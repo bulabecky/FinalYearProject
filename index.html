@@ -24,17 +24,14 @@
           map: map
         });
       }
-      <?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://www.opengis.net/kml/2.2">
-  <Placemark>
-    <name>Simple placemark</name>
-    <description>Attached to the ground. Intelligently places itself 
-       at the height of the underlying terrain.</description>
-    <Point>
-      <coordinates>53.34560667126015,-6.262207028750026,0</coordinates>
-    </Point>
-  </Placemark>
-</kml>
+      var kmlLayer = new google.maps.KmlLayer();
+      var kmlUrl = 'https://github.com/bulabecky/FinalYearProject/blob/master/test.xml';
+  var kmlOptions = {
+    suppressInfoWindows: true,
+    preserveViewport: false,
+    map: map
+  };
+var kmlLayer = new google.maps.KmlLayer(kmlUrl, kmlOptions);
 
     </script>
     <script async defer
