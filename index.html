@@ -18,10 +18,10 @@
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
           center: uluru
+          suppressInfoWindows = false,
         });
         var marker = new google.maps.Marker({
           position: uluru,
-          suppressInfoWindows = false,
           map: map
 
         });
