@@ -18,14 +18,14 @@
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
           center: uluru
-          
         });
         var marker = new google.maps.Marker({
           position: uluru,
           map: map
         });
       }
-     var kmlUrl = 'https://developers.google.com/maps/documentation/javascript/tutorials/westcampus.kml';
+      var kmlLayer = new google.maps.KmlLayer();
+      var kmlUrl = 'https://github.com/bulabecky/FinalYearProject/blob/master/test.xml';
   var kmlOptions = {
     suppressInfoWindows: true,
     preserveViewport: false,
