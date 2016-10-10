@@ -21,8 +21,9 @@
         });
         var marker = new google.maps.Marker({
           position: uluru,
+          suppressInfoWindows = false,
           map: map
-          suppressInfoWindows = false
+
         });
       }
       var kmlLayer = new google.maps.KmlLayer();
