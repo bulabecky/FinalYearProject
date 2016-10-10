@@ -54,25 +54,17 @@
         marker.addListener('click', function() {
           infowindow.open(map, marker);
         });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
+        // var marker = new google.maps.Marker({
+        //   position: uluru,
+        //   map: map
 
-        });
-        var marker1 = new google.maps.Marker({
-          position: uluru2,
-          map: map
+        // });
+        // var marker1 = new google.maps.Marker({
+        //   position: uluru2,
+        //   map: map
 
-        });
+        // });
       }
-      var kmlLayer = new google.maps.KmlLayer();
-      var kmlUrl = 'https://github.com/bulabecky/FinalYearProject/blob/master/test.xml';
-  var kmlOptions = {
-    suppressInfoWindows: true,
-    preserveViewport: false,
-    map: map
-  };
-var kmlLayer = new google.maps.KmlLayer(kmlUrl, kmlOptions);
 
     </script>
     <script async defer
