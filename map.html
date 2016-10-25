@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link href="bootstrap.min.css" rel="stylesheet">
+	 <script src="map.js"></script>	
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     
+  </head>
+  <body>
+ 
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="Logomakr_7PyeqI.png" class="img-thumbnail" width="45"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ulster <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Donegal</a></li>
+            <li><a href="#">Derry</a></li>
+            <li><a href="#">Tyrone</a></li>
+            <li><a href="#">Fermanagh</a></li>
+            <li><a href="#">Cavan</a></li>
+            <li><a href="#">Monaghan</a></li>
+            <li><a href="#">Antrim</a></li>
+            <li><a href="#">Down</a></li>
+            <li><a href="#">Armagh</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <div id="map">
+        <script>
+         function initMap() {
+        var Donegal = {lat: 54.6549, lng: -8.1041};
+        var Dublin = {lat: 53.34560667126015, lng: -6.262207028750026};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: Donegal,
+
+        });
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Clonmany Festival</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Clonmany Festival</b> is Irelands longest running (49 years and counting!) and best known family festival and is situated in the' + ' beautiful village of Clonmany in the Inishowen Peninsula.' +
+            '</div>'+
+            '</div>';
+            
+        var contentString2 ='<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Clonmany Festival</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Clonmany Festival</b> is Irelands longest running (49 years and counting!) and best known family festival and is situated in the' + ' beautiful village of Clonmany in the Inishowen Peninsula.' +
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: (contentString,contentString2)
+        });
+
+        var marker = new google.maps.Marker({
+          position: Donegal,
+          map: map,
+          title: 'Donegal'
+        });
+        var marker2 = new google.maps.Marker({
+          position: Dublin,
+          map: map,
+          title: 'Dublin'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker, marker2);
+        });
+       
+      }
+</script>
+
+      </div>
+    
+  
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
+    </script>
+  </body>
+</html>
