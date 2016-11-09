@@ -1,4 +1,4 @@
-<script>
+
 function initMap() {
         var Donegal = {lat: 54.6549, lng: -8.1041};
         var uluru2 = {lat: 53.34560667126015, lng: -6.262207028750026};
@@ -35,4 +35,4 @@ function initMap() {
         });
        
       }
-</script>
+
