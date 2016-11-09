@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <link href="bootstrap.min.css" rel="stylesheet">	
+      <link href="bootstrap.min.css" rel="stylesheet">
+	 <script src="map.js"></script>	
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-     
-     
+        <title>Conás Ceol</title>
   </head>
   <body>
  
@@ -83,59 +83,62 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-    <div id="map">
+
+ <div id="map">
         <script>
          function initMap() {
-        var Donegal = {lat: 54.6549, lng: -8.1041};
-        var Derry = {lat: 55.006763, lng: -7.318268};
+        var Gweedore = {lat: 55.05028, lng: -8.23194};
+        var Gweedore2 = {lat: 55.06592, lng: -8.23807};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: Donegal,
+          zoom: 9,
+          center: Gweedore,
 
         });
         var contentString = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Clonmany Festival</h1>'+
+            '<h1 id="firstHeading" class="firstHeading">Altan</h1>'+
             '<div id="bodyContent">'+
-            '<p><b>Clonmany Festival</b> is Irelands longest running (49 years and counting!) and best known family festival and is situated in the' + ' beautiful village of Clonmany in the Inishowen Peninsula.' +
+            '<p><b>Altan</b> are a Irish Folk Music band formed in Co Donegal in 1987 by lead vocalist Mairéad Ní Mhaonaigh and her husband the late Frankie Kennedy (1955-1994).'+
+            'They brought Donegal’s rich collection of Irish language songs and instrumental styles to audiences around the world and they remain the world’s foremost Irish traditional group with over a million records sold.'+
+            'They were the first traditional group to be signed to a major label when they signed with Virgin Records in 1994. Altan have established a large following in Ireland, UK, Europe, United States, Canada and even in Japan.'+
+            'They have worked with a wide variety of well-known musicians including Dolly Parton, Enya, The Chieftains, Bonnie Raitt, Alison Krauss and many others.'+
+            'Members: Mairéad Ní Mhaonaigh, Ciarán Curran, Ciarán Tourish, Mark Kelly, Dáithí Sproule, Martin Tourish.'+
+            'Past members:	Frankie Kennedy, Paul OShaughnessy, Dermot Byrne.</p>'+
+             '<iframe width="560" height="315" src="https://www.youtube.com/embed/s04TE7cWZlY" frameborder="0" allowfullscreen></iframe>'+
             '</div>'+
             '</div>';
-            
-        var contentString2 ='<div id="content">'+
+             
+             var contentString2 = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">The Undertones</h1>'+
-            '<div id-"bodyContent">'+
-            '<p><b>The Undertones</b> are a punk rock/new wave band formed in Derry, Northern Ireland, in 1974.' +
-            'From 1975 to 1983, the Undertones consisted of Feargal Sharkey (vocals), John ONeill (rhythm guitar, vocals), Damian ONeill (lead guitar, vocals), Michael Bradley (bass, vocals) and Billy Doherty (drums).'+
-            'Much of the earlier Undertones material drew influence from punk rock and new wave; the Undertones also incorporated elements of rock, glam rock and post-punk into material released after 1979, before citing soul and Motown as the influence for the material released upon their final album.' +
-            '<iframe width="560" height="315" src="https://www.youtube.com/embed/PinCg7IGqHg" frameborder="0" allowfullscreen></iframe>'+
-            '</iframe>'+
-            '</div>'+
-            '<div>';
+            '<h1 id="firstHeading" class="firstHeading">Clannad</h1>'+
+            '<div id="bodyContent">'+
+                 '<p><b>Clannad</b> are an Irish band formed in 1970 in Gweedore, County Donegal.'+
+                 'Their music has been variously described as bordering on folk and folk rock, traditional Irish, Celtic and new-age, often incorporating elements of an even broader spectrum of smooth jazz and Gregorian chant.'+
+                 'After twelve years of success in the folk music industry, they shot to international recognition in 1982 with the release of the "Theme from Harrys Game", becoming the most successful band in the Celtic music genre.'+
+                 'They subsequently went on to bridge the gap between traditional Celtic music and pop music in the 1980s and 1990s with albums such as Macalla and Anam.'+
+                'Members: Ciarán Brennan, Moya Brennan, Pól Brennan, Noel Duggan'+
+                 'Past members	Pádraig Duggan (1949–2016), Enya Brennan</p>'+
+                 '<iframe width="560" height="315" src="https://www.youtube.com/embed/2KpNzalFKPo" frameborder="0" allowfullscreen></iframe>'+
+                 '</div>'+
+                 '</div>';
 
+            
         var infowindow = new google.maps.InfoWindow({
           content: (contentString)
         });
-             var infowindow2 = new google.maps.InfoWindow({
-          content: (contentString2)
-        });
-
+        var infowindow2 = new google.maps.InfoWindow({content: (contentString2)});
         var marker = new google.maps.Marker({
-          position: Donegal,
+          position: Gweedore,
           map: map,
-          title: 'Donegal'
+          title: 'Gweedore'
         });
-        var marker2 = new google.maps.Marker({
-          position: Derry,
-          map: map,
-          title: 'Derry'
-        });
+        var marker2 = new google.maps.Marker ({position: Gweedore2, map:map, title: 'Gweedore'});
         marker.addListener('click', function() {
           infowindow.open(map, marker);
         });
-        marker2.addListener('click', function() {
+             marker2.addListener('click', function() {
           infowindow2.open(map, marker2);
         });
       }

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <link href="bootstrap.min.css" rel="stylesheet">	
+      <link href="bootstrap.min.css" rel="stylesheet">
+	 <script src="map.js"></script>	
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-     
-     
+        <title>Conás Ceol</title>
   </head>
   <body>
  
@@ -83,60 +83,45 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-    <div id="map">
+
+ <div id="map">
         <script>
          function initMap() {
-        var Donegal = {lat: 54.6549, lng: -8.1041};
-        var Derry = {lat: 55.006763, lng: -7.318268};
+        var Antrim = {lat: 54.7195, lng: -6.2072};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: Donegal,
+          zoom: 9,
+          center: Antrim,
 
         });
         var contentString = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Clonmany Festival</h1>'+
+            '<h1 id="firstHeading" class="firstHeading">The Irish Rovers</h1>'+
             '<div id="bodyContent">'+
-            '<p><b>Clonmany Festival</b> is Irelands longest running (49 years and counting!) and best known family festival and is situated in the' + ' beautiful village of Clonmany in the Inishowen Peninsula.' +
+            '<p><b>The Irish Rovers</b> are a group of Irish musicians, half of whom now live in Canada.'+
+            'The Canadian Irish folk group created in 1963 and named after the traditional song "The Irish Rover" is best known for their international television series, contributing to the popularization of Irish Music in North America, and for the songs "The Unicorn", "Wasnt That A Party", "The Orange and the Green", "Whiskey on a Sunday", "Lily The Pink" and "The Black Velvet Band".' +
+            'The primary voices heard in the groups early songs were Will Millar (tenor), Jimmy Ferguson (baritone), George Millar and Joe Millar, and in the last twenty years, also John Reynolds and Ian Millar. Wilcil McDowells accordion has been a signature sound of the band throughout their more than fifty years.'+
+            'All but one of the band members are from Ireland. Founding member George Millar and his cousin Ian are both from Ballymena, original member Wilcil McDowell is from Larne, Sean ODriscoll from Cork, Gerry OConnor from Dundalk, with Morris Crum from Carnlough and percussionist Fred Graham from Belfast. Flute/whistle player Geoffrey Kelly was born in Dumfries, Scotland.'+
+            'In the 1980s, the group briefly renamed itself The Rovers. During this period, their "Wasnt That a Party" led to crossover success in the country rock genre.'+
+            'The Irish Rovers have represented Canada at five World Expos.</p>'+
+        '<iframe width="560" height="315" src="https://www.youtube.com/embed/DfsgHyymG8E" frameborder="0" allowfullscreen></iframe>'+
             '</div>'+
             '</div>';
             
-        var contentString2 ='<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">The Undertones</h1>'+
-            '<div id-"bodyContent">'+
-            '<p><b>The Undertones</b> are a punk rock/new wave band formed in Derry, Northern Ireland, in 1974.' +
-            'From 1975 to 1983, the Undertones consisted of Feargal Sharkey (vocals), John ONeill (rhythm guitar, vocals), Damian ONeill (lead guitar, vocals), Michael Bradley (bass, vocals) and Billy Doherty (drums).'+
-            'Much of the earlier Undertones material drew influence from punk rock and new wave; the Undertones also incorporated elements of rock, glam rock and post-punk into material released after 1979, before citing soul and Motown as the influence for the material released upon their final album.' +
-            '<iframe width="560" height="315" src="https://www.youtube.com/embed/PinCg7IGqHg" frameborder="0" allowfullscreen></iframe>'+
-            '</iframe>'+
-            '</div>'+
-            '<div>';
 
+
+            
         var infowindow = new google.maps.InfoWindow({
           content: (contentString)
         });
-             var infowindow2 = new google.maps.InfoWindow({
-          content: (contentString2)
-        });
-
+        
         var marker = new google.maps.Marker({
-          position: Donegal,
+          position: Antrim,
           map: map,
-          title: 'Donegal'
-        });
-        var marker2 = new google.maps.Marker({
-          position: Derry,
-          map: map,
-          title: 'Derry'
+          title: 'Antrim'
         });
         marker.addListener('click', function() {
           infowindow.open(map, marker);
-        });
-        marker2.addListener('click', function() {
-          infowindow2.open(map, marker2);
         });
       }
 </script>
