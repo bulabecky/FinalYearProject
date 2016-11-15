@@ -1,47 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
-  <Document>
-    <name>KmlFile</name>
-    <Placemark>
-      <name>Google West Campus 1</name>
-      <styleUrl>#west_campus_style</styleUrl>
-      <ExtendedData>
-        <Data name="string">
-       <value>Attached to the ground. Intelligently places itself 
-       at the height of the underlying terrain.</value>
-       </Data>
-       </ExtendedData>
-      <Point>
-        <coordinates>-122.0914977709329,37.42390182131783,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <name>Google West Campus 2</name>
-      <styleUrl>#west_campus_style</styleUrl>
-      <ExtendedData>
-        <Data name="">
-          <value><![CDATA[<iframe width="480" height="360"
-            src="https://www.youtube.com/embed/nb4gvrNrDWw" frameborder="0"
-            allowfullscreen></iframe><br><br>]]></value>
-        </Data>
-      </ExtendedData>
-      <Point>
-        <coordinates>-122.0926995893311,37.42419403634421,0</coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
-      <name>Google West Campus 3</name>
-      <styleUrl>#west_campus_style</styleUrl>
-      <ExtendedData>
-        <Data name="video">
-          <value><![CDATA[<iframe width="480" height="360"
-            src="https://www.youtube.com/embed/0hhiEjf7_NA" frameborder="0"
-            allowfullscreen></iframe><br><br>]]></value>
-        </Data>
-      </ExtendedData>
-      <Point>
-        <coordinates>-122.0922532985281,37.42301710721216,0</coordinates>
-      </Point>
-    </Placemark>
-  </Document>
+<Document>
+  <name>My Golf Course Example</name>
+  <Placemark>
+    <name>Club house</name>
+    <ExtendedData>
+      <Data name="holeNumber">
+        <value>1</value>
+      </Data>
+      <Data name="holeYardage">
+        <value>234</value>
+      </Data>
+      <Data name="holePar">
+        <value>4</value>
+      </Data>
+    </ExtendedData>
+    <Point>
+      <coordinates>-111.956,33.5043</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>By the lake</name>
+    <ExtendedData>
+      <Data name="holeNumber">
+        <value>5</value>
+      </Data>
+      <Data name="holeYardage">
+        <value>523</value>
+      </Data>
+      <Data name="holePar">
+        <value>5</value>
+      </Data>
+    </ExtendedData>
+    <Point>
+      <coordinates>-111.95,33.5024</coordinates>
+    </Point>
+  </Placemark>
+</Document>
 </kml>
