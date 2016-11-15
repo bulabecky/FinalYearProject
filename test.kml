@@ -2,15 +2,22 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>KmlFile</name>
+    <Style id="style">
+      <IconStyle>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/paddle/go.png
+          </href>
+        </Icon>
+      </IconStyle>
+      <BalloonStyle>
+        <text>$[video]</text>
+      </BalloonStyle>
+    </Style>
     <Placemark>
       <name>Google West Campus 1</name>
       <styleUrl>#west_campus_style</styleUrl>
-      <ExtendedData>
-        <Data name="string">
-       <value>Attached to the ground. Intelligently places itself 
-       at the height of the underlying terrain.</value>
-       </Data>
-       </ExtendedData>
+       <description>Attached to the ground. Intelligently places itself 
+       at the height of the underlying terrain.</description>
       <Point>
         <coordinates>-122.0914977709329,37.42390182131783,0</coordinates>
       </Point>
@@ -19,7 +26,8 @@
       <name>Google West Campus 2</name>
       <styleUrl>#west_campus_style</styleUrl>
       <ExtendedData>
-        <Data name=""><iframe width="560" height="315" src="https://www.youtube.com/embed/bq5SGSCZe4E" frameborder="0" allowfullscreen></iframe><br><br>]]></value>
+        <Data name="video">
+          <value><![CDATA[<iframe width="560" height="315" src="https://www.youtube.com/embed/bq5SGSCZe4E" frameborder="0" allowfullscreen></iframe><br><br>]]></value>
         </Data>
       </ExtendedData>
       <Point>
