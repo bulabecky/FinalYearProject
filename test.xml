@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
-  <Placemark>
-    <name>Simple placemark</name>
-    <description>Attached to the ground. Intelligently places itself 
-       at the height of the underlying terrain.</description>
-    <Point>
-      <coordinates>53.34560667126015,-6.262207028750026,0</coordinates>
-    </Point>
-  </Placemark>
+  <document>
+      <placemark>
+      <name>TEST</name>
+          <description>Can you see me?</description>
+          <point>
+          <coordinates>
+              55.0498421,0.,-8.229326000000015,0.</coordinates>
+          </point>
+      </placemark>
+      
+    </document>
 </kml>
