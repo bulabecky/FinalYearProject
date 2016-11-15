@@ -18,17 +18,20 @@
     <body>
         <div id="map"></div>
         <div id="capture"></div>
-        <script>
-    function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 11,
-          center: {lat: 41.876, lng: -87.624}
-        });
+       v<script>
+      var map;
+      var src = 'http://cosanceol/test.kml';
 
-        var ctaLayer = new google.maps.KmlLayer({
-          url: 'http://cosanceol,tk/test.kml',
-          map: map
+      /**
+       * Initializes the map and calls the function that loads the KML layer.
+       */
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: new google.maps.LatLng(-19.257753, 146.823688),
+          zoom: 2,
+          mapTypeId: 'terrain'
         });
+        loadKmlLayer(src, map);
       }
             </script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
