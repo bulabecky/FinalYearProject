@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="initial-scale=1.0">
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>TEST</title>
+    <title>KML Click Capture Sample</title>
     <style>
-    #map {
-    height: 100%;
+      html, body {
+        height: 370px;
+        padding: 0;
+        margin: 0;
         }
-    html, body {
-    height: 100%;
-    margin: 0; 
-    padding: 0;
-        }
+      #map {
+       height: 360px;
+       width: 300px;
+       overflow: hidden;
+       float: left;
+       border: thin solid #333;
+       }
+      #capture {
+       height: 360px;
+       width: 480px;
+       overflow: hidden;
+       float: left;
+       background-color: #ECECFB;
+       border: thin solid #333;
+       border-left: none;
+       }
     </style>
-    </head>
-    <body>
-        <div id="map"></div>
-        <div id="capture"></div>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="capture"></div>
        <script>
       var map;
       var src = 'http://cosanceol/test.kml';
