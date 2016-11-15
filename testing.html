@@ -43,7 +43,7 @@
         var kmlLayer = new google.maps.KmlLayer(src, {
           suppressInfoWindows: false,
           preserveViewport: false,
-          map: map
+          map: map,
         });
         google.maps.event.addListener(kmlLayer, 'click', function(event) {
           var content = event.featureData.infoWindowHtml;
