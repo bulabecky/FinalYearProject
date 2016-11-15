@@ -16,9 +16,8 @@
     <Placemark>
       <name>Google West Campus 1</name>
       <styleUrl>#west_campus_style</styleUrl>
-      <description>
-      TEST TEST TEST
-      </description>
+       <description>Attached to the ground. Intelligently places itself 
+       at the height of the underlying terrain.</description>
       <Point>
         <coordinates>-122.0914977709329,37.42390182131783,0</coordinates>
       </Point>
