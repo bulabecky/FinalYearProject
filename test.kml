@@ -2,7 +2,7 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>KmlFile</name>
-    <Style id="west_campus_style">
+    <Style id="test">
       <IconStyle>
         <Icon>
           <href>http:// google.com/mapfiles/kml/paddle/go.png
@@ -15,7 +15,7 @@
     </Style>
     <Placemark>
       <name>Google West Campus 1</name>
-      <styleUrl>#west_campus_style</styleUrl>
+      <styleUrl>#test</styleUrl>
       <ExtendedData>
         <Data name="video">
           <value><![CDATA[<iframe width="480" height="360"
@@ -29,7 +29,7 @@
     </Placemark>
     <Placemark>
       <name>Google West Campus 2</name>
-      <styleUrl>#west_campus_style</styleUrl>
+      <styleUrl>#test</styleUrl>
       <ExtendedData>
         <Data name="video">
           <value><![CDATA[<iframe width="480" height="360"
@@ -43,7 +43,7 @@
     </Placemark>
     <Placemark>
       <name>Google West Campus 3</name>
-      <styleUrl>#west_campus_style</styleUrl>
+      <styleUrl>#test</styleUrl>
       <ExtendedData>
         <Data name="video">
           <value><![CDATA[<iframe width="480" height="360"
