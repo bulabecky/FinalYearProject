@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <document>
+      <placemark>
+      <name>TEST</name>
+          <description>Can you see me?</description>
+          <point>
+          <coordinates>
+              55.0498421,0.,-8.229326000000015,0.</coordinates>
+          </point>
+      </placemark>
+      
+    </document>
+</kml>
