@@ -5,27 +5,14 @@
     <meta charset="utf-8">
     <title>TEST</title>
     <style>
-      html, body {
-        height: 370px;
-        padding: 0;
-        margin: 0;
+    #map {
+    height: 100%;
         }
-      #map {
-       height: 360px;
-       width: 300px;
-       overflow: hidden;
-       float: left;
-       border: thin solid #333;
-       }
-      #capture {
-       height: 360px;
-       width: 480px;
-       overflow: hidden;
-       float: left;
-       background-color: #ECECFB;
-       border: thin solid #333;
-       border-left: none;
-       }
+    html, body {
+    height: 100%;
+    margin: 0; 
+    padding: 0;
+        }
     </style>
     </head>
     <body>
@@ -40,6 +27,7 @@
        */
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
+          center: new google.maps.LatLng(-19.257753, 146.823688),
           zoom: 2,
           mapTypeId: 'terrain'
         });
@@ -53,7 +41,7 @@
        */
       function loadKmlLayer(src, map) {
         var kmlLayer = new google.maps.KmlLayer(src, {
-          suppressInfoWindows: true,
+          suppressInfoWindows: false,
           preserveViewport: false,
           map: map
         });
