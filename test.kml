@@ -2,17 +2,17 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>KmlFile</name>
-    <Style id="west_campus_style">
-      <IconStyle>
-        <Icon>
-          <href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png
-          </href>
-        </Icon>
-      </IconStyle>
-      <BalloonStyle>
-        <text>$[video]</text>
-      </BalloonStyle>
-    </Style>
+    //<Style id="west_campus_style">//
+      //<IconStyle>//
+        //<Icon>//
+          //<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png//
+          //</href>//
+        //</Icon>//
+      //</IconStyle>//
+      //<BalloonStyle>//
+        //<text>$[video]</text>//
+      //</BalloonStyle>//
+    //</Style>//
     <Placemark>
       <name>Google West Campus 1</name>
       <styleUrl>#west_campus_style</styleUrl>
