@@ -10,16 +10,16 @@
         </Icon>
       </IconStyle>
       <BalloonStyle>
-        <text>$[description]</text>
+        <text>$[string]</text>
       </BalloonStyle>
     </Style>
     <Placemark>
       <name>Google West Campus 1</name>
       <styleUrl>#west_campus_style</styleUrl>
       <ExtendedData>
-        <Data name="description">
-       <description>Attached to the ground. Intelligently places itself 
-       at the height of the underlying terrain.</description>
+        <Data name="string">
+       <value>Attached to the ground. Intelligently places itself 
+       at the height of the underlying terrain.</value>
        </Data>
        </ExtendedData>
       <Point>
