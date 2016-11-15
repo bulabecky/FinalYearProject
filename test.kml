@@ -16,13 +16,9 @@
     <Placemark>
       <name>Google West Campus 1</name>
       <styleUrl>#west_campus_style</styleUrl>
-      <ExtendedData>
-        <Data name="video">
-          <value><![CDATA[<iframe width="480" height="360"
-            src="https://www.youtube.com/embed/ZE8ODPL2VPI" frameborder="0"
-            allowfullscreen></iframe><br><br>]]></value>
-        </Data>
-      </ExtendedData>
+      <description>
+      TEST TEST TEST
+      </description>
       <Point>
         <coordinates>-122.0914977709329,37.42390182131783,0</coordinates>
       </Point>
