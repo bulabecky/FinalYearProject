@@ -16,6 +16,7 @@
     <Placemark>
       <name>Google West Campus 1</name>
       <styleUrl>#west_campus_style</styleUrl>
+      <description>test test tes</description>
       <ExtendedData>
         <Data name="video">
           <value><![CDATA[<iframe width="560" height="315" src="https://www.youtube.com/embed/bq5SGSCZe4E" frameborder="0" allowfullscreen></iframe><br><br>]]></value>
