@@ -117,10 +117,9 @@
        * Initializes the map and calls the function that loads the KML layer.
        */
       function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: new google.maps.LatLng(53.3498,-6.2603),
-          zoom:4,
-          mapTypeId: 'terrain'
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: {lat: 41.876, lng: -87.624}
         });
         loadKmlLayer(src, map);
       }
