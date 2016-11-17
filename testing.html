@@ -111,15 +111,16 @@
     <div id="capture"></div>
     <script>
       var map;
-      var src = 'http://cosanceol.tk/fake.kml';
+      var src = 'http://cosanceol.tk/test.kml';
 
       /**
        * Initializes the map and calls the function that loads the KML layer.
        */
       function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 11,
-          center: {lat: 41.876, lng: -87.624}
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: new google.maps.LatLng(53.3498,-6.2603),
+          zoom: 2,
+          mapTypeId: 'terrain'
         });
         loadKmlLayer(src, map);
       }
