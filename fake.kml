@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
+<Style>
+      <IconStyle>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/paddle/go.png
+          </href>
+        </Icon>
+      </IconStyle>
+      <BalloonStyle>
+      </BalloonStyle>
+    </Style>
  <Placemark>
       <name>Dublin</name>
       <description>test test test</description>
