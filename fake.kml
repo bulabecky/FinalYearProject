@@ -4,7 +4,7 @@
 <Style>
       <IconStyle>
         <Icon>
-          <href>http://maps.google.com/mapfiles/kml/paddle/go.png
+          <href>"http://maps.google.com/mapfiles/kml/paddle/go.png"
           </href>
         </Icon>
       </IconStyle>
