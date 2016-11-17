@@ -51,5 +51,22 @@
         <coordinates>53.3424,-6.2413</coordinates>
       </Point>
     </Placemark>
+      
+      <Placemark>
+      <name>Our test 3</name>
+      <styleUrl>#west_campus_style</styleUrl>
+      <ExtendedData>
+        <Data name="video">
+          <value><![CDATA[<iframe width="480" height="360"
+            src="https://www.youtube.com/embed/0hhiEjf7_NA" frameborder="0"
+            allowfullscreen></iframe><br><br>]]></value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>53.3400,-6.2413</coordinates>
+      </Point>
+    </Placemark>
+      
+      
   </Document>
 </kml>
