@@ -54,8 +54,8 @@
        */
       function loadKmlLayer(src, map) {
         var kmlLayer = new google.maps.KmlLayer(src, {
-          suppressInfoWindows: true,
-          preserveViewport: false,
+          suppressInfoWindows: false,
+          preserveViewport: true,
           map: map
         });
         google.maps.event.addListener(kmlLayer, 'click', function(event) {
