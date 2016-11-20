@@ -108,41 +108,20 @@
   </div><!-- /.container-fluid -->
 </nav>
     <div id="map"></div>
-    <div id="capture"></div>
     <script>
-      var map;
-      var src = 'http://cosanceol.tk/test.kml';
 
-      /**
-       * Initializes the map and calls the function that loads the KML layer.
-       */
       function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: new google.maps.LatLng(53.3498,-6.2603),
-          zoom: 2,
-          mapTypeId: 'roadmap'
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: {lat: 41.876, lng: -87.624}
         });
-        loadKmlLayer(src, map);
-      }
 
-      /**
-       * Adds a KMLLayer based on the URL passed. Clicking on a marker
-       * results in the balloon content being loaded into the right-hand div.
-       * @param {string} src A URL for a KML file.
-       */
-      function loadKmlLayer(src, map) {
-        var kmlLayer = new google.maps.KmlLayer(src, {
-          suppressInfoWindows: true,
-          preserveViewport: false,
+        var ctaLayer = new google.maps.KmlLayer({
+          url: 'test.kml',
           map: map
         });
-        google.maps.event.addListener(kmlLayer, 'click', function(event) {
-          var content = event.featureData.infoWindowHtml;
-          var testimonial = document.getElementById('capture');
-          testimonial.innerHTML = content;
-        });
       }
-    </script>
+      </script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
         </script>
     </body>

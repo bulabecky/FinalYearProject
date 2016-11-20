@@ -1,27 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
-<Document>
-<Style>
-      <IconStyle>
-        <Icon>
-          <href>"http://maps.google.com/mapfiles/kml/paddle/go.png"
-          </href>
-        </Icon>
-      </IconStyle>
-      <BalloonStyle>
-      </BalloonStyle>
-    </Style>
  <Placemark>
       <name>Dublin</name>
       <description>test test test</description>
-      <ExtendedData>
-        <Data name="video">
-          <value><![CDATA[<iframe width="560" height="315" src="https://www.youtube.com/embed/bq5SGSCZe4E" frameborder="0" allowfullscreen></iframe><br><br>]]></value>
-        </Data>
-      </ExtendedData>
-      <Point>
-        <coordinates>55.05028,-8.23194</coordinates>
+      <Point><coordinates>53.3498,-6.2603</coordinates>
       </Point>
     </Placemark>
-    </Document>
     </kml>
