@@ -19,15 +19,6 @@ function loginForm(){
     </div>
     ';
 }
- 
-if(isset($_POST['enter'])){
-    if($_POST['name'] != ""){
-        $_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
-    }
-    else{
-        echo '<span class="error">Please type in a name</span>';
-    }
-
 ?>
 <?php
 if(!isset($_SESSION['name'])){
