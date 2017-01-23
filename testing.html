@@ -108,6 +108,8 @@
   </div><!-- /.container-fluid -->
 </nav>
     <div id="map"></div>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
+      </script>
     <script>
 
       function initMap() {
@@ -117,12 +119,12 @@
         });
 
         var ctaLayer = new google.maps.KmlLayer({
-          url: 'test.kml',
+          url: 'https://raw.githubusercontent.com/bulabecky/FinalYearProject/master/fake.kml',
           map: map
         });
       }
       </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
-        </script>
+        
+        
     </body>
 </html>
