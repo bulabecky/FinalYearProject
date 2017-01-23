@@ -4,14 +4,19 @@
 <title>Chat - Customer Module</title>
 <link type="text/css" rel="stylesheet" href="style.css" />
 </head>
- 
+
+<?php
+if(!isset($_SESSION['name'])){
+    loginForm();
+}
+else{
+?>
 <div id="wrapper">
     <div id="menu">
-        <p class="welcome">Welcome, <b></b></p>
+        <p class="welcome">Welcome, <b><?php echo $_SESSION['name']; ?></b></p>
         <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
         <div style="clear:both"></div>
-    </div>
-     
+    </div>    
     <div id="chatbox"></div>
      
     <form name="message" action="">
@@ -23,8 +28,8 @@
 <script type="text/javascript">
 // jQuery Document
 $(document).ready(function(){
- 
 });
 </script>
-</body>
-</html>
+<?php
+}
+?>
