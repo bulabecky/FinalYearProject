@@ -16,8 +16,7 @@ function loginForm(){
         <input type="text" name="name" id="name" />
         <input type="submit" name="enter" id="enter" value="Enter" />
     </form>
-    </div>
-    ';
+    </div>';
 }
 ?>
 <?php
