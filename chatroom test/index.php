@@ -27,7 +27,7 @@ if(isset($_POST['enter'])){
     else{
         echo '<span class="error">Please type in a name</span>';
     }
-}
+
 ?>
 <?php
 if(!isset($_SESSION['name'])){
