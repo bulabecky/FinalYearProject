@@ -4,14 +4,7 @@
 <title>Chat - Customer Module</title>
 <link type="text/css" rel="stylesheet" href="style.css" />
 </head>
-
-<?php
-if(!isset($_SESSION['name'])){
-    loginForm();
-}
-else{
-?>
- <?
+<?php 
 session_start();
  
 function loginForm(){
@@ -35,6 +28,12 @@ if(isset($_POST['enter'])){
         echo '<span class="error">Please type in a name</span>';
     }
 }
+?>
+<?php
+if(!isset($_SESSION['name'])){
+    loginForm();
+}
+else{
 ?>
 <div id="wrapper">
     <div id="menu">
