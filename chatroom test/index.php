@@ -29,6 +29,7 @@ else{
 // jQuery Document
 $(document).ready(function(){
 });
+
 </script>
 <?php
 }
