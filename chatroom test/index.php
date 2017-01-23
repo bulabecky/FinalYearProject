@@ -8,7 +8,7 @@
 session_start();
  
 function loginForm(){
-    echo'
+    echo
     <div id="loginform">
     <form action="index.php" method="post">
         <p>Please enter your name to continue:</p>
@@ -16,7 +16,7 @@ function loginForm(){
         <input type="text" name="name" id="name" />
         <input type="submit" name="enter" id="enter" value="Enter" />
     </form>
-    </div>';
+    </div>;
 }
 ?>
 <?php
