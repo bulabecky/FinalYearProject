@@ -9,13 +9,13 @@
 	define('DBPASS', '');
 	define('DBNAME', 'FYP');
 	
-	$conn = mysql_connect(DBHOST,DBUSER,DBPASS);
-	$dbcon = mysql_select_db(DBNAME);
+	$conn = mysqli_connect(DBHOST,DBUSER,DBPASS);
+	$dbcon = mysqli_select_db(DBNAME);
 	
 	if ( !$conn ) {
-		die("Connection failed : " . mysql_error());
+		die("Connection failed : " . mysqli_error());
 	}
 	
 	if ( !$dbcon ) {
-		die("Database Connection failed : " . mysql_error());
+		die("Database Connection failed : " . mysqli_error());
 	}
