@@ -78,7 +78,8 @@
 </div>
 
 </body>
-    <?php
+</html>
+ <?php
 	ob_start();
 	session_start();
 	require_once 'dbconnect.php';
@@ -136,5 +137,4 @@
 		
 	}
 ?>
-</html>
 <?php ob_end_flush(); ?>
