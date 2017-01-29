@@ -1,32 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Coding Cage - Login & Registration System</title>
-<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />
-<link rel="stylesheet" href="style.css" type="text/css" />
-</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Cosan Ceol Login</title>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />
+        <link rel="stylesheet" href="style.css" type="text/css" />
+    </head>
 <body>
-
-<div class="container">
-
-	<div id="login-form">
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
-    
-    	<div class="col-md-12">
-        
-        	<div class="form-group">
+    <div class="container">
+	   <div id="login-form">
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
+        <div class="col-md-12">
+            <div class="form-group">
             	<h2 class="">Sign In.</h2>
             </div>
-        
         	<div class="form-group">
             	<hr />
             </div>
-            
             <?php
-			if ( isset($errMSG) ) {
-				
-				?>
+			if ( isset($errMSG) ) {?>
 				<div class="form-group">
             	<div class="alert alert-danger">
 				<span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
@@ -59,7 +51,7 @@
             </div>
             
             <div class="form-group">
-            	<button type="submit" class="btn btn-block btn-primary" name="btn-login">Sign In</button>
+                <button type="submit" class="btn btn-block btn-primary" name="btn-login"><a href="home.php">Sign In</a></button>
             </div>
             
             <div class="form-group">
@@ -69,7 +61,6 @@
             <div class="form-group">
             	<a href="register.php">Sign Up Here...</a>
             </div>
-        
         </div>
    
     </form>
