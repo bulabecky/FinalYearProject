@@ -1,10 +1,3 @@
-<?php
-/*
-Author: Javed Ur Rehman
-Website: http://www.allphptricks.com/
-*/
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
