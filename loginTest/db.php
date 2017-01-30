@@ -5,7 +5,7 @@ Website: http://www.allphptricks.com/
 */
 
 
-$con = mysqli_connect("178.62.80.200","root","","register");
+$con = mysqli_connect("178.62.80.200","root","Beckyboo4","register");
 // Check connection
 if (mysqli_connect_errno())
   {
