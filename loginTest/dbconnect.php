@@ -10,4 +10,3 @@
      if ($DBcon->connect_errno) {
          die("ERROR : -> ".$DBcon->connect_error);
      }
-?>

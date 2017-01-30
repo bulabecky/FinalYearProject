@@ -12,5 +12,3 @@ if (isset($_GET['logout'])) {
 	unset($_SESSION['userSession']);
 	header("Location: index.php");
 }
-
-?>
