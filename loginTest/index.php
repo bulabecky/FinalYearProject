@@ -1,11 +1,6 @@
-<?php
-/*
-Author: Javed Ur Rehman
-Website: http://www.allphptricks.com/
-*/
-
-include("auth.php"); //include auth.php file on all secure pages ?>
 <!DOCTYPE html>
+<?php
+include("auth.php"); //include auth.php file on all secure pages ?>
 <html>
 <head>
 <meta charset="utf-8">
