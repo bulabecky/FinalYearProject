@@ -41,9 +41,9 @@
    
    $password = hash('sha256', $pass); // password hashing using SHA256
   
-   $res=mysql_query("SELECT userId, userName, userPass FROM users WHERE userEmail='$email'");
-   $row=mysql_fetch_array($res);
-   $count = mysql_num_rows($res); // if uname/pass correct it returns must be 1 row
+   $res=mysqli_query("SELECT userId, userName, userPass FROM users WHERE userEmail='$email'");
+   $row=mysqli_fetch_array($res);
+   $count = mysqli_num_rows($res); // if uname/pass correct it returns must be 1 row
    
    if( $count == 1 && $row['userPass']==$password ) {
     $_SESSION['user'] = $row['userId'];
