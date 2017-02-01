@@ -6,7 +6,7 @@
  
  define('DBHOST', 'localhost');
  define('DBUSER', 'root');
- define('DBPASS', '');
+ define('DBPASS', 'Beckyboo4');
  define('DBNAME', 'register');
  
  $conn = mysqli_connect(DBHOST,DBUSER,DBPASS);
