@@ -12,7 +12,7 @@ return $xmlStr;
 }
 
 // Opens a connection to a MySQL server
-$connection=mysql_connect ('localhost', $username, $password);
+$connection=mysqli_connect ('178.62.80.200', $username, $password);
 if (!$connection) {
   die('Not connected : ' . mysql_error());
 }
@@ -36,7 +36,7 @@ header("Content-type: text/xml");
 echo '<markers>';
 
 // Iterate through the rows, printing XML nodes for each
-while ($row = @mysql_fetch_assoc($result)){
+while ($row = mysql_fetch_assoc($result)){
   // Add to XML document node
   echo '<marker ';
   echo 'name="' . parseToXML($row['name']) . '" ';
