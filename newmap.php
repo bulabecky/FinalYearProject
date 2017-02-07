@@ -18,7 +18,7 @@ if (mysqli_connect_errno())
         </style>
         <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
-    </script>>
+    </script>
         <script type="text/javascript">
             //Sample code written by August Li
             var icon = new google.maps.MarkerImage("http://maps.google.com/mapfiles/ms/micons/blue.png",
