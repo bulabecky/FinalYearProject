@@ -7,13 +7,11 @@ $node = $doc->create_element("markers");
 $parnode = $doc->append_child($node);
 
 // Opens a connection to a MySQL server
-$con = mysqli_connect("localhost","$username","$password","$database");
-
-// Check connection
+$connection = mysqli_connect ('localhost', $username, $password);
 if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
+}
 
 // Set the active MySQL database
 $db_selected = mysqli_select_db($database, $connection);
