@@ -1,8 +1,25 @@
 <?php
-$conn = mysql_connect("178.62.80.200", "root", "Beckyboo4") or die(mysql_error());
-mysql_select_db("FYP") or die(mysql_error());
-?>
 
+ // this will avoid mysql_connect() deprecation error.
+ error_reporting( ~E_DEPRECATED & ~E_NOTICE );
+ // but I strongly suggest you to use PDO or MySQLi.
+ 
+ define('DBHOST', 'localhost');
+ define('DBUSER', 'root');
+ define('DBPASS', 'Beckyboo4');
+ define('DBNAME', 'FYP');
+ 
+ $conn = mysqli_connect(DBHOST,DBUSER,DBPASS);
+ $dbcon = mysqli_select_db(DBNAME);
+ 
+ if ( !$conn ) {
+  die("Connection failed : " . mysqli_error());
+ }
+ 
+ if ( !$dbcon ) {
+  die("Database Connection failed : " . mysqli_error());
+ }
+ ?>
     <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
