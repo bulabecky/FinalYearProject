@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Registration</title>
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="style1.css" />
 </head>
 <body>
     <!DOCTYPE html>
