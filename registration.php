@@ -118,7 +118,7 @@ VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
     }else{
 ?>
 <div class="form">
-<h1>Registration</h1>
+<h1 style="color:white;">Registration</h1>
 <form name="registration" action="" method="post">
 <input type="text" name="username" placeholder="Username" required />
 <input type="email" name="email" placeholder="Email" required />
