@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link href="bootstrap.min.css" rel="stylesheet">	
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     
+     <title>Cosan Ceol</title>
+  </head>
+  <body>
+ 
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+     
+      <a class="navbar-brand" href="#"><img src="logo.png" class="img-thumbnail" width="45"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ulster <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+			  <li><a href="antrim.html">Antrim</a></li>
+			  <li><a href="#">Armagh</a></li>
+			  <li><a href="#">Cavan</a></li>
+			  <li><a href="#">Derry</a></li>
+			  <li><a href="donegal.html">Donegal</a></li>
+			  <li><a href="#">Down</a></li>
+			  <li><a href="#">Fermanagh</a></li>
+			  <li><a href="#">Monaghan</a></li>
+			  <li><a href="#">Tyrone</a></li>
+         </ul>
+            <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Munster <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Clare</a></li>
+            <li><a href="#">Cork</a></li>
+            <li><a href="#">Kerry</a></li>
+            <li><a href="#">Limerick</a></li>
+            <li><a href="#">Tipperary</a></li>
+            <li><a href="#">Waterford</a></li>
+          </ul>
+          </li>
+           <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Leinster<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Carlow</a></li>
+            <li><a href="#">Dublin</a></li>
+            <li><a href="#">Kildare</a></li>
+            <li><a href="#">Kilkenny</a></li>
+            <li><a href="#">Laois</a></li>
+            <li><a href="#">Longford</a></li>
+            <li><a href="#">Louth</a></li>
+            <li><a href="#">Meath</a></li>
+            <li><a href="#">Offaly</a></li>
+            <li><a href="#">Westmeath</a></li>
+            <li><a href="#">Wexford</a></li>
+            <li><a href="#">Wicklow</a></li>
+          </ul>
+          </li>
+           <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Connacht <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Galway</a></li>
+            <li><a href="#">Leitrim</a></li>
+            <li><a href="#">Mayo</a></li>
+            <li><a href="#">Roscommon</a></li>
+            <li><a href="#">Sligo</a></li>
+          </ul>
+          </li>
+          </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="registration.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <div id="map">
+        <script>
+         function initMap() {
+        var Donegal = {lat: 54.6549, lng: -8.1041};
+        var Derry = {lat: 55.006763, lng: -7.318268};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: Donegal,
+
+        });
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Clonmany Festival</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Clonmany Festival</b> is Irelands longest running (49 years and counting!) and best known family festival and is situated in the' + ' beautiful village of Clonmany in the Inishowen Peninsula.' +
+            '</div>'+
+            '</div>';
+            
+        var contentString2 ='<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">The Undertones</h1>'+
+            '<div id-"bodyContent">'+
+            '<p><b>The Undertones</b> are a punk rock/new wave band formed in Derry, Northern Ireland, in 1974.' +
+            'From 1975 to 1983, the Undertones consisted of Feargal Sharkey (vocals), John ONeill (rhythm guitar, vocals), Damian ONeill (lead guitar, vocals), Michael Bradley (bass, vocals) and Billy Doherty (drums).'+
+            'Much of the earlier Undertones material drew influence from punk rock and new wave; the Undertones also incorporated elements of rock, glam rock and post-punk into material released after 1979, before citing soul and Motown as the influence for the material released upon their final album.' +
+            '<iframe width="560" height="315" src="https://www.youtube.com/embed/PinCg7IGqHg" frameborder="0" allowfullscreen></iframe>'+
+            '</iframe>'+
+            '</div>'+
+            '<div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: (contentString)
+        });
+             var infowindow2 = new google.maps.InfoWindow({
+          content: (contentString2)
+        });
+
+        var marker = new google.maps.Marker({
+          position: Donegal,
+          map: map,
+          title: 'Donegal'
+        });
+        var marker2 = new google.maps.Marker({
+          position: Derry,
+          map: map,
+          title: 'Derry'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+        marker2.addListener('click', function() {
+          infowindow2.open(map, marker2);
+        });
+      }
+</script>
+ <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap"
+    </script>
+      </div>
+	  <div id="history">
+	  <h3 style="color: green">About Cosan Ceol</h3>
+	  <p style="color: green">Ireland is a country rich in history, and Irish Traditional Music is a great part of this.</p>
+	  <p style="color: green">Cosan Ceol will allow you to travel around Ireland, learning all about different Bands influenced by the music culture of their homeland</p>
+    </div>
+  
+    
+  </body>
+</html>

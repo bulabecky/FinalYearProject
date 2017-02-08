@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+ <Placemark>
+      <name>Dublin</name>
+      <description>test test test</description>
+      <Point><coordinates>53.3498,-6.2603</coordinates>
+      </Point>
+    </Placemark>
+    </kml>
