@@ -23,7 +23,9 @@
 </head>
 
 <body>
-  <a href="#SignIn" class="btn btn-lg btn-dark">test</a>
+ <button type="button" class="btn btn-lg btn-dark">
+  <span class="glyphicon glyphicon-home" aria-hidden="true"><a href="../index.html"> Home</a></span>
+</button>
     <!-- Navigation -->
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
