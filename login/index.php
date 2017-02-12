@@ -27,7 +27,7 @@ include("auth.php");
 </head>
 
 <body>
-  <p>Welcome <?php echo $_SESSION['username']; ?>!</p>
+  <p style="color: floralwhite;">Welcome <?php echo $_SESSION['username']; ?>!</p>
 <a href="logout.php">Logout</a>
 </div>
     <!-- Navigation -->
