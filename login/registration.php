@@ -23,7 +23,7 @@
 </head>
 
 <body>
-  <button type="button" class="btn btn-lg btn-dark" aria-label="Left Align">
+  <button type="button" class="btn btn-lg btn-dark">
   <span class="glyphicon glyphicon-home" aria-hidden="true"><a href="../index.html"> Home</a></span>
 </button>
     <!-- Navigation -->
