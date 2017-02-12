@@ -9,10 +9,10 @@
     <title>Cosán Ceol</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css1/bootstrap1.min.css" rel="stylesheet">
+    <link href="../css1/bootstrap1.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css1/stylish-portfolio.css" rel="stylesheet">
+    <link href="../css1/stylish-portfolio.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
