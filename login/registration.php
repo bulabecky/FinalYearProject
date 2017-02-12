@@ -23,8 +23,8 @@
 </head>
 
 <body>
-  <button type="button" class="btn btn-default" aria-label="Left Align">
-  <span class="glyphicon glyphicon-home" aria-hidden="true"><a href="../index.htmk"> Home</a></span>
+  <button type="button" class="btn btn-lg btn-dark" aria-label="Left Align">
+  <span class="glyphicon glyphicon-home" aria-hidden="true"><a href="../index.html"> Home</a></span>
 </button>
     <!-- Navigation -->
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
