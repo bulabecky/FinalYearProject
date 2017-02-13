@@ -25,4 +25,21 @@
 			<coordinates>-8.4863,51.8969,0</coordinates>
 		</Point>
 	</Placemark>
+
+	<Placemark>
+		<name>Test Placemarker</name>
+		<description>polygon bitches</description>
+		<Polygon>
+			<outerBoundaryIs>
+			<LinerRing>
+				<tessellate>1</tessellate>
+					<coordinates>
+		              -7.4116,55.2628,0
+			          -7.4560,55.1366,0
+			          -7.2631,55.2949,0
+					</coordinates>
+			</LinerRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
 </KML>
