@@ -44,6 +44,46 @@
 	</Placemark>
 
 	<Placemark>
+		<name>Altan</name>
+		<description>
+        <![CDATA[<div style="font-size:larger">
+          <div>
+            <div style="width: 500px; font-size: 12px;">
+               <p><b>The Irish Rovers</b> are a group of Irish musicians, half of whom now live in Canada. <br>The Canadian Irish folk group created in 1963 and named after <br>the traditional song "The Irish Rover" is best known for their <br>international television series, contributing to the popularization <br>of Irish Music in North America, and for the songs<br> "The Unicorn", "Wasn't That A Party", "The <br>Orange and the Green", "Whiskey on a Sunday",<br> "Lily The Pink" and "The Black Velvet Band".<br>The primary voices heard in the group's early songs <br>were Will Millar (tenor), Jimmy Ferguson (baritone),<br> George Millar and Joe Millar, and in the last twenty years, also <br>John Reynolds and Ian Millar. <br>Wilcil McDowell's accordion has been<br> a signature sound of the band throughout <br>their more than fifty years.
+				<br>All but one of the band members are from Ireland.<br> Founding member George Millar and his cousin Ian are both from Ballymena, <br>original member Wilcil McDowell is from Larne, Sean <br>O'Driscoll from Cork, Gerry O'Connor from Dundalk, <br>with Morris Crum from Carnlough and percussionist Fred Graham from Belfast. <br>Flute/whistle player Geoffrey Kelly was born in Dumfries, Scotland.
+				<br>In the 1980s, the group briefly renamed itself The Rovers.<br> During this period, their "Wasn't That a Party" <br>led to crossover success in the country rock genre.
+				<br>The Irish Rovers have represented Canada at five World Expos.
+			</p>
+            </div>
+            <div style="font-size: 11px;">
+              <a target="_blank" href="https://www.youtube.com/watch?v=s04TE7cWZlY">
+                https://www.youtube.com/watch?v=s04TE7cWZlY</a><br>
+            </div><br>
+            <div style="margin-left: auto; margin-right:auto;">
+              <object height="175" width="500">
+                <param value="http://www.youtube.com/v/s04TE7cWZlY" name="movie">
+                <param value="transparent" name="wmode">
+                <embed wmode="transparent" type="application/x-shockwave-flash"
+                   src="http://www.youtube.com/v/s04TE7cWZlY" height="175"
+                   width="212">
+               </object>
+             </div>
+           </div>
+          </div>
+          <div style="font-size: smaller; margin-top: 1em;">Saved from 
+            <a href="http://maps.google.com/ig/add?synd=mpl&pid=mpl&moduleurl=
+                http:%2F%2Fwww.google.com%2Fig%2Fmodules%2Fmapplets-youtube.xml&hl=en&gl=us">
+                YouTubeVideos</a>
+          </div>
+         ]]>
+      </description>
+      <styleUrl>#icon</styleUrl> 
+		<Point>
+			<coordinates>-8.23194,55.05028,0 </coordinates>
+		</Point>
+	</Placemark>
+
+	<Placemark>
 		<name>Test Placemarker</name>
 		<description>Test Test Test</description>
 
