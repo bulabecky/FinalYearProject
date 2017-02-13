@@ -33,7 +33,7 @@ body {
 h3 {
     color: aliceblue;
 }
-h2 .heading {
+h2 #heading {
     color: floralwhite;
 }
 h2 {
@@ -241,7 +241,4 @@ footer {
   position: fixed;
   bottom: 5px;
   right: 5px;
-}
-.heading {
-    color:floralwhite;
 }
