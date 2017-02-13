@@ -56,15 +56,15 @@
 			</p>
             </div>
             <div style="font-size: 11px;">
-              <a target="_blank" href="https://www.youtube.com/watch?v=s04TE7cWZlY">
-                https://www.youtube.com/watch?v=s04TE7cWZlY</a><br>
+              <a target="_blank" href="https://www.youtube.com/watch?v=Qqs4EbU02As">
+                https://www.youtube.com/watch?v=Qqs4EbU02As</a><br>
             </div><br>
             <div style="margin-left: auto; margin-right:auto;">
               <object height="175" width="500">
-                <param value="http://www.youtube.com/v/s04TE7cWZlY" name="movie">
+                <param value="http://www.youtube.com/v/Qqs4EbU02As" name="movie">
                 <param value="transparent" name="wmode">
                 <embed wmode="transparent" type="application/x-shockwave-flash"
-                   src="http://www.youtube.com/v/s04TE7cWZlY" height="175"
+                   src="http://www.youtube.com/v/Qqs4EbU02As" height="175"
                    width="212">
                </object>
              </div>
@@ -79,7 +79,7 @@
       </description>
       <styleUrl>#icon</styleUrl> 
 		<Point>
-			<coordinates>-8.23194,55.05028,0 </coordinates>
+			<coordinates>-6.2072,54.7195,0 </coordinates>
 		</Point>
 	</Placemark>
 
