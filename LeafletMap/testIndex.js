@@ -19,5 +19,8 @@ var mymap = L.map('mapid').setView([53.350140, -6.266155], 13);
   mymap.on('click', onMapClick);   
 
   var kmlLayer = new L.KML ("test.kml", {async:true});
+  kmlLayer.on("loaded", function(e) {
+    mymap.fitBounds(e.target.getBounds());
+  });
 
   mymap.addLayer(kmlLayer); 
