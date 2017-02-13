@@ -2,19 +2,23 @@
 <KML XMLNS="HTTP://WWW.OPENINGS.NET/KML/2.2">
 
 	<Placemark>
-		<name>Altan</name>
-		<description>
-		<p>Altan are a Irish Folk Music band formed in Co Donegal in 1987 by lead vocalist Mairéad Ní Mhaonaigh and her husband the late Frankie Kennedy (1955-1994). They brought Donegal’s rich collection of Irish language songs and instrumental styles to audiences around the world and they remain the world’s foremost Irish traditional group with over a million records sold. They were the first traditional group to be signed to a major label when they signed with Virgin Records in 1994. Altan have established a large following in Ireland, UK, Europe, United States, Canada and even in Japan.They have worked with a wide variety of well-known musicians including Dolly Parton, Enya, The Chieftains, Bonnie Raitt, Alison Krauss and many others. Members: Mairéad Ní Mhaonaigh, Ciarán Curran, Ciarán Tourish, Mark Kelly, Dáithí Sproule, Martin Tourish. Past members: Frankie Kennedy, Paul OShaughnessy, Dermot Byrne.</p>
-		<div style="font-size: 11px;">
-              <a target="_blank" href="https://www.youtube.com/watch?v=s04TE7cWZlY">
-                https://www.youtube.com/watch?v=s04TE7cWZlY</a><br>
+	<description>
+        <![CDATA[<div style="font-size:larger">
+          <div>
+            <div style="width: 212px; font-size: 12px;">
+              <b>Altan</b>
+              <br><p>Test</p>
+            </div>
+            <div style="font-size: 11px;">
+              <a target="_blank" href="https://www.youtube.com/watch?v=1KmDmMHkcWc">
+                https://www.youtube.com/watch?v=1KmDmMHkcWc</a><br>
             </div><br>
             <div style="margin-left: auto; margin-right:auto;">
               <object height="175" width="212">
-                <param value="http://www.youtube.com/v/s04TE7cWZlY" name="movie">
+                <param value="http://www.youtube.com/v/1KmDmMHkcWc" name="movie">
                 <param value="transparent" name="wmode">
                 <embed wmode="transparent" type="application/x-shockwave-flash"
-                   src="http://www.youtube.com/v/s04TE7cWZlY" height="175"
+                   src="http://www.youtube.com/v/1KmDmMHkcWc" height="175"
                    width="212">
                </object>
              </div>
@@ -24,7 +28,9 @@
             <a href="http://maps.google.com/ig/add?synd=mpl&pid=mpl&moduleurl=
                 http:%2F%2Fwww.google.com%2Fig%2Fmodules%2Fmapplets-youtube.xml&hl=en&gl=us">
                 YouTubeVideos</a>
-          </div></description>
+          </div>
+         ]]>
+      </description>
 		<Point>
 			<coordinates>-8.23194,55.05028,0</coordinates>
 		</Point>
