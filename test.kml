@@ -31,8 +31,8 @@
           </div>
          ]]>
       </description>
-		<Points>
-		<coordinates>-8.23194, 55.05028, 0 </coordinates>
+		<Point>
+			<coordinates>-8.23194,55.05028,0 </coordinates>
 		</Point>
 	</Placemark>
 
