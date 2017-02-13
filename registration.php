@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset="utf-8">
+<title>Registration</title>
+<link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
   <head>
       <link href="bootstrap.min.css" rel="stylesheet">	
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -86,73 +94,38 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-    <div id="map">
-        <script>
-         function initMap() {
-        var Donegal = {lat: 54.6549, lng: -8.1041};
-        var Derry = {lat: 55.006763, lng: -7.318268};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: Donegal,
-
-        });
-        var contentString = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Clonmany Festival</h1>'+
-            '<div id="bodyContent">'+
-            '<p><b>Clonmany Festival</b> is Irelands longest running (49 years and counting!) and best known family festival and is situated in the' + ' beautiful village of Clonmany in the Inishowen Peninsula.' +
-            '</div>'+
-            '</div>';
-            
-        var contentString2 ='<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">The Undertones</h1>'+
-            '<div id-"bodyContent">'+
-            '<p><b>The Undertones</b> are a punk rock/new wave band formed in Derry, Northern Ireland, in 1974.' +
-            'From 1975 to 1983, the Undertones consisted of Feargal Sharkey (vocals), John ONeill (rhythm guitar, vocals), Damian ONeill (lead guitar, vocals), Michael Bradley (bass, vocals) and Billy Doherty (drums).'+
-            'Much of the earlier Undertones material drew influence from punk rock and new wave; the Undertones also incorporated elements of rock, glam rock and post-punk into material released after 1979, before citing soul and Motown as the influence for the material released upon their final album.' +
-            '<iframe width="560" height="315" src="https://www.youtube.com/embed/PinCg7IGqHg" frameborder="0" allowfullscreen></iframe>'+
-            '</iframe>'+
-            '</div>'+
-            '<div>';
-
-        var infowindow = new google.maps.InfoWindow({
-          content: (contentString)
-        });
-             var infowindow2 = new google.maps.InfoWindow({
-          content: (contentString2)
-        });
-
-        var marker = new google.maps.Marker({
-          position: Donegal,
-          map: map,
-          title: 'Donegal'
-        });
-        var marker2 = new google.maps.Marker({
-          position: Derry,
-          map: map,
-          title: 'Derry'
-        });
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
-        });
-        marker2.addListener('click', function() {
-          infowindow2.open(map, marker2);
-        });
-      }
-</script>
- <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap"
-    </script>
-      </div>
-	  <div id="history">
-	  <h3 style="color: green">About Cosan Ceol</h3>
-	  <p style="color: green">Ireland is a country rich in history, and Irish Traditional Music is a great part of this.</p>
-	  <p style="color: green">Cosan Ceol will allow you to travel around Ireland, learning all about different Bands influenced by the music culture of their homeland</p>
-    </div>
-  
-    
-  </body>
+<?php
+require('db.php');
+// If form submitted, insert values into the database.
+if (isset($_REQUEST['username'])){
+        // removes backslashes
+	$username = stripslashes($_REQUEST['username']);
+        //escapes special characters in a string
+	$username = mysqli_real_escape_string($con,$username); 
+	$email = stripslashes($_REQUEST['email']);
+	$email = mysqli_real_escape_string($con,$email);
+	$password = stripslashes($_REQUEST['password']);
+	$password = mysqli_real_escape_string($con,$password);
+	$trn_date = date("Y-m-d H:i:s");
+        $query = "INSERT into `users` (username, password, email, trn_date)
+VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
+        $result = mysqli_query($con,$query);
+        if($result){
+            echo "<div class='form'>
+<h3>You are registered successfully.</h3>
+<br/>Click here to <a href='login.php'>Login</a></div>";
+        }
+    }else{
+?>
+<div class="form">
+<h1 style="color:white;">Registration</h1>
+<form name="registration" action="" method="post">
+<input type="text" name="username" placeholder="Username" required />
+<input type="email" name="email" placeholder="Email" required />
+<input type="password" name="password" placeholder="Password" required />
+<input type="submit" name="submit" value="Register" />
+</form>
+</div>
+<?php } ?>
+</body>
 </html>
