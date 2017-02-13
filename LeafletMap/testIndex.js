@@ -16,13 +16,4 @@ var mymap = L.map('mapid').setView([53.350140, -6.266155], 13);
     }
   mymap.on('click', onMapClick);    
 
-  var MusicIcon = L.Icon.extend({
-    options: {
-        iconSize:     [38, 95],
-        iconAnchor:   [22, 94],
-        popupAnchor:  [-3, -76]
-    }
-});
-  ShowBand = new MusicIcon({iconUrl: 'showband.png'});
-  L.marker([53.35, -6.25], {icon: ShowBand}).addTo(map).bindPopup("I am a green leaf.");
-    
+var marker = L.marker([53.35096,-6.25465]).addTo(mymap);
