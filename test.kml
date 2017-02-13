@@ -2,12 +2,12 @@
 <KML XMLNS="HTTP://WWW.OPENINGS.NET/KML/2.2">
 
 	<Placemark>
-	<description>
+		<name>Altan</name>
+		<description>
         <![CDATA[<div style="font-size:larger">
           <div>
             <div style="width: 212px; font-size: 12px;">
-              <b>Altan</b>
-              <br><p>Test</p>
+              <b>Clonmany Festival</b>
             </div>
             <div style="font-size: 11px;">
               <a target="_blank" href="https://www.youtube.com/watch?v=1KmDmMHkcWc">
@@ -31,8 +31,8 @@
           </div>
          ]]>
       </description>
-		<Point>
-			<coordinates>-8.23194,55.05028,0</coordinates>
+		<Points>
+		<coordinates>-8.23194, 55.05028, 0 </coordinates>
 		</Point>
 	</Placemark>
 
@@ -54,7 +54,7 @@
 	</Placemark>
 
 	<Placemark>
-		<name style= "color:Red;">Test Placemarker</name>
+		<name>Test Placemarker</name>
 		<description>Test 3</description>
 
 		<Point>
