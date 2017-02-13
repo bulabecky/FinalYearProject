@@ -5,7 +5,7 @@
 		<description>Test Test Test</description>
 
 		<Point>
-			<coordinates>54.9558,-7.7343,0</coordinates>
+			<coordinates>-7.7343,54.9558,0</coordinates>
 		</Point>
 	</Placemark>
 </KML>
