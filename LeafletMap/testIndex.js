@@ -16,4 +16,8 @@ var mymap = L.map('mapid').setView([53.350140, -6.266155], 13);
         .openOn(mymap);
         var LatLong = e.latlng.toString()
     }
-  mymap.on('click', onMapClick);    
+  mymap.on('click', onMapClick);   
+
+  var kmlLayer = new L.KML ("test.kml", {async:true});
+
+  mymap.addLayer(kmlLayer); 
