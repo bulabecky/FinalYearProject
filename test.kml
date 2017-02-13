@@ -8,4 +8,12 @@
 			<coordinates>-7.7343,54.9558,0</coordinates>
 		</Point>
 	</Placemark>
+	<Placemark>
+		<name>Test Placemarker</name>
+		<description>Test 2</description>
+
+		<Point>
+			<coordinates>-6.5918,53.3813,0</coordinates>
+		</Point>
+	</Placemark>
 </KML>
