@@ -16,4 +16,13 @@
 			<coordinates>-6.5918,53.3813,0</coordinates>
 		</Point>
 	</Placemark>
+
+	<Placemark>
+		<name>Test Placemarker</name>
+		<description>Test 3</description>
+
+		<Point>
+			<coordinates>-8.4863,51.8969,0</coordinates>
+		</Point>
+	</Placemark>
 </KML>

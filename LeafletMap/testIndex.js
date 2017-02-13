@@ -5,7 +5,7 @@ var mymap = L.map('mapid').setView([53.350140, -6.266155], 13);
       attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
     }).addTo(mymap);
 
-    var marker = L.marker([53.350140, -6.266155]).addTo(mymap);
+    
 
     var popup = L.popup(); 
 
