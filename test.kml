@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding= "UTF-8"?>
 <KML XMLNS="HTTP://WWW.OPENINGS.NET/KML/2.2">
+
+	<Placemark>
+		<name>Atlan</name>
+		<description></description>
+		<Point>
+			<coordinates>-8.23194,55.05028,0</coordinates>
+		</Point>
+	</Placemark>
+
 	<Placemark>
 		<name>Test Placemarker</name>
 		<description>Test Test Test</description>
