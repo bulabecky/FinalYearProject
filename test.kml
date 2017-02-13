@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding= "UTF-8"?>
 <KML XMLNS="HTTP://WWW.OPENINGS.NET/KML/2.2">
 	<Placemark>
@@ -8,4 +9,16 @@
 			<coordinates>53.35096, -6.25465</coordinates>
 		</Point>
 	</Placemark>
+=======
+<?xml version="1.0" encoding= "UTF-8"?>
+<KML XMLNS="HTTP://WWW.OPENINGS.NET/KML/2.2">
+	<Placemark>
+		<name>Test Placemarker</name>
+		<description>Test Test Test</description>
+
+		<Point>
+			<coordinates>53.35096, -6.25465</coordinates>
+		</Point>
+	</Placemark>
+>>>>>>> a5e8b2d004b6689f209f868785baed715cc53464
 </kml>
