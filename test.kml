@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding= "UTF-8"?>
 <KML XMLNS="HTTP://WWW.OPENINGS.NET/KML/2.2">
-
+<Style id="icon">
+    <IconStyle>
+        <Icon>
+          <href>showband.png</href>
+        </Icon>
+    </IconStyle>
+</Style>
 	<Placemark>
 		<name>Altan</name>
 		<description>
@@ -31,6 +37,7 @@
           </div>
          ]]>
       </description>
+      <styleUrl>#icon</styleUrl> 
 		<Point>
 			<coordinates>-8.23194,55.05028,0 </coordinates>
 		</Point>
