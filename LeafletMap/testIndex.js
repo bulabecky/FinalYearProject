@@ -16,4 +16,4 @@ var mymap = L.map('mapid').setView([53.350140, -6.266155], 13);
     }
   mymap.on('click', onMapClick);    
 
-var marker = L.marker([53.35096,-6.25465]).addTo(mymap);
+var marker = L.marker([53.35096,-6.25464]).addTo(mymap);
