@@ -35,15 +35,15 @@
               <b>The Spaghetti Film</b>
             </div>
             <div style="font-size: 11px;">
-              <a target="_blank" href="https://youtu.be/dQw4w9WgXcQ">
-                http://www.youtube.com/?v=FICUvrVlyXc</a><br>
+              <a target="_blank" href="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                "https://www.youtube.com/embed/dQw4w9WgXcQ"</a><br>
             </div><br>
             <div style="margin-left: auto; margin-right:auto;">
               <object height="175" width="212">
-                <param value="https://youtu.be/dQw4w9WgXcQ" name="movie">
+                <param value="https://www.youtube.com/embed/dQw4w9WgXcQ" name="movie">
                 <param value="transparent" name="wmode">
                 <embed wmode="transparent" type="application/x-shockwave-flash"
-                   src="https://youtu.be/dQw4w9WgXcQ" height="175"
+                   src=https://www.youtube.com/embed/dQw4w9WgXcQ height="175"
                    width="212">
                </object>
              </div>
