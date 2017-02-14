@@ -33,8 +33,11 @@ body {
 h3 {
     color: aliceblue;
 }
-h2 {
+#heading {
     color: floralwhite;
+}
+h2 {
+    color: red;
 }
 /* Custom Button Styles */
 
