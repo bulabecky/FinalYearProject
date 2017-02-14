@@ -3,7 +3,7 @@
 <Style id="icon">
     <IconStyle>
         <Icon>
-          <href>showband.png</href>
+          <href>../showband.png</href>
         </Icon>
     </IconStyle>
 </Style>
