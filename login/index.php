@@ -29,9 +29,7 @@ include("auth.php");
 <body>
   <p style="color: floralwhite;">Welcome <?php echo $_SESSION['username']; ?>!</p>
 <a href="logout.php">Logout</a>
-</div>
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+   <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
@@ -55,10 +53,11 @@ include("auth.php");
             </li>
         </ul>
     </nav>
-<body>
+
+    <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <h1>Cosán Ceol</h1>
+            <h1 id="heading">Cosán Ceol</h1>
             <h3>Journey through Irish Music</h3>
             <br>
             <a href="#map" class="btn btn-dark btn-lg">Start Searching</a>
@@ -83,18 +82,17 @@ include("auth.php");
     <section id="SignIn">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <a href="login.php" class="btn btn-lg btn-dark">Log In</a>
-                    <a href="#" class="btn btn-lg btn-dark">Register Me!</a>
+                    <a href="login/login.php" class="btn btn-lg btn-dark">Log In</a>
+                    <a href="login/registration.php" class="btn btn-lg btn-dark">Register Me!</a>
                 </div>
             </div>
         </section>
 
-    
-   <!-- Map -->
+    <!-- Map -->
     <section id="map" class="map">
         <div id="mapid"  style="width: 100%; height: 700px;"></div>
-        <script src="../LeafletMap/KML.js"></script>
-        <script src="../LeafletMap/testIndex.js"></script>
+        <script src="../../LeafletMap/KML.js"></script>
+        <script src="../../LeafletMap/testIndex.js"></script>
     </section>
 
     <!-- Footer -->
@@ -210,7 +208,7 @@ include("auth.php");
         // Enable map zooming with mouse scroll when the user clicks the map
     $('.map').on('click', onMapClickHandler);
     </script>
-<div class="form">
-</div>
+
 </body>
+
 </html>
