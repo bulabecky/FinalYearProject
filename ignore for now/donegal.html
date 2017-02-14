@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link href="bootstrap.min.css" rel="stylesheet">
+	 <script src="map.js"></script>	
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <title>Cosan Ceol</title>
+  </head>
+  <body>
+ 
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+     
+      <a class="navbar-brand" href="#"><img src="logo.png" class="img-thumbnail" width="45"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ulster <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+			  <li><a href="antrim.html">Antrim</a></li>
+			  <li><a href="#">Armagh</a></li>
+			  <li><a href="#">Cavan</a></li>
+			  <li><a href="#">Derry</a></li>
+			  <li><a href="donegal.html">Donegal</a></li>
+			  <li><a href="#">Down</a></li>
+			  <li><a href="#">Fermanagh</a></li>
+			  <li><a href="#">Monaghan</a></li>
+			  <li><a href="#">Tyrone</a></li>
+         </ul>
+            <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Munster <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Clare</a></li>
+            <li><a href="#">Cork</a></li>
+            <li><a href="#">Kerry</a></li>
+            <li><a href="#">Limerick</a></li>
+            <li><a href="#">Tipperary</a></li>
+            <li><a href="#">Waterford</a></li>
+          </ul>
+          </li>
+           <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Leinster<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Carlow</a></li>
+            <li><a href="#">Dublin</a></li>
+            <li><a href="#">Kildare</a></li>
+            <li><a href="#">Kilkenny</a></li>
+            <li><a href="#">Laois</a></li>
+            <li><a href="#">Longford</a></li>
+            <li><a href="#">Louth</a></li>
+            <li><a href="#">Meath</a></li>
+            <li><a href="#">Offaly</a></li>
+            <li><a href="#">Westmeath</a></li>
+            <li><a href="#">Wexford</a></li>
+            <li><a href="#">Wicklow</a></li>
+          </ul>
+          </li>
+           <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Connacht <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Galway</a></li>
+            <li><a href="#">Leitrim</a></li>
+            <li><a href="#">Mayo</a></li>
+            <li><a href="#">Roscommon</a></li>
+            <li><a href="#">Sligo</a></li>
+          </ul>
+          </li>
+          </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+ <div id="map">
+        <script>
+         function initMap() {
+        var Gweedore = {lat: 55.05028, lng: -8.23194};
+        var Gweedore2 = {lat: 55.06592, lng: -8.23807};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 9,
+          center: Gweedore,
+
+        });
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Altan</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Altan</b> are a Irish Folk Music band formed in Co Donegal in 1987 by lead vocalist Mairéad Ní Mhaonaigh and her husband the late Frankie Kennedy (1955-1994).'+
+            'They brought Donegal’s rich collection of Irish language songs and instrumental styles to audiences around the world and they remain the world’s foremost Irish traditional group with over a million records sold.'+
+            'They were the first traditional group to be signed to a major label when they signed with Virgin Records in 1994. Altan have established a large following in Ireland, UK, Europe, United States, Canada and even in Japan.'+
+            'They have worked with a wide variety of well-known musicians including Dolly Parton, Enya, The Chieftains, Bonnie Raitt, Alison Krauss and many others.'+
+            'Members: Mairéad Ní Mhaonaigh, Ciarán Curran, Ciarán Tourish, Mark Kelly, Dáithí Sproule, Martin Tourish.'+
+            'Past members:	Frankie Kennedy, Paul OShaughnessy, Dermot Byrne.</p>'+
+             '<iframe width="560" height="315" src="https://www.youtube.com/embed/s04TE7cWZlY" frameborder="0" allowfullscreen></iframe>'+
+            '</div>'+
+            '</div>';
+             
+             var contentString2 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Clannad</h1>'+
+            '<div id="bodyContent">'+
+                 '<p><b>Clannad</b> are an Irish band formed in 1970 in Gweedore, County Donegal.'+
+                 'Their music has been variously described as bordering on folk and folk rock, traditional Irish, Celtic and new-age, often incorporating elements of an even broader spectrum of smooth jazz and Gregorian chant.'+
+                 'After twelve years of success in the folk music industry, they shot to international recognition in 1982 with the release of the "Theme from Harrys Game", becoming the most successful band in the Celtic music genre.'+
+                 'They subsequently went on to bridge the gap between traditional Celtic music and pop music in the 1980s and 1990s with albums such as Macalla and Anam.'+
+                'Members: Ciarán Brennan, Moya Brennan, Pól Brennan, Noel Duggan'+
+                 'Past members	Pádraig Duggan (1949–2016), Enya Brennan</p>'+
+                 '<iframe width="560" height="315" src="https://www.youtube.com/embed/2KpNzalFKPo" frameborder="0" allowfullscreen></iframe>'+
+                 '</div>'+
+                 '</div>';
+
+            
+        var infowindow = new google.maps.InfoWindow({
+          content: (contentString)
+        });
+        var infowindow2 = new google.maps.InfoWindow({content: (contentString2)});
+        var marker = new google.maps.Marker({
+          position: Gweedore,
+          map: map,
+          title: 'Gweedore'
+        });
+        var marker2 = new google.maps.Marker ({position: Gweedore2, map:map, title: 'Gweedore'});
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+             marker2.addListener('click', function() {
+          infowindow2.open(map, marker2);
+        });
+      }
+</script>
+ <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
+    </script>
+      </div>
+	  <div id="history">
+	  <h3 style="color: green">About Cosan Ceol</h3>
+	  <p style="color: green">Ireland is a country rich in history, and Irish Traditional Music is a great part of this.</p>
+	  <p style="color: green">Cosan Ceol will allow you to travel around Ireland, learning all about different Bands influenced by the music culture of their homeland</p>
+    </div>
+  
+    
+  </body>
+</html>

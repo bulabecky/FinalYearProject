@@ -1,85 +1,7 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
- 		 <title>Cosán Ceol</title>
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link href="bootstrap.min.css" rel="stylesheet">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </head>
-
-<body>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="irishmusic_1.jpg" alt="irish music 1" width="12000" height="700">
-        <div class="carousel-caption">
-          <h3>test</h3>
-          <p>Test, test and test</p>
-        </div>      
-      </div>
-
-      <div class="item">
-        <img src="irishmusic_2.jpg" alt="irish music 2" width="12000" height="700">
-        <div class="carousel-caption">
-          <h3>test</h3>
-          <p>Test, test and test</p>
-        </div>      
-      </div>
-    
-      <div class="item">
-        <img src="irishmusic_3.jpg" alt="irish music 3" width="12000" height="700">
-        <div class="carousel-caption">
-          <h3>test</h3>
-          <p>Test, test and test</p>
-        </div>      
-      </div>
-  
-        
-     <div class="item">
-        <img src="irishmusic_4.jpg" alt="irish music 4" width="12000" height="700">
-        <div class="carousel-caption">
-          <h3>test</h3>
-          <p>Test, test and test</p>
-        </div>      
-      </div>
-          </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-</div>
-<div class="test">
-
-  	<img src= "newLogo.png" alt="Logo" class="center">
-    <button type="button" class="btn btn-success btn-block bottomaligned"><a href=map.html >Start Searching</a></button>
-
-    </div>
-</body>
-</html>
-=======
+<?php
+//include auth.php file on all secure pages
+include("auth.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,23 +13,23 @@
     <title>Cosán Ceol</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css1/bootstrap1.min.css" rel="stylesheet">
+    <link href="../css1/bootstrap1.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css1/stylish-portfolio.css" rel="stylesheet">
+    <link href="../css1/stylish-portfolio.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
-
-
-
 </head>
 
 <body>
+  <p style="color: floralwhite;">Welcome <?php echo $_SESSION['username']; ?>!</p>
+<a href="logout.php">Logout</a>
+</div>
     <!-- Navigation -->
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
@@ -133,8 +55,7 @@
             </li>
         </ul>
     </nav>
-
-    <!-- Header -->
+<body>
     <header id="top" class="header">
         <div class="text-vertical-center">
             <h1>Cosán Ceol</h1>
@@ -162,8 +83,8 @@
     <section id="SignIn">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <a href="login/login.php" class="btn btn-lg btn-dark">Log In</a>
-                    <a href="login/registration.php" class="btn btn-lg btn-dark">Register Me!</a>
+                    <a href="login.php" class="btn btn-lg btn-dark">Log In</a>
+                    <a href="#" class="btn btn-lg btn-dark">Register Me!</a>
                 </div>
             </div>
         </section>
@@ -287,8 +208,7 @@
         // Enable map zooming with mouse scroll when the user clicks the map
     $('.map').on('click', onMapClickHandler);
     </script>
-
+<div class="form">
+</div>
 </body>
-
 </html>
->>>>>>> 98959eaad8f442f3ce13cf71f91384bc0cde9b66
