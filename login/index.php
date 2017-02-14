@@ -70,7 +70,7 @@ include("auth.php");
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Cosán Ceol</h2>
+                    <h2 id="heading">Cosán Ceol</h2>
                     <p class="lead">Cosán ceol is an interactive map appliction highlighting Irish Music. </p>
                 </div>
             </div>
@@ -92,6 +92,7 @@ include("auth.php");
     <!-- Map -->
     <section id="map" class="map">
         <div id="mapid"  style="width: 100%; height: 700px;"></div>
+        <script src="../../LeafletMap/KML.js"></script>
         <script src="../../LeafletMap/testIndex.js"></script>
     </section>
 
