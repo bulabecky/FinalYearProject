@@ -12,14 +12,14 @@ include("auth.php");
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cosán Ceol</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="../css1/bootstrap1.min.css" rel="stylesheet">
+       <!-- Bootstrap Core CSS -->
+    <link href="css1/bootstrap1.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../css1/stylish-portfolio.css" rel="stylesheet">
+    <link href="css1/stylish-portfolio.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
@@ -90,6 +90,7 @@ include("auth.php");
         </section>
 
     <!-- Map -->
+   <!-- Map -->
     <section id="map" class="map">
         <div id="mapid"  style="width: 100%; height: 700px;"></div>
         <script src="../../LeafletMap/KML.js"></script>
