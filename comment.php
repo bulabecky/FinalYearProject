@@ -1,5 +1,5 @@
 <?php
-mysql_connect("localhost","root","Beckyboo4");
+mysqli_connect("localhost","root","Beckyboo4");
 mysql_select_db("register");
 error_reporting(E_ALL ^ E_NOTICE);
 $notify = "";
@@ -7,7 +7,7 @@ $name=$_POST['name'];
 $comment=$_POST['comment'];
 $submit=$_POST['submit'];
 if(isset($_POST['notify_box'])){ $notify = $_POST['notify_box']; }
-$dbLink = mysql_connect("localhost", "root", "Beckyboo4");
+$dbLink = mysqli_connect("localhost", "root", "Beckyboo4");
     mysql_query("SET character_set_client=utf8", $dbLink);
     mysql_query("SET character_set_connection=utf8", $dbLink);
  
@@ -23,7 +23,7 @@ if($submit)
     }
 }
 
-$dbLink = mysql_connect("localhost", "root", "Beckyboo4");
+$dbLink = mysqli_connect("localhost", "root", "Beckyboo4");
 mysql_query("SET character_set_results=utf8", $dbLink);
 mb_language('uni');
 mb_internal_encoding('UTF-8');
