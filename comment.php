@@ -1,5 +1,5 @@
 <?php
-include("login/db.php");
+include("db.php");
 $select=mysqli_query("select * from commenttable");
 while($row=mysqli_fetch_array($select))
 {
