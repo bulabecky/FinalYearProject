@@ -1,6 +1,6 @@
 <?php
 mysqli_connect("localhost","root","Beckyboo4");
-mysql_select_db("register");
+mysqli_select_db("register");
 error_reporting(E_ALL ^ E_NOTICE);
 $notify = "";
 $name=$_POST['name'];
@@ -8,14 +8,14 @@ $comment=$_POST['comment'];
 $submit=$_POST['submit'];
 if(isset($_POST['notify_box'])){ $notify = $_POST['notify_box']; }
 $dbLink = mysqli_connect("localhost", "root", "Beckyboo4");
-    mysql_query("SET character_set_client=utf8", $dbLink);
-    mysql_query("SET character_set_connection=utf8", $dbLink);
+    mysqli_query("SET character_set_client=utf8", $dbLink);
+    mysqli_query("SET character_set_connection=utf8", $dbLink);
  
 if($submit)
 {
     if($name&&$comment)
     {
-        $insert=mysql_query("INSERT INTO comment (name,comment) VALUES ('$name','$comment') ");
+        $insert=mysqli_query("INSERT INTO comment (name,comment) VALUES ('$name','$comment') ");
     }
     else
     {
@@ -29,7 +29,7 @@ mb_language('uni');
 mb_internal_encoding('UTF-8');
  
 $sql = "SELECT * FROM comment";
-$getquery = mysql_query($sql);
+$getquery = mysqli_query($sql);
 ?>
 <html>
 <head>
@@ -54,7 +54,7 @@ body { margin: auto 48px; }
             </thead>
             <tbody>
 <?php
-while($row = mysql_fetch_array($getquery)) {
+while($row = mysqli_fetch_array($getquery)) {
     echo '<td>' . $row['name'] . '</td>';
     echo '<td>' . $row['comment'] . '</td>';
 }
