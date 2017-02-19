@@ -1,5 +1,7 @@
 <?php
-require("login/db.php")
+mysqli_connect("localhost","root","Beckyboo4");
+mysqli_select_db("register");
+error_reporting(E_ALL ^ E_NOTICE);
 $notify = "";
 $name=$_POST['name'];
 $comment=$_POST['comment'];
@@ -22,7 +24,7 @@ if($submit)
 }
 
 $dbLink = mysqli_connect("localhost", "root", "Beckyboo4");
-mysql_query("SET character_set_results=utf8", $dbLink);
+mysqli_query("SET character_set_results=utf8", $dbLink);
 mb_language('uni');
 mb_internal_encoding('UTF-8');
  
