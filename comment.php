@@ -1,7 +1,5 @@
 <?php
-mysqli_connect("localhost","root","Beckyboo4");
-mysqli_select_db("register");
-error_reporting(E_ALL ^ E_NOTICE);
+require("login/db.php")
 $notify = "";
 $name=$_POST['name'];
 $comment=$_POST['comment'];
