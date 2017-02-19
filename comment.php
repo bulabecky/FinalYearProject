@@ -4,7 +4,6 @@ $select=mysqli_query("select * from commenttable");
 while($row=mysqli_fetch_array($select))
 {
     echo "<div id='sty'>";
-    echo "<img src='files/fav icon.png'"."' width='50px' height='50px' align='left' />";
     echo "<div id='nameid'>".$row['name']."</div>";
     echo "<div id='msgid'>".$row['message']."</div>";
     echo "</div><br />";
@@ -108,16 +107,6 @@ function validation()
     }
     var nam1=document.getElementById('tnameid');
     nam1.style.borderColor="";
-    var jo=document.comment.job.value;
-    var jo1=document.getElementById('tjobid');
-    if(jo=="")
-    {
-        document.comment.job.focus();
-        jo1.style.borderColor="#f00";
-        return false;
-    }
-    var jo1=document.getElementById('tjobid');
-    jo1.style.borderColor="";
     var mess=document.comment.message.value;
     var mess1=document.getElementById('tmessageid');
     if(mess=="")
