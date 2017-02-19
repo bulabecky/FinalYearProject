@@ -138,10 +138,6 @@ function validation()
     <td><input type="text" name="namename" id="tnameid"></td>
   </tr>
   <tr>
-    <td align="right" id="one">Work :<span style="color:#F00;">*</span></td>
-    <td><input type="text" name="job" id="tjobid"></td>
-  </tr>
-  <tr>
     <td align="right" id="one"></td>
     <td><textarea name="message" id="tmessageid"></textarea></td>
   </tr>
