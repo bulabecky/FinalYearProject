@@ -15,7 +15,7 @@ if($submit)
 {
     if($name&&$comment)
     {
-        $insert=mysqli_query("INSERT INTO comment (name,comment) VALUES ('$name','$comment') ");
+        $insert=mysqli_query("INSERT INTO comment VALUES ('$name','$comment') ");
     }
     else
     {
