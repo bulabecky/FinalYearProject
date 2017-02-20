@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>testing comment section</title>
 </head>
-<body>
+<body onload="submitcomment();>
 
 <table>
 
@@ -33,15 +33,7 @@
 	<tr>
 		<td></td>
 		<td><input type="submit" value="Comment" onclick="submitcomment();"/></td>
-	</tr>
-
-</table>
-
-<br><br>
-	<div id="showcomments"></div>
-
-</body>
-<script>
+		<script>
 
 function submitcomment() {
 
@@ -87,6 +79,15 @@ function submitcomment() {
 
 	var url= "usercomments.php";
 </script>
+	</tr>
+
+</table>
+
+<br><br>
+	<div id="showcomments"></div>
+
+</body>
+
 
 </html>
 
