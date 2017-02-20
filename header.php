@@ -5,7 +5,7 @@
         <title>POST</title>
    
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="screen">
-        <link href="fonts/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="screen">
        
        
     </head>
