@@ -123,7 +123,7 @@ include('header.php');
 		$post_id=$_POST['id'];
 		
 		mysqli_query("insert into comment (content,post_id) values('$comment_content',$post_id)")or die(mysqli_error());
-		header('location:index.php');
+		header('location:index1.php');
 		
 		
 		}
