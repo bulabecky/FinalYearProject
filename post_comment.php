@@ -22,7 +22,7 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
           die('Could not select:' . mysqli_error());
       }
         
-        if($row=mysqli_fetch_array($select))
+        if($row=mysqli_fetch_row($select))
         {
           $name=$row['name'];
           $comment=$row['comment'];
@@ -33,6 +33,12 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
               <p class="comment"><?php echo $comment;?></p> 
             <p class="time"><?php echo $time;?></p>
           </div>
+
+
+
+
+
+
         <?php
         }
       exit;
