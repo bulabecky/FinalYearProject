@@ -22,22 +22,18 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
         if (!$select) {
           die('Could not select:' . mysqli_error());
         }
-        
-
-        while ($row = mysqli_fetch_row($result)) {
-          $name = $row[0];
-          $comment = $row[1];
-          $datetime = $row[2];
           
           ?>
 
+          <script>console.log("WE ARE HERE");</script>
           <div class="comment_div"> 
             <p class="name">Posted By:<?php echo $name;?></p>
               <p class="comment"><?php echo $comment;?></p> 
-            <p class="time"><?php echo $datetime;?></p>
+            <p class="time"><?php echo $time;?></p>
           </div>
+          
           <?php
-          }
+          
 
           mysqli_close($con) or die(mysqli_error());
 
