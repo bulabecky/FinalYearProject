@@ -22,7 +22,7 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
           die('Could not select:' . mysqli_error());
       }
         
-        while ($row = mysqli_fetch_array($select)) {
+        if ($row = mysqli_fetch_array($select)) {
         $name = $row[0];
         $comment = $row[1];
         $datetime = $row[2];
