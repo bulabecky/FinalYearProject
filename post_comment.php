@@ -24,22 +24,7 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
         
         if($row=mysqli_fetch_row($select))
         {
-          $name=$row['name'];
-          $comment=$row['comment'];
-          $time=$row['post_time'];
-        ?>
-            <div class="comment_div"> 
-            <p class="name">Posted By:<?php echo $name;?></p>
-              <p class="comment"><?php echo $comment;?></p> 
-            <p class="time"><?php echo $time;?></p>
-          </div>
-
-
-
-
-
-
-        <?php
+          echo "BOOM BOOM BOOM";
         }
       exit;
       }
