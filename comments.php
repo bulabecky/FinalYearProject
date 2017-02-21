@@ -31,11 +31,13 @@
     echo("<script>console.log('FOR THE LOVE OF GAWD WORK');</script>");
 
 
-    $result = mysql_query('SELECT * FROM coments');
+    $result = mysql_query('SELECT * FROM comments');
     if (!$result) {
         die('Could not query:' . mysql_error());
     }
 
+    echo mysql_result($result, 0);
+    
     mysqli_close($conn) or die(mysqli_error());
     ?>
   </div>
