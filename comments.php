@@ -29,7 +29,7 @@
       }
 
 
-    $result = mysqli_query($con,'SELECT name, comment, post_time FROM comments');
+    $result = mysqli_query($con,'SELECT name, comment, post_time FROM comments order by post_time desc');
     if (!$result) {
         die('Could not query:' . mysqli_error());
     }
