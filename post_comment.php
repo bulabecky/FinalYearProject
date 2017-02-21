@@ -14,12 +14,13 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
 
 
       $name = $_POST['user_name'];
-      $comment = $_POST['user_comm'];
+      $comment = mysql_real_escape_string($_POST['user_comm']);
 
-      $name = mysql_real_escape_string($name);
 
-      $insert = mysqli_query($con,"INSERT INTO comments(name, comment, post_time) VALUES ('$name','$comment', '$date')");
 
+      $insert = sprintf($con,"INSERT INTO comments(name, comment, post_time) VALUES ('$name','$comment', '$date')");
+
+      $run = mysqli_query($insert);
           
           ?>
 
