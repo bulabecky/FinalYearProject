@@ -26,5 +26,6 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
         {
           echo "BOOM BOOM BOOM";
         }
-      exit;
+      
       }
+?>
