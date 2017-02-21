@@ -1,6 +1,6 @@
 <?php
-echo("<script>console.log('PHP');</script>");
-$con = mysqli_connect("localhost","root","Beckyboo4","register");
+
+$con = mysqli_connect("localhost","root","Beckyboo","register");
     // Check connection
 if (mysqli_connect_errno())
   {
