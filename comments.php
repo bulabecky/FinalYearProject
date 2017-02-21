@@ -28,22 +28,19 @@
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
       }
 
-    echo("<script>console.log('FOR THE LOVE OF GAWD WORK');</script>");
 
-
-    $result = mysqli_query($con,'SELECT * FROM comments');
+    $result = mysqli_query($con,'SELECT name, comment, post_time FROM comments');
     if (!$result) {
         die('Could not query:' . mysqli_error());
     }
 
    while ($row = mysqli_fetch_row($result)) {
-        printf ("id: %s", $row[0]);
-        printf ("name: %s",  $row[1]);
+        printf ("name: %s", $row[0]);
+        printf ("comment: %s",  $row[1]);
+        printf ("datetime: %s",  $row[2]);
         printf ("\n");
     }
 
-
-    echo("<script>console.log('HELP ME JESUS:');</script>");
 
     mysqli_close($con) or die(mysqli_error());
     ?>
