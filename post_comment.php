@@ -15,18 +15,29 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
 
       $insert = mysqli_query($con,"INSERT INTO comments(name, comment, post_time) VALUES ('$name','$comment', CURRENT_TIMESTAMP)");
 
-      $id=mysqli_insert_id($insert);
+      
 
-        $select=mysqli_query($con,"select name,comment,post_time from comments where name='$name' and comment='$comment' and id='$id'");
+        $select=mysqli_query($con,"select name,comment,post_time from comments where name='$name' and comment='$comment'");
         if (!$select) {
           die('Could not select:' . mysqli_error());
-      }
-        
-        if($row=mysqli_fetch_row($select)){
-          echo("<script>console.log('ALMIGHTY JESUS');</script>");
-        } else {
-          echo("<script>console.log('ALMIGHTY JESUS');</script>");
         }
-      
-      }
+        
+
+        while ($row = mysqli_fetch_row($result)) {
+          $name = $row[0];
+          $comment = $row[1];
+          $datetime = $row[2];
+          
+          ?>
+
+          <div class="comment_div"> 
+            <p class="name">Posted By:<?php echo $name;?></p>
+              <p class="comment"><?php echo $comment;?></p> 
+            <p class="time"><?php echo $datetime;?></p>
+          </div>
+          <?php
+          }
+
+          mysqli_close($con) or die(mysqli_error());
+    }
 ?>
