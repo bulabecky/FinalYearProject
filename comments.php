@@ -36,10 +36,11 @@
         die('Could not query:' . mysqli_error());
     }
 
+    $titties = mysqli_result($result);
 
-    echo("<script>console.log('HELP ME JESUS');</script>");
+    echo("<script>console.log('HELP ME JESUS:');</script>");
 
-    mysqli_close($conn) or die(mysqli_error());
+    mysqli_close($con) or die(mysqli_error());
     ?>
   </div>
 
