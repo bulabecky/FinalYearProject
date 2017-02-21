@@ -2,7 +2,7 @@ console.log("CONNECTED BITCH");
 function post()
 {
   console.log("POSTING BITCH");
-  var comment = document.getElementById("comment").value;
+  var comment = $("#comment").val();
   var name = document.getElementById("username").value;
 
 
