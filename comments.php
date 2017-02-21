@@ -21,10 +21,23 @@
 
   <div id="all_comments">
   <?php
-    require("login/db.php");
+    $con = mysqli_connect("localhost","root","Beckyboo4","register");
+    // Check connection
+    if (mysqli_connect_errno())
+      {
+      echo "Failed to connect to MySQL: " . mysqli_connect_error();
+      }
+
     echo("<script>console.log('FOR THE LOVE OF GAWD WORK');</script>");
+
+    
     $sql = "SELECT * FROM comments";
-   
+    $query = mysql_query($sql);
+    while($row = mysql_fetch_assoc($query)){
+      echo(stripslashes($row['name'])); //The details is what contains the <strong>Test</strong>
+    }
+
+    mysql_close($conn) or die(mysql_error());
     ?>
   </div>
 
