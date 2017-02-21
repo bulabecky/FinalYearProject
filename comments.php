@@ -5,6 +5,7 @@
 <script type="text/javascript">
 function post()
 {
+  console.log("POSTING BITCH");
   var comment = document.getElementById("comment").value;
   var name = document.getElementById("username").value;
   if(comment && name)
@@ -38,12 +39,12 @@ function post()
 
   <h1>Instant Comment System Using Ajax,PHP and MySQL</h1>
 
-  <form method="post" action="" onsubmit="return post();">
+  <form method="post" action="">
   <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
   <br>
   <input type="text" id="username" placeholder="Your Name">
   <br>
-  <input type="submit" value="Post Comment">
+  <input type="submit" onClick="post()" value="Post Comment">
   </form>
 
   <div id="all_comments">
