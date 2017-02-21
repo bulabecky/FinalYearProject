@@ -15,10 +15,22 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
 
       $result = mysqli_query($con,"INSERT INTO comments(name, comment, post_time) VALUES ('$name','$comment', CURRENT_TIMESTAMP)");
 
+      $id=mysqli_insert_id($insert);
 
-    }
-
-
-
-
-?>
+        $select=mysqli_query("select name,comment,post_time from comments where name='$name' and comment='$comment' and id='$id'");
+        
+        if($row=mysqli_fetch_array($select))
+        {
+          $name=$row['name'];
+          $comment=$row['comment'];
+          $time=$row['post_time'];
+        ?>
+            <div class="comment_div"> 
+            <p class="name">Posted By:<?php echo $name;?></p>
+              <p class="comment"><?php echo $comment;?></p> 
+            <p class="time"><?php echo $time;?></p>
+          </div>
+        <?php
+        }
+      exit;
+      }
