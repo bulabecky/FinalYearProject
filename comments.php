@@ -38,7 +38,7 @@ function post()
 
   <h1>Instant Comment System Using Ajax,PHP and MySQL</h1>
 
-  <form method='post' action="" onsubmit="return post();">
+  <form method="post" action="" onsubmit="return post();">
   <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
   <br>
   <input type="text" id="username" placeholder="Your Name">
