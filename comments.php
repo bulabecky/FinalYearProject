@@ -23,7 +23,7 @@
   <?php
     $host="localhost";
     $username="root";
-    $password="";
+    $password="Beckyboo4";
     $databasename="sample";
 
     $connect=mysqli_connect($host,$username,$password);
