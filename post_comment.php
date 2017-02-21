@@ -1,6 +1,7 @@
 <?php
 require("login/db.php");
-
+$output = "<script>console.log('HELLO MOTTO');</script>";
+echo $output;
 if(isset($_POST['user_comm']) && isset($_POST['user_name']))
 {
   $comment=$_POST['user_comm'];
