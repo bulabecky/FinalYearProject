@@ -2,7 +2,7 @@
 $host="localhost";
 $username="root";
 $password="Beckyboo4";
-$databasename="sample";
+$databasename="register";
 
 $connect=mysql_connect($host,$username,$password);
 $db=mysql_select_db($databasename);
