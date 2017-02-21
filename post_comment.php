@@ -10,12 +10,10 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
 
     if(isset($_POST['user_comm']) && isset($_POST['user_name'])){
 
-      $result = mysqli_query($con,'SELECT name, comment, post_time FROM commments');
-        if (!$result) {
-            die('Could not query:' . mysqli_error());
-        }
+      $name = $_POST['user_name'];
+      $comment = $_POST['user_comm'];
 
-
+      $result = mysqli_query($con,"INSERT INTO comments(id, name, comment, post_time) VALUES ('', '$name','$comment', CURRENT_TIMESTAMP)");
 
 
     }
