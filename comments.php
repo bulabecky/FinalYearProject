@@ -22,7 +22,7 @@
   <div id="all_comments">
   <?php
     require("login/db.php");
-    echo("<script>console.log('FOR THE LOVE OF GAWD WORK');</script>");
+    echo("<script>console.log('FOR THE LOVE OF GAWD WORK: '+ $con);</script>");
     ?>
   </div>
 
