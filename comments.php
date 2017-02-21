@@ -37,7 +37,8 @@
     }
 
    while ($row = mysqli_fetch_row($result)) {
-        printf ($row);
+        printf ("id: " + $row[0]);
+        printf ("name: " + $row[1]);
     }
 
 
