@@ -22,28 +22,7 @@
   <div id="all_comments">
   <?php
     require("login/db.php");
-  
-    $comm = mysqli_query("select name,comment,post_time from comments order by post_time desc");
-    while($row=mysqli_fetch_array($comm))
-    {
-    $name=$row['name'];
-    $comment=$row['comment'];
-      $time=$row['post_time'];
-
-
-
-      $output = "<script>console.log('HELLO MOTTO2');</script>";
-      echo $output;
-    ?>
-  
-  <div class="comment_div"> 
-    <p class="name">Posted By:<?php echo $name;?></p>
-      <p class="comment"><?php echo $comment;?></p> 
-    <p class="time"><?php echo $time;?></p>
-  </div>
-  
-    <?php
-    }
+    echo("<script>console.log('FOR THE LOVE OF GAWD WORK');</script>");
     ?>
   </div>
 
