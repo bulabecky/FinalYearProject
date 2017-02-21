@@ -1,17 +1,10 @@
-console.log("CONNECTED BITCH");
 function post()
 {
-  console.log("POSTING LOLOLOLOL");
   var comment = document.getElementById("comment").value;
   var name = document.getElementById("username").value;
 
-
-  console.log("comment: "+ comment);
-  console.log("name: "+name);
-
   if(comment && name)
   {
-    console.log("inside if statement");
     $.ajax
     ({
       type: 'post',
