@@ -4,20 +4,20 @@ $username="root";
 $password="Beckyboo4";
 $databasename="register";
 
-$connect=mysql_connect($host,$username,$password);
-$db=mysql_select_db($databasename);
+$connect=mysqli_connect($host,$username,$password);
+$db=mysqli_select_db($databasename);
 
 if(isset($_POST['user_comm']) && isset($_POST['user_name']))
 {
   $comment=$_POST['user_comm'];
   $name=$_POST['user_name'];
-  $insert=mysql_query("insert into comments values('','$name','$comment',CURRENT_TIMESTAMP)");
+  $insert=mysqli_query("insert into comments values('','$name','$comment',CURRENT_TIMESTAMP)");
   
-  $id=mysql_insert_id($insert);
+  $id=mysqli_insert_id($insert);
 
-  $select=mysql_query("select name,comment,post_time from comments where name='$name' and comment='$comment' and id='$id'");
+  $select=mysqli_query("select name,comment,post_time from comments where name='$name' and comment='$comment' and id='$id'");
   
-  if($row=mysql_fetch_array($select))
+  if($row=mysqli_fetch_array($select))
   {
 	  $name=$row['name'];
 	  $comment=$row['comment'];
