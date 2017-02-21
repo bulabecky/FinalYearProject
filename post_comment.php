@@ -14,7 +14,7 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
 
 
       $name = $_POST['user_name'];
-      $comment = mysql_real_escape_string($_POST['user_comm']);
+      $comment = $_POST['user_comm'];
 
 
 
