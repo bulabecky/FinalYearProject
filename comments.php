@@ -38,7 +38,7 @@
 
     echo mysql_result($result);
 
-    mysqli_close($conn) or die(mysqli_error());
+    mysqli_close($con) or die(mysqli_error());
     ?>
   </div>
 
