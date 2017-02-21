@@ -22,10 +22,11 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
           die('Could not select:' . mysqli_error());
       }
         
-        if($row=mysqli_fetch_row($select))
-        {
+        if($row=mysqli_fetch_row($select)){
           echo("<script>console.log('ALMIGHTY JESUS');</script>");
-        } 
+        } else {
+          echo("<script>console.log('JUST JESUS');</script>");
+        }
       
       }
 ?>
