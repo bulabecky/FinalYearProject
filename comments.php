@@ -36,7 +36,9 @@
         die('Could not query:' . mysqli_error());
     }
 
-    echo(mysqli_free_result($result));
+   while ($row = mysqli_fetch_row($result)) {
+        printf ("%s (%s)\n", $row[0], $row[1]);
+    }
 
 
     echo("<script>console.log('HELP ME JESUS:');</script>");
