@@ -39,5 +39,7 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
           }
 
           mysqli_close($con) or die(mysqli_error());
+
+      exit;
     }
-?>
+
