@@ -17,7 +17,7 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
 
       $id=mysqli_insert_id($insert);
 
-        $select=mysqli_query("select name,comment,post_time from comments where name='$name' and comment='$comment' and id='$id'");
+        $select=mysqli_query($con,"select name,comment,post_time from comments where name='$name' and comment='$comment' and id='$id'");
         
         if($row=mysqli_fetch_array($select))
         {
