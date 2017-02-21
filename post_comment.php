@@ -13,7 +13,7 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
       $name = $_POST['user_name'];
       $comment = $_POST['user_comm'];
 
-      $result = mysqli_query($con,"INSERT INTO comments(name, comment, post_time) VALUES ('$name','$comment', CURRENT_TIMESTAMP)");
+      $insert = mysqli_query($con,"INSERT INTO comments(name, comment, post_time) VALUES ('$name','$comment', CURRENT_TIMESTAMP)");
 
       $id=mysqli_insert_id($insert);
 
