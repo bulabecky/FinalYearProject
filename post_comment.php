@@ -23,9 +23,12 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
       }
         
         if($row=mysqli_fetch_row($select))
-        {
-          echo "BOOM BOOM BOOM";
-        }
+        {?>
+          <script>console.log("MANUS");</script>
+        <?php}else if($row=mysqli_fetch_row($select))
+        {?>
+          <script>console.log("NOPE");</script>
+        <?php}
       
       }
 ?>
