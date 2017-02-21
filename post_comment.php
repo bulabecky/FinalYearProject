@@ -18,16 +18,9 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
 
       $insert = mysqli_query($con,"INSERT INTO comments(name, comment, post_time) VALUES ('$name','$comment', $date)");
 
-      
-
-        $select=mysqli_query($con,"select name,comment,post_time from comments where name='$name' and comment='$comment'");
-        if (!$select) {
-          die('Could not select:' . mysqli_error());
-        }
           
           ?>
 
-          <script>console.log("WE ARE HERE");</script>
           <div class="comment_div"> 
             <p class="name">Posted By:<?php echo $name;?></p>
               <p class="comment"><?php echo $comment;?></p> 
