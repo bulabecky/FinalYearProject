@@ -37,7 +37,7 @@
     }
 
 
-    echo("<script>console.log('HELP ME JESUS: "+$result+"');</script>");
+    echo("<script>console.log('HELP ME JESUS');</script>");
 
     mysqli_close($conn) or die(mysqli_error());
     ?>
