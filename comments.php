@@ -36,7 +36,7 @@
         printf("error: %s\n", mysqli_error($con));
     }
 
-    echo mysql_result($result);
+    echo mysqli_result($result);
 
     mysqli_close($con) or die(mysqli_error());
     ?>
