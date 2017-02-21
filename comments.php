@@ -22,7 +22,14 @@
   <div id="all_comments">
   <?php
     require("login/db.php");
-    echo("<script>console.log('FOR THE LOVE OF GAWD WORK: '+ $con);</script>");
+    echo("<script>console.log('FOR THE LOVE OF GAWD WORK');</script>");
+    $sql = "SELECT * FROM comments";
+    $query = mysql_query($sql);
+    while($row = mysql_fetch_assoc($query)){
+      echo(stripslashes($row['name'])); //The details is what contains the <strong>Test</strong>
+    }
+
+    mysql_close($conn) or die(mysql_error());
     ?>
   </div>
 
