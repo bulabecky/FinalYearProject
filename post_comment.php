@@ -23,19 +23,9 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
       }
         
         if ($row = mysqli_fetch_array($select)) {
-        $name = $row[0];
-        $comment = $row[1];
-        $datetime = $row[2];
-        
-        ?>
-
-        <div class="comment_div"> 
-          <p class="name">Posted By:<?php echo $name;?></p>
-            <p class="comment"><?php echo $comment;?></p> 
-          <p class="time"><?php echo $datetime;?></p>
-        </div>
-      <?php
-      }
+          echo $row['name'];
+        }
+      
 
       mysqli_close($con) or die(mysqli_error());
         
