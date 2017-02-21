@@ -15,9 +15,9 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
 
       $insert = mysqli_query($con,"INSERT INTO comments(name, comment, post_time) VALUES ('$name','$comment', CURRENT_TIMESTAMP)");
 
-      $id=mysqli_insert_id($insert);
+      
 
-        $select=mysqli_query($con,"select name,comment,post_time from comments where name='$name' and comment='$comment' and id='$id'");
+        $select=mysqli_query($con,"select name,comment,post_time from comments where name='$name' and comment='$comment'");
         if (!$select) {
           die('Could not select:' . mysqli_error());
       }
