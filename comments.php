@@ -11,12 +11,12 @@
 
   <h1>Instant Comment System Using Ajax,PHP and MySQL</h1>
 
-  <form method="post" action="">
+  <form method="post" action="" onsubmit="return post();">
   <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
   <br>
   <input type="text" id="username" placeholder="Your Name">
   <br>
-  <input type="submit" onClick="post()" value="Post Comment">
+  <input type="submit" value="Post Comment">
   </form>
 
   <div id="all_comments">
