@@ -36,9 +36,8 @@
         die('Could not query:' . mysqli_error());
     }
 
-    echo mysql_result($result);
 
-    echo("<script>console.log('HELP ME JESUS: "+mysql_result($result)+"');</script>");
+    echo("<script>console.log('HELP ME JESUS: "+$result+"');</script>");
 
     mysqli_close($conn) or die(mysqli_error());
     ?>
