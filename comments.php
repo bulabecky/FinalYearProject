@@ -21,7 +21,7 @@
 
   <div id="all_comments">
   <?php
-    $con = mysqli_connect("localhost","root","Beckybo4","register");
+    $con = mysqli_connect("localhost","root","Beckyboo4","register");
     // Check connection
     if (mysqli_connect_errno())
       {
@@ -31,7 +31,7 @@
     echo("<script>console.log('FOR THE LOVE OF GAWD WORK');</script>");
 
 
-    $result = mysqli_query('SELECT * FROM comments');
+    $result = mysqli_query("INSERT INTO comments(id, name, comment, post_time) VALUES ('3','Charlie Boy','BOOOOOOM','2017-02-21 17:26')");
     if (!$result) {
         die('Could not query:' . mysqli_error());
     }
