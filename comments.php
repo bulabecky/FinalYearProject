@@ -38,6 +38,8 @@
 
     echo mysql_result($result);
 
+    echo("<script>console.log('HELP ME JESUS: "+mysql_result($result)+"');</script>");
+
     mysqli_close($conn) or die(mysqli_error());
     ?>
   </div>
