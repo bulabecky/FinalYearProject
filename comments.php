@@ -35,7 +35,10 @@
     }
 
    while ($row = mysqli_fetch_row($result)) {
-        printf ("name: %s comment: %s datetime: %s <br>", $row[0], $row[1], $row[2]);
+      $name = $row[0];
+      $comment = $row[1];
+      $datetime = $row[2];
+      printf ("name: %s comment: %s datetime: %s <br>", $name, $comment, $datetime);
     }
 
 
