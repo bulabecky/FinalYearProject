@@ -36,8 +36,6 @@
         die('Could not query:' . mysql_error());
     }
 
-
-
     mysqli_close($conn) or die(mysqli_error());
     ?>
   </div>
