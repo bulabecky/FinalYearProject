@@ -7,7 +7,7 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
 
-echo "<script>console.log('HELLO MOTTO');</script>";
+  echo("<script>console.log('PHP');</script>");
 
 
 
