@@ -22,10 +22,10 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
           die('Could not select:' . mysqli_error());
       }
         
-        if ($row = mysqli_fetch_array($select)) {
-          echo $row['name'];
+        while ($row = mysql_fetch_array($select, MYSQL_ASSOC)) {
+            print_r($row);
         }
-      
+              
 
       mysqli_close($con) or die(mysqli_error());
         
