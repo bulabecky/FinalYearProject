@@ -53,11 +53,11 @@ function post()
     $password="";
     $databasename="sample";
 
-    $connect=mysql_connect($host,$username,$password);
-    $db=mysql_select_db($databasename);
+    $connect=mysqli_connect($host,$username,$password);
+    $db=mysqli_select_db($databasename);
   
-    $comm = mysql_query("select name,comment,post_time from comments order by post_time desc");
-    while($row=mysql_fetch_array($comm))
+    $comm = mysqli_query("select name,comment,post_time from comments order by post_time desc");
+    while($row=mysqli_fetch_array($comm))
     {
     $name=$row['name'];
     $comment=$row['comment'];
