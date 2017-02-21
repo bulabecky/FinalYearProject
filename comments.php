@@ -33,7 +33,7 @@
 
     $result = mysqli_query("INSERT INTO comments(id, name, comment, post_time) VALUES ('3','Charlie Boy','BOOOOOOM','2017-02-21 17:26')");
     if (!$result) {
-        die('Could not query: %s' . mysqli_error());
+        printf("error: %s\n", mysqli_error($con));
     }
 
     echo mysql_result($result);
