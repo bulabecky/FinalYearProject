@@ -10,7 +10,7 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
 
     if(isset($_POST['user_comm']) && isset($_POST['user_name'])){
       date_default_timezone_set('Europe/Dublin');
-      $date = date('m/d/Y h:i:s a', time());
+      $date = date('Y-m-d H:i:s', time());
 
 
       $name = $_POST['user_name'];
