@@ -16,7 +16,9 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
       $name = $_POST['user_name'];
       $comment = $_POST['user_comm'];
 
-      $insert = mysqli_query($con,"INSERT INTO comments(name, comment, post_time) VALUES ('$name','$comment', '$date')");
+      $insert = mysqli_query($con,"INSERT INTO comments(name, comment, post_time) VALUES ("mysql_real_escape_string($name),
+                            '$comment', 
+                            '$date'));
 
           
           ?>
