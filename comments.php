@@ -38,9 +38,16 @@
       $name = $row[0];
       $comment = $row[1];
       $datetime = $row[2];
-      printf ("name: %s comment: %s datetime: %s <br>", $name, $comment, $datetime);
-    }
+      
+      ?>
 
+      <div class="comment_div"> 
+        <p class="name">Posted By:<?php echo $name;?></p>
+          <p class="comment"><?php echo $comment;?></p> 
+        <p class="time"><?php echo $datetime;?></p>
+      </div>
+    <?php
+    }
 
     mysqli_close($con) or die(mysqli_error());
     ?>
