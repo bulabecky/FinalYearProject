@@ -7,8 +7,8 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
 
-$output = "<script>console.log('HELLO MOTTO');</script>";
-echo $output;
+echo("<script>console.log('HELLO MOTTO');</script>");
+
 if(isset($_POST['user_comm']) && isset($_POST['user_name']))
 {
   $comment=$_POST['user_comm'];
