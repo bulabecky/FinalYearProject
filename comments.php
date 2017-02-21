@@ -1,7 +1,36 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="comment_style.css">
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js">
+<script type="text/javascript">
+function post()
+{
+  var comment = document.getElementById("comment").value;
+  var name = document.getElementById("username").value;
+  if(comment && name)
+  {
+    $.ajax
+    ({
+      type: 'post',
+      url: 'post_comment.php',
+      data: 
+      {
+         user_comm:comment,
+       user_name:name
+      },
+      success: function (response) 
+      {
+      document.getElementById("all_comments").innerHTML=response+document.getElementById("all_comments").innerHTML;
+      document.getElementById("comment").value="";
+        document.getElementById("username").value="";
+  
+      }
+    });
+  }
+  
+  return false;
+}
+</script>
 
 </head>
 
@@ -40,36 +69,7 @@
       <p class="comment"><?php echo $comment;?></p> 
     <p class="time"><?php echo $time;?></p>
   </div>
-  <script type="text/javascript" src="js/jquery.js">
-<script type="text/javascript">
-function post()
-{
-  var comment = document.getElementById("comment").value;
-  var name = document.getElementById("username").value;
-  if(comment && name)
-  {
-    $.ajax
-    ({
-      type: 'post',
-      url: 'post_comment.php',
-      data: 
-      {
-         user_comm:comment,
-       user_name:name
-      },
-      success: function (response) 
-      {
-      document.getElementById("all_comments").innerHTML=response+document.getElementById("all_comments").innerHTML;
-      document.getElementById("comment").value="";
-        document.getElementById("username").value="";
   
-      }
-    });
-  }
-  
-  return false;
-}
-</script>
     <?php
     }
     ?>
