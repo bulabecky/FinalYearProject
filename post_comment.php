@@ -25,9 +25,7 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
         if($row=mysqli_fetch_row($select))
         {
           echo("<script>console.log('ALMIGHTY JESUS');</script>")
-        } else {
-          echo("<script>console.log('*insert cry face here*');</script>")
-        }
+        } 
       
       }
 ?>
