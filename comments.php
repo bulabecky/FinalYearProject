@@ -21,7 +21,7 @@
 
   <div id="all_comments">
   <?php
-    $con = mysqli_connect("localhost","root","Beckyboo4","register");
+    $con = mysqli_connect("localhost","root","Beckybo4","register");
     // Check connection
     if (mysqli_connect_errno())
       {
