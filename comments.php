@@ -31,7 +31,7 @@
     echo("<script>console.log('FOR THE LOVE OF GAWD WORK');</script>");
 
 
-    $result = mysql_query('SELECT * FROM comments');
+    $result = mysql_query('SELECT * FROM coments');
     if (!$result) {
         die('Could not query:' . mysql_error());
     }
