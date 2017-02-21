@@ -34,7 +34,7 @@
     $sql = "SELECT * FROM comments";
     $query = mysqli_query($sql);
     while($row = mysqli_fetch_assoc($query)){
-      echo(stripslashes($row['name'])); //The details is what contains the <strong>Test</strong>
+      echo htmlspecialchars_decode(stripslashes($row['name'])); //The details is what contains the <strong>Test</strong>
     }
 
     mysqli_close($conn) or die(mysqli_error());
