@@ -6,6 +6,7 @@ function post()
   var name = document.getElementById("username").value;
   if(comment && name)
   {
+    console.log("inside if statement")
     $.ajax
     ({
       type: 'post',
@@ -13,12 +14,12 @@ function post()
       data: 
       {
          user_comm:comment,
-       user_name:name
+         user_name:name
       },
       success: function (response) 
       {
-      document.getElementById("all_comments").innerHTML=response+document.getElementById("all_comments").innerHTML;
-      document.getElementById("comment").value="";
+        document.getElementById("all_comments").innerHTML=response+document.getElementById("all_comments").innerHTML;
+        document.getElementById("comment").value="";
         document.getElementById("username").value="";
   
       }
