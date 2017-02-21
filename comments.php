@@ -30,14 +30,14 @@
 
     echo("<script>console.log('FOR THE LOVE OF GAWD WORK');</script>");
 
-    
+
     $sql = "SELECT * FROM comments";
-    $query = mysql_query($sql);
-    while($row = mysql_fetch_assoc($query)){
+    $query = mysqli_query($sql);
+    while($row = mysqli_fetch_assoc($query)){
       echo(stripslashes($row['name'])); //The details is what contains the <strong>Test</strong>
     }
 
-    mysql_close($conn) or die(mysql_error());
+    mysqli_close($conn) or die(mysqli_error());
     ?>
   </div>
 
