@@ -22,7 +22,7 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
           die('Could not select:' . mysqli_error());
       }
         
-        while ($row = mysql_fetch_array($select, MYSQL_ASSOC)) {
+        while ($row = mysqli_fetch_array($select, MYSQL_ASSOC)) {
             print_r($row);
         }
               
