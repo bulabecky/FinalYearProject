@@ -24,7 +24,7 @@
     $host="localhost";
     $username="root";
     $password="Beckyboo4";
-    $databasename="sample";
+    $databasename="register";
 
     $connect=mysqli_connect($host,$username,$password);
     $db=mysqli_select_db($databasename);
