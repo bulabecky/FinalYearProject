@@ -33,7 +33,7 @@
 
     $result = mysqli_query('SELECT * FROM comments');
     if (!$result) {
-        die('Could not query:' . mysql_error());
+        die('Could not query:' . mysqli_error());
     }
 
     echo mysql_result($result);
