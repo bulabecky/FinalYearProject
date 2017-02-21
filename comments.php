@@ -31,7 +31,7 @@
     echo("<script>console.log('FOR THE LOVE OF GAWD WORK');</script>");
 
 
-    $result = mysqli_query($con, "INSERT INTO comments(id, name, comment, post_time) VALUES ('3','Charlie Boy','BOOOOOOM','2017-02-21 17:26')");
+    $result = mysqli_query($con, "select * from comments");
     if (!$result) {
         printf("error: %s\n", mysqli_error($con));
     }
