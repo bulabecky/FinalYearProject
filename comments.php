@@ -36,7 +36,6 @@
         die('Could not query:' . mysqli_error());
     }
 
-    $titties = mysqli_result($result);
 
     echo("<script>console.log('HELP ME JESUS:');</script>");
 
