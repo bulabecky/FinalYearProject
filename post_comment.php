@@ -1,11 +1,5 @@
 <?php
-$host="localhost";
-$username="root";
-$password="Beckyboo4";
-$databasename="register";
-
-$connect=mysqli_connect($host,$username,$password);
-$db=mysqli_select_db($databasename);
+require("login/db.php");
 
 if(isset($_POST['user_comm']) && isset($_POST['user_name']))
 {
