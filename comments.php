@@ -36,7 +36,7 @@
         die('Could not query:' . mysqli_error());
     }
 
-    mysqli_free_result($result);
+    echo(mysqli_free_result($result));
 
 
     echo("<script>console.log('HELP ME JESUS:');</script>");
