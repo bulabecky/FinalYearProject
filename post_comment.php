@@ -5,7 +5,7 @@ if(isset($_POST['user_comm']) && isset($_POST['user_name']))
 {
   $comment=$_POST['user_comm'];
   $name=$_POST['user_name'];
-  $insert=mysqli_query("insert into comments values('','$name','$comment',CURRENT_TIMESTAMP)");
+  $insert=mysqli_query("insert into comments values('2','Becky','Right durr','2017-02-21 16:15')");
   
   $id=mysqli_insert_id($insert);
 
