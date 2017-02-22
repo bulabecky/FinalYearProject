@@ -98,7 +98,7 @@ include("auth.php");
         <div id="mapid">
              <h1>Leave a comment!</h1>
 
-  <form style= "margin-left: 70%;" method="post" action="" onsubmit="return post();">
+  <form style= "margin-left: 100%;" method="post" action="" onsubmit="return post();">
   <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
   <br>
   <input type="text" id="username" placeholder="Your Name">
@@ -139,7 +139,7 @@ include("auth.php");
     mysqli_close($con) or die(mysqli_error());
     ?>
   </div>
-            
+
         </div>
         
         <script src="../../LeafletMap/KML.js"></script>
