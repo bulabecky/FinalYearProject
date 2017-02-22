@@ -1,51 +1,46 @@
 <?php
-ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
-echo "<?xml version='1.0' ?>";
-echo ("<script>console.log('opening of page');</script>");
-function parseToXML($htmlStr)
-{
-$xmlStr=str_replace('<','&lt;',$htmlStr);
-$xmlStr=str_replace('>','&gt;',$xmlStr);
-$xmlStr=str_replace('"','&quot;',$xmlStr);
-$xmlStr=str_replace("'",'&#39;',$xmlStr);
-$xmlStr=str_replace("&",'&amp;',$xmlStr);
-return $xmlStr;
-}
+require("dbinfo.php");
+
+// Start XML file, create parent node
+$doc = domxml_new_doc("1.0");
+$node = $doc->create_element("markers");
+$parnode = $doc->append_child($node);
 
 // Opens a connection to a mysqli server
-$con = mysqli_connect("localhost","root","Beckyboo4","map");
-// Check connection
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+$connection=mysqli_connect ('localhost', $username, $password);
+if (!$connection) {
+  die('Not connected : ' . mysqli_error());
 }
 
-$result = mysqli_query($con,'SELECT * FROM `markers` WHERE 1');
+// Set the active mysqli database
+$db_selected = mysqli_select_db($database, $connection);
+if (!$db_selected) {
+  die ('Can\'t use db : ' . mysqli_error());
+}
+
+// Select all the rows in the markers table
+$query = "SELECT * FROM markers WHERE 1";
+$result = mysqli_query($query);
 if (!$result) {
   die('Invalid query: ' . mysqli_error());
 }
 
+header("Content-type: text/xml");
 
-
-// Start XML file, echo parent node
-echo ('<markers>');
-
-// Iterate through the rows, printing XML nodes for each
+// Iterate through the rows, adding XML nodes for each
 while ($row = @mysqli_fetch_assoc($result)){
-
-  echo ("<script>console.log('Heuston, we are in!');</script>");
   // Add to XML document node
+  $node = $doc->create_element("marker");
+  $newnode = $parnode->append_child($node);
 
-  echo "<marker "; 
-  echo 'name="' . parseToXML($row['name']) . '" ';echo __LINE__;exit;
-  echo 'address="' . parseToXML($row['address']) . '" ';
-  echo 'lat="' . $row['lat'] . '" ';
-  echo 'lng="' . $row['lng'] . '" ';
-  echo 'type="' . $row['type'] . '" ';
-  echo '/>';
+  $newnode->set_attribute("name", $row['name']);
+  $newnode->set_attribute("address", $row['address']);
+  $newnode->set_attribute("lat", $row['lat']);
+  $newnode->set_attribute("lng", $row['lng']);
+  $newnode->set_attribute("type", $row['type']);
 }
 
-// End XML file
-echo '</markers>';
+$xmlfile = $doc->dump_mem();
+echo $xmlfile;
 
 ?>
