@@ -18,7 +18,9 @@ $con = mysqli_connect("localhost","root","Beckyboo4","map");
     $result = mysqli_query($con,'SELECT * FROM `markers` WHERE 1');
     if (!$result) {
         die('Could not query:' . mysqli_error());
+    }
 
+header("Content-type: text/xml");
 
 // Iterate through the rows, adding XML nodes for each
 
