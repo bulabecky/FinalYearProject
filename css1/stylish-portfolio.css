@@ -214,27 +214,6 @@ hr.small {
 
 /* Call to Action */
 
-
-
-/* Map */
-
-.map {
-    height: 500px;
-    width:50%;
-}
-
-@media(max-width:768px) {
-    .map {
-        height: 75%;
-    }
-}
-
-.map iframe {
-    pointer-events: none;
-}
-
-/* Footer */
-
 footer {
     padding: 200px 0;
 }
