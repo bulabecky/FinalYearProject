@@ -4,11 +4,11 @@ echo "<?xml version='1.0' ?>";
 echo ("<script>console.log('opening of page');</script>");
 function parseToXML($htmlStr)
 {
-$xmlStr=str_replace('<','&lt;',$htmlStr);echo __LINE__;exit;
+$xmlStr=str_replace('<','&lt;',$htmlStr);
 $xmlStr=str_replace('>','&gt;',$xmlStr);
 $xmlStr=str_replace('"','&quot;',$xmlStr);
 $xmlStr=str_replace("'",'&#39;',$xmlStr);
-$xmlStr=str_replace("&",'&amp;',$xmlStr);
+$xmlStr=str_replace("&",'&amp;',$xmlStr);echo __LINE__;exit;
 return $xmlStr;
 }
 
