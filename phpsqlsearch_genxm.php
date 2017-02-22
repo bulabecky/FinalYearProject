@@ -13,15 +13,11 @@ return $xmlStr;
 }
 
 // Opens a connection to a mysqli server
-$connection=mysqli_connect('localhost', $username, $password);
-if (!$connection) {
-  die('Not connected : ' . mysqli_error());
-}
-echo("<script>console.log('database connected');</script>");
-// Set the active mysqli database
-$db_selected = mysqli_select_db($database, $connection);
-if (!$db_selected) {
-  die ('Can\'t use db : ' . mysqli_error());
+$connection=$con = mysqli_connect("localhost","root","Beckyboo4","map");
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
 // Select all the rows in the markers table
