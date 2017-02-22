@@ -1,39 +1,43 @@
 <?php
-// Start XML file, create parent node
-$doc = domxml_new_doc("1.0");
-$node = $doc->create_element("markers");
-$parnode = $doc->append_child($node);
 
-// Opens a connection to a mysqli server
-$con = mysqli_connect("localhost","root","Beckyboo4","register");
-// Check connection
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
-// Select all the rows in the markers table
-$result = mysqli_query($con,'SELECT * FROM markers');
+require("phpsqlajax_dbinfo.php");
+
+// Start XML file, create parent node
+
+$dom = new DOMDocument("1.0");
+$node = $dom->createElement("markers");
+$parnode = $dom->appendChild($node);
+
+// Opens a connection to a MySQL server
+
+$con = mysqli_connect("localhost","root","Beckyboo4","`map");
+    // Check connection
+    if (mysqli_connect_errno())
+      {
+      echo "Failed to connect to MySQL: " . mysqli_connect_error();
+      }
+
+
+    $result = mysqli_query($con,'SELECT * FROM markers');
     if (!$result) {
         die('Could not query:' . mysqli_error());
     }
 
-
 header("Content-type: text/xml");
 
 // Iterate through the rows, adding XML nodes for each
-while ($row = @mysqli_fetch_assoc($result)){
-  // Add to XML document node
-  $node = $doc->create_element("marker");
-  $newnode = $parnode->append_child($node);
 
-  $newnode->set_attribute("name", $row['name']);
-  $newnode->set_attribute("address", $row['address']);
-  $newnode->set_attribute("lat", $row['lat']);
-  $newnode->set_attribute("lng", $row['lng']);
-  $newnode->set_attribute("type", $row['type']);
+while ($row = @mysql_fetch_assoc($result)){
+  // Add to XML document node
+  $node = $dom->createElement("marker");
+  $newnode = $parnode->appendChild($node);
+  $newnode->setAttribute("name",$row['name']);
+  $newnode->setAttribute("address", $row['address']);
+  $newnode->setAttribute("lat", $row['lat']);
+  $newnode->setAttribute("lng", $row['lng']);
+  $newnode->setAttribute("type", $row['type']);
 }
 
-$xmlfile = $doc->dump_mem();
-echo $xmlfile;
+echo $dom->saveXML();
 
 ?>
