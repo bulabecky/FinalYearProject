@@ -67,6 +67,7 @@ input[type="submit"]
 .comment_div .comment
 {
 	padding:10px;
+    color: black;
 	
 }
 .comment_div .time
