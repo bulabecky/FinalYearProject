@@ -60,7 +60,7 @@ input[type="submit"]
 	height:30px;
 	line-height:30px;
 	padding:10px;
-	background-color:#0C0D0D;
+	background-color:firebrick;
 	color:white;
 	text-align:left;
 	
@@ -74,7 +74,7 @@ input[type="submit"]
 {
 	font-style:italic;
 	padding:10px;
-	background-color:#0C0D0D;
+	background-color:firebrick;
 	color:white;
 	text-align:left;
 	
