@@ -93,12 +93,6 @@
 
     <script>
       var customLabel = {
-        restaurant: {
-          label: 'R'
-        },
-        bar: {
-          label: 'B'
-        },
          Festival: {
           label: 'F'
         },
