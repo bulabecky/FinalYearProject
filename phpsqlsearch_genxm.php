@@ -2,8 +2,9 @@
 ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
 echo "<?xml version='1.0' ?>";
 echo ("<script>console.log('opening of page');</script>");
-function parseToXML($htmlStr)echo __LINE__;exit;
-$xmlStr=str_replace('<','&lt;',$htmlStr);
+function parseToXML($htmlStr)
+{
+$xmlStr=str_replace('<','&lt;',$htmlStr);echo __LINE__;exit;
 $xmlStr=str_replace('>','&gt;',$xmlStr);
 $xmlStr=str_replace('"','&quot;',$xmlStr);
 $xmlStr=str_replace("'",'&#39;',$xmlStr);
