@@ -1,7 +1,7 @@
 <?php
 echo "<?xml version='1.0' ?>";
-header("Content-type: text/xml");
 echo ("<script>console.log('opening of page');</script>");
+header("Content-type: text/xml");
 function parseToXML($htmlStr)
 {
 $xmlStr=str_replace('<','&lt;',$htmlStr);
