@@ -98,7 +98,7 @@ include("auth.php");
         <div id="mapid"></div>
          <h1>Leave a comment!</h1>
 
-  <form method="post" action="" onsubmit="return post();">
+  <form style= "margin-left: 50%;" method="post" action="" onsubmit="return post();">
   <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
   <br>
   <input type="text" id="username" placeholder="Your Name">
