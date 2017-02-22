@@ -24,11 +24,6 @@ include("auth.php");
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
-
-    <script type="text/javascript" src="../js/jquery.js"></script>
-<script src="../testAjax.js"></script>
-
-<link rel="stylesheet" type="text/css" href="../comment_style.css">
 </head>
 
 <body>
@@ -96,7 +91,6 @@ include("auth.php");
     <!-- Map -->
     <section id="map" class="map">
         <div id="mapid"></div>
-        
         <script src="../../LeafletMap/KML.js"></script>
         <script src="../../LeafletMap/testIndex.js"></script>
     </section>
