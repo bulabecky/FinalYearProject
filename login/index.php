@@ -128,7 +128,7 @@ include("auth.php");
       
       ?>
 
-      <div class="comment_div"> 
+      <div class="comment_div" style= "margin-left: 50%;""> 
         <p class="name">Posted By: <?php echo $name;?></p>
           <p class="comment"><?php echo $comment;?></p> 
         <p class="time"><?php echo $datetime;?></p>
