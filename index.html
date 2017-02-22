@@ -2,24 +2,80 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <title>Using MySQL and PHP with Google Maps</title>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 50%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+    <link href="css1/bootstrap1.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css1/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <title>Cosán Ceol</title>
   </head>
 
   <body>
-    <div id="map"></div>
+   <a href="comments.php">test</a>
+    <a href="map.html">google map test</a>
+
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top" onclick=$("#menu-close").click();>Menu </a>
+            </li>
+            <li>
+                <a href="#top" onclick=$("#menu-close").click();>Home</a>
+            </li>
+            <li>
+                <a href="#about" onclick=$("#menu-close").click();>About</a>
+            </li>
+            <li>
+                <a href="#services" onclick=$("#menu-close").click();>Log In</a>
+            </li>
+            <li>
+                <a href="#portfolio" onclick=$("#menu-close").click();>Sign Up</a>
+            </li>
+            <li>
+                <a href="#map" onclick=$("#menu-close").click();>Manus</a>
+                <a href="#map" onclick=$("#menu-close").click();>Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1 id="heading">Cosán Ceol</h1>
+            <h3>Journey through Irish Music</h3>
+            <br>
+            <a href="#map" class="btn btn-dark btn-lg">Start Searching</a>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 id="heading">Cosán Ceol</h2>
+                    <p class="lead">Cosán ceol is an interactive map appliction highlighting Irish Music. </p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Call to Action -->
+    <section id="SignIn">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <a href="login/login.php" class="btn btn-lg btn-dark">Log In</a>
+                    <a href="login/registration.php" class="btn btn-lg btn-dark">Register Me!</a>
+                </div>
+            </div>
+        </section>
+      <section id="map" class="map">
+        <div id="map"></div>
 
     <script>
       var customLabel = {
@@ -100,6 +156,7 @@
 
       function doNothing() {}
     </script>
+    </section>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
     </script>
