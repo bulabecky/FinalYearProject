@@ -94,10 +94,10 @@
     <script>
       var customLabel = {
          Festival: {
-          label: 'F'
+          label: 'R'
         },
         Band: {
-            leabel: 'B'
+          label: 'B'
         }
       };
 
