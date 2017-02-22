@@ -20,7 +20,7 @@ textarea
 	font-size:17px;
 	padding:10px;
 	font-family:helvetica;
-	float: right;
+	
 }
 input[type="text"]
 {
@@ -32,7 +32,7 @@ input[type="text"]
 	font-size:17px;
 	padding:10px;
 	font-family:helvetica;
-	float: right;
+	
 }
 input[type="submit"]
 {
@@ -44,7 +44,7 @@ input[type="submit"]
 	margin-top:10px;
 	border-radius:5px;
 	font-size:17px;
-	float: right;
+	
 }
 .comment_div
 {
@@ -52,7 +52,7 @@ input[type="submit"]
 	background-color:white;
 	margin-top:10px;
 	text-align:right;
-	float: right;
+	
 }
 .comment_div .name
 {
@@ -62,12 +62,12 @@ input[type="submit"]
 	background-color:#253D3D;
 	color:white;
 	text-align:left;
-	float: right;
+	
 }
 .comment_div .comment
 {
 	padding:10px;
-	float: right;
+	
 }
 .comment_div .time
 {
@@ -76,5 +76,5 @@ input[type="submit"]
 	background-color:#253D3D;
 	color:white;
 	text-align:left;
-	float: right;
+	
 }
