@@ -24,7 +24,7 @@ if (!$result) {
   die('Invalid query: ' . mysqli_error());
 }
 
-
+header("Content-type: text/xml");
 // Start XML file, echo parent node
 echo '<markers>';
 
