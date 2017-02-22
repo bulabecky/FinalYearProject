@@ -30,6 +30,8 @@ echo '<markers>';
 
 // Iterate through the rows, printing XML nodes for each
 while ($row == @mysqli_fetch_assoc($result)){
+
+  echo ("<script>console.log('Heuston, we are in!');</script>");
   // Add to XML document node
   echo '<marker ';
   echo 'name="' . parseToXML($row['name']) . '" ';
