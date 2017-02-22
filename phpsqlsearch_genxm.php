@@ -1,4 +1,6 @@
 <?php
+header("Content-type: text/xml");
+echo "<?xml version='1.0' ?>";
 echo("<script>console.log('can you see me?');</script>");
 
 function parseToXML($htmlStr)
@@ -24,8 +26,7 @@ if (!$result) {
   die('Invalid query: ' . mysqli_error());
 }
 
-header("Content-type: text/xml");
-echo "<?xml version='1.0' ?>";
+
 // Start XML file, echo parent node
 echo '<markers>';
 
