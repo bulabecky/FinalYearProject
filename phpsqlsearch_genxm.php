@@ -20,8 +20,10 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$result = mysqli_query($con,'SELECT * FROM markers WHERE 1');
-
+$result = mysqli_query($con,'SELECT *FROM markers WHERE 1');
+if (!$result) {
+  die('Invalid query: ' . mysqli_error());
+}
 
 header("Content-type: text/xml");
 echo "<?xml version='1.0' ?>";
