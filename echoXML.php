@@ -12,7 +12,7 @@ return $xmlStr;
 }
 
 // Opens a connection to a MySQL server
-$connection=mysqli_connect ('localhost', $username, $password);
+$connection=mysqli_connect ('localhost', 'bob', $password);
 if (!$connection) {
   die('Not connected : ' . mysqli_error());
 }
