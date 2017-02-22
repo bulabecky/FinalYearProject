@@ -1,4 +1,5 @@
 <?php
+echo ("<script>console.log('opening of page');</script>");
 function parseToXML($htmlStr)
 {
 $xmlStr=str_replace('<','&lt;',$htmlStr);
