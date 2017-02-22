@@ -1,4 +1,5 @@
 <?php
+echo "<?xml version='1.0' ?>";
 echo ("<script>console.log('opening of page');</script>");
 function parseToXML($htmlStr)
 {
