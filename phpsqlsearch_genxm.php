@@ -29,7 +29,7 @@ if (!$result) {
 echo '<markers>';
 
 // Iterate through the rows, printing XML nodes for each
-while ($row == @mysqli_fetch_assoc($result)){
+while ($row = @mysqli_fetch_assoc($result)){
 
   echo ("<script>console.log('Heuston, we are in!');</script>");
   // Add to XML document node
