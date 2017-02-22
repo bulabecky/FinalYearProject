@@ -25,6 +25,7 @@ if (!$result) {
   die('Invalid query: ' . mysqli_error());
 }
 
+echo __LINE__;exit;
 
 // Start XML file, echo parent node
 echo ('<markers>');
@@ -34,8 +35,8 @@ while ($row = mysqli_fetch_assoc($result)){
 
   echo ("<script>console.log('Heuston, we are in!');</script>");
   // Add to XML document node
-  
-  echo '<marker ';echo __LINE__;exit;
+
+  echo '<marker ';
   echo 'name="' . parseToXML($row['name']) . '" ';
   echo 'address="' . parseToXML($row['address']) . '" ';
   echo 'lat="' . $row['lat'] . '" ';
