@@ -16,6 +16,9 @@ body {
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+.lead {
+    color:floralwhite;
+}
 
 .text-vertical-center {
     display: table-cell;
