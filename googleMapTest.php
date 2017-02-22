@@ -91,7 +91,7 @@
  
         <?php
  
-        /$con = mysqli_connect("localhost","root","Beckyboo4","register");
+        $con = mysqli_connect("localhost","root","Beckyboo4","FYP");
     // Check connection
     if (mysqli_connect_errno())
       {
