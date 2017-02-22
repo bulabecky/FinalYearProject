@@ -42,7 +42,7 @@
       ?>
 
       <div class="comment_div"> 
-        <p class="name">Posted By:<?php echo $name;?></p>
+        <p class="name">Posted By: <?php echo $name;?></p>
           <p class="comment"><?php echo $comment;?></p> 
         <p class="time"><?php echo $datetime;?></p>
       </div>
