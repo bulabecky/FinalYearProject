@@ -20,7 +20,7 @@ $con = mysqli_connect("localhost","root","Beckyboo4","map");
         die('Could not query:' . mysqli_error());
     }
 
-header("Content-type: text/xml");
+header("Content-type: text/html");
 
 // Iterate through the rows, adding XML nodes for each
 
