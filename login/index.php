@@ -98,6 +98,7 @@ include("auth.php");
         <div id="mapid">
         <script src="../../LeafletMap/KML.js"></script>
         <script src="../../LeafletMap/testIndex.js"></script>
+        <div id="commentSection" style="float: right;">
            <h1>Leave a comment!</h1>
 
   <form style= "float: right;" method="post" action="" onsubmit="return post();">
@@ -142,6 +143,7 @@ include("auth.php");
     ?>
   </div>
   
+        </div>
         </div>
         
     </section>
