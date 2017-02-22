@@ -1,6 +1,6 @@
 <html>
     <head>
-    <script type='text/javascript' src='jquery-1.6.2.min.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
     <script type='text/javascript' src='jquery-ui-1.8.14.custom.min.js'></script>
     <style>
  
