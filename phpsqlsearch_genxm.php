@@ -16,7 +16,7 @@ $connection=mysqlii_connect ('localhost', $username, $password);
 if (!$connection) {
   die('Not connected : ' . mysqli_error());
 }
-
+echo("<script>console.log('database connected');</script>");
 // Set the active mysqli database
 $db_selected = mysqli_select_db($database, $connection);
 if (!$db_selected) {
