@@ -15,7 +15,7 @@ $con = mysqli_connect("localhost","root","Beckyboo4","`map");
       }
 
 
-    $result = mysqli_query($con,'SELECT * FROM markers');
+    $result = mysqli_query($con,'SELECT * FROM `markers` WHERE 1');
     if (!$result) {
         die('Could not query:' . mysqli_error());
     }
