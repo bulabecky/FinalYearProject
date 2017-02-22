@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html>
     <head>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
-    <script type='text/javascript' src='jquery-ui-1.8.14.custom.min.js'></script>
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js'></script>
     <style>
  
         BODY {font-family : Verdana,Arial,Helvetica,sans-serif; color: #000000; font-size : 13px ; }
