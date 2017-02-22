@@ -96,9 +96,9 @@ include("auth.php");
     <!-- Map -->
     <section id="map" class="map">
         <div id="mapid" style="float: left;">
-            
-        </div>
-         <h1>Leave a comment!</h1>
+        <script src="../../LeafletMap/KML.js"></script>
+        <script src="../../LeafletMap/testIndex.js"></script>
+           <h1>Leave a comment!</h1>
 
   <form style= "float: right;" method="post" action="" onsubmit="return post();">
   <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
@@ -141,9 +141,9 @@ include("auth.php");
     mysqli_close($con) or die(mysqli_error());
     ?>
   </div>
-
-        <script src="../../LeafletMap/KML.js"></script>
-        <script src="../../LeafletMap/testIndex.js"></script>
+  
+        </div>
+        
     </section>
 
     <!-- Footer -->
