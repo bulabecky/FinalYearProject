@@ -1,4 +1,4 @@
-<?php
+<?
 header("Content-type: text/xml");
 require("dbinfo.php");
 function parseToXML($htmlStr) 
@@ -15,14 +15,14 @@ $center_lat = $_GET["lat"];
 $center_lng = $_GET["lng"];
 $radius = $_GET["radius"];
 // Opens a connection to a MySQL server
-$connection=mysql_connect (localhost, $username, $password);
+$connection=mysqli_connect (localhost, $username, $password);
 if (!$connection) {
-  die('Not connected : ' . mysql_error());
+  die('Not connected : ' . mysqli_error());
 }
 // Set the active MySQL database
-$db_selected = mysql_select_db($database, $connection);
+$db_selected = mysqli_select_db($database, $connection);
 if (!$db_selected) {
-  die ('Can\'t use db : ' . mysql_error());
+  die ('Can\'t use db : ' . mysqli_error());
 }
 // Select all the rows in the markers table
 $query = sprintf("SELECT address, name, lat, lng, ( 3959 * acos( cos( radians('%s') ) * cos( radians( lat ) ) * cos( radians( lng ) - radians('%s') ) + sin( radians('%s') ) * sin( radians( lat ) ) ) ) AS distance FROM markers HAVING distance < '%s' ORDER BY distance LIMIT 0 , 20",
@@ -32,12 +32,12 @@ $query = sprintf("SELECT address, name, lat, lng, ( 3959 * acos( cos( radians('%
   mysql_real_escape_string($radius));
 $result = mysql_query($query);
 if (!$result) {
-  die('Invalid query: ' . mysql_error());
+  die('Invalid query: ' . mysqli_error());
 }
 // Start XML file, echo parent node
 echo "<markers>\n";
 // Iterate through the rows, printing XML nodes for each
-while ($row = @mysql_fetch_assoc($result)){
+while ($row = @mysqli_fetch_assoc($result)){
   // ADD TO XML DOCUMENT NODE
   echo '<marker ';
   echo 'name="' . parseToXML($row['name']) . '" ';
