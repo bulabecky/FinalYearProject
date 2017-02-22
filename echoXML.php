@@ -1,5 +1,5 @@
 <?php
-require("credentials.php");
+
 
 function parseToXML($htmlStr)
 {
@@ -12,16 +12,12 @@ return $xmlStr;
 }
 
 // Opens a connection to a MySQL server
-$connection=mysqli_connect ('localhost', 'bob', $password);
-if (!$connection) {
-  die('Not connected : ' . mysqli_error());
-}
-
-// Set the active MySQL database
-$db_selected = mysqli_select_db($database, $connection);
-if (!$db_selected) {
-  die ('Can\'t use db : ' . mysqli_error());
-}
+$con = mysqli_connect("localhost","root","Beckyboo4","FYP");
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
 
 // Select all the rows in the markers table
 $query = ($connection,"SELECT * FROM markersDB WHERE 1");
