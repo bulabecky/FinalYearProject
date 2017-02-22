@@ -36,7 +36,7 @@
           label: 'Neighborhood'
         }
       };
-
+        console.log("before initiate map");
         function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           center: new google.maps.LatLng(38.907192, -77.036871), // Washington D.C.
@@ -45,6 +45,7 @@
         var infoWindow = new google.maps.InfoWindow;
 
           // Change this depending on the name of your PHP or XML file
+          console.log("before xml");
           downloadUrl('http://cosanceol.tk/echoXML.php', function(data) {
             var xml = data.responseXML;
             var markers = xml.documentElement.getElementsByTagName('marker');
@@ -79,7 +80,7 @@
           });
         }
 
-
+        console.log("outside xml");
 
       function downloadUrl(url, callback) {
         var request = window.ActiveXObject ?
