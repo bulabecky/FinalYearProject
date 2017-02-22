@@ -1,6 +1,6 @@
 <?php
 header("Content-type: text/xml");
-echo "<?xml version='1.0' ?>";
+echo ("<?xml version='1.0' ?>");
 echo("<script>console.log('can you see me?');</script>");
 
 function parseToXML($htmlStr)
