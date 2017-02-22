@@ -17,7 +17,7 @@ body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .lead {
-    color:floralwhite;
+    color:whitesmoke;
 }
 
 .text-vertical-center {
@@ -37,11 +37,9 @@ h3 {
     color: aliceblue;
 }
 #heading {
-    color: floralwhite;
+    color: whitesmoke;
 }
-h2 {
-    color: red;
-}
+
 /* Custom Button Styles */
 
 .btn-dark {
