@@ -1,7 +1,7 @@
 <?php
 require("dbinfo.php");
 echo("<script>console.log('can you see me?');</script>");
-echo "<?xml version='1.0' ?>";
+
 function parseToXML($htmlStr)
 {
 $xmlStr=str_replace('<','&lt;',$htmlStr);
@@ -13,7 +13,7 @@ return $xmlStr;
 }
 
 // Opens a connection to a mysqli server
-$connection=mysqlii_connect ('localhost', $username, $password);
+$connection=mysqli_connect ('localhost', $username, $password);
 if (!$connection) {
   die('Not connected : ' . mysqli_error());
 }
@@ -32,7 +32,7 @@ if (!$result) {
 }
 
 header("Content-type: text/xml");
-
+echo "<?xml version='1.0' ?>";
 // Start XML file, echo parent node
 echo '<markers>';
 
