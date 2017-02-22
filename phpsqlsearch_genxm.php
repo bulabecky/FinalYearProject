@@ -13,19 +13,15 @@ return $xmlStr;
 }
 
 // Opens a connection to a mysqli server
-$connection=$con = mysqli_connect("localhost","root","Beckyboo4","map");
+$con = mysqli_connect("localhost","root","Beckyboo4","map");
 // Check connection
 if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-// Select all the rows in the markers table
-$query = ($connection,"SELECT * FROM markers WHERE 1");
-$result = mysqli_query($query);
-if (!$result) {
-  die('Invalid query: ' . mysqli_error());
-}
+$result = mysqli_query($con,'SELECT * FROM markers WHERE 1');
+
 
 header("Content-type: text/xml");
 echo "<?xml version='1.0' ?>";
