@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
 echo "<?xml version='1.0' ?>";
 echo ("<script>console.log('opening of page');</script>");
 function parseToXML($htmlStr)
@@ -33,6 +34,7 @@ while ($row = mysqli_fetch_assoc($result)){
 
   echo ("<script>console.log('Heuston, we are in!');</script>");
   // Add to XML document node
+  echo __LINE__;exit;
   echo '<marker ';
   echo 'name="' . parseToXML($row['name']) . '" ';
   echo 'address="' . parseToXML($row['address']) . '" ';
