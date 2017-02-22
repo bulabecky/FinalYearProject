@@ -96,10 +96,10 @@ include("auth.php");
     <!-- Map -->
     <section id="map" class="map">
         <div id="mapid">
-        <script src="../../LeafletMap/KML.js"></script>
+         </div>
+         <script src="../../LeafletMap/KML.js"></script>
         <script src="../../LeafletMap/testIndex.js"></script>
-        </div>
-        
+
     </section>
 
     <!-- Footer -->
