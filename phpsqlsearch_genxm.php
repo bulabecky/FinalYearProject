@@ -12,14 +12,14 @@ return $xmlStr;
 }
 
 // Opens a connection to a mysqli server
-$con = mysqli_connect("localhost","root","Beckybo4","map");
+$con = mysqli_connect("localhost","root","Beckyboo4","map");
 // Check connection
 if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$result = mysqli_query($con,'SELECT *FROM markers WHERE 1');
+$result = mysqli_query($con,'SELECT * FROM `markers` WHERE 1');
 if (!$result) {
   die('Invalid query: ' . mysqli_error());
 }
