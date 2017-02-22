@@ -100,17 +100,19 @@ include("auth.php");
     </section>
 
     <!-- Footer -->
-    <footer>
+       <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Start Bootstrap</strong>
+                    <h4><strong>Cosán Ceol</strong>
                     </h4>
-                    <p>3481 Melrose Place
-                        <br>Beverly Hills, CA 90210</p>
+                    <p>Maynooth Univerisity
+                        <br>Maynooth
+                        <br>Co Kildare
+                        <br>Ireland</p>
                     <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">name@example.com</a>
+                        
+                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:cosanceol@gmail.com">cosanceol@gmail.com</a>
                         </li>
                     </ul>
                     <br>
@@ -126,12 +128,13 @@ include("auth.php");
                         </li>
                     </ul>
                     <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
+                    <p class="text-muted">Copyright &copy; cosanceol.tk 2017</p>
                 </div>
             </div>
         </div>
         <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
     </footer>
+
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
