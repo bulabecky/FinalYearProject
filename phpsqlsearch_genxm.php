@@ -1,5 +1,5 @@
 <?php
-require("phpsqlajax_dbinfo.php");
+require("dbinfo.php");
 
 function parseToXML($htmlStr)
 {
