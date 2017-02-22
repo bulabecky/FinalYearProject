@@ -1,5 +1,5 @@
 <?php
-
+ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
 // Start XML file, create parent node
 
 $dom = new DOMDocument("1.0");
@@ -8,7 +8,7 @@ $parnode = $dom->appendChild($node);
 
 // Opens a connection to a MySQL server
 
-   $con = mysqli_connect("localhost","root","Bekyboo4","map");
+   $con = mysqli_connect("localhost","root","Beckyboo4","map");
     // Check connection
     if (mysqli_connect_errno())
       {
@@ -21,7 +21,7 @@ $parnode = $dom->appendChild($node);
         die('Could not query:' . mysqli_error());
     }
 
-header("Content-type: text/xml");
+header("Content-type: text/xml");echo __LINE__;exit;
 
 // Iterate through the rows, adding XML nodes for each
 
