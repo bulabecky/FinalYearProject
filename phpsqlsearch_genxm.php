@@ -21,7 +21,7 @@ if (mysqli_connect_errno())
 }
 
 // Select all the rows in the markers table
-$query = "SELECT * FROM markers WHERE 1";
+$query = ($connection,"SELECT * FROM markers WHERE 1");
 $result = mysqli_query($query);
 if (!$result) {
   die('Invalid query: ' . mysqli_error());
