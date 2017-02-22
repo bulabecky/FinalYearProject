@@ -11,23 +11,23 @@ $xmlStr=str_replace("&",'&amp;',$xmlStr);
 return $xmlStr;
 }
 
-// Opens a connection to a MySQL server
-$connection=mysql_connect ('localhost', $username, $password);
+// Opens a connection to a mysqli server
+$connection=mysqlii_connect ('localhost', $username, $password);
 if (!$connection) {
-  die('Not connected : ' . mysql_error());
+  die('Not connected : ' . mysqli_error());
 }
 
-// Set the active MySQL database
-$db_selected = mysql_select_db($database, $connection);
+// Set the active mysqli database
+$db_selected = mysqli_select_db($database, $connection);
 if (!$db_selected) {
-  die ('Can\'t use db : ' . mysql_error());
+  die ('Can\'t use db : ' . mysqli_error());
 }
 
 // Select all the rows in the markers table
 $query = "SELECT * FROM markers WHERE 1";
-$result = mysql_query($query);
+$result = mysqli_query($query);
 if (!$result) {
-  die('Invalid query: ' . mysql_error());
+  die('Invalid query: ' . mysqli_error());
 }
 
 header("Content-type: text/xml");
@@ -36,7 +36,7 @@ header("Content-type: text/xml");
 echo '<markers>';
 
 // Iterate through the rows, printing XML nodes for each
-while ($row = @mysql_fetch_assoc($result)){
+while ($row = @mysqli_fetch_assoc($result)){
   // Add to XML document node
   echo '<marker ';
   echo 'name="' . parseToXML($row['name']) . '" ';
