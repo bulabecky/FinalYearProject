@@ -63,9 +63,9 @@
               var text = document.createElement('text');
               text.textContent = address
               infowincontent.appendChild(text);
-              var videoplayer = document.createElement('video');
-              video.video = video
-              infowincontent.appendChild(videoplayer);
+              var x = document.createElement("IFRAME");
+               x.setAttribute('video');
+               infowincontent.appendChild(x);
               var icon = customLabel[type] || {};
               var marker = new google.maps.Marker({
                 map: map,
