@@ -1,6 +1,6 @@
 <?php
 require("dbinfo.php");
-
+echo("<script>console.log('can you see me?');</script>");
 function parseToXML($htmlStr)
 {
 $xmlStr=str_replace('<','&lt;',$htmlStr);
