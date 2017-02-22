@@ -2,11 +2,10 @@ body
 {
 	text-align:center;
 	font-family:helvetica;
-	background-color:#303030;
 }
 h1
 {
-	color:whitesmoke;
+	color:floralwhite;
 	text-align:center;
 	margin-top:100px;
 
@@ -39,7 +38,7 @@ input[type="submit"]
 	width:150px;
 	height:40px;
 	border:none;
-	background-color:#000000;
+	background-color:#2E64FE;
 	color:white;
 	margin-top:10px;
 	border-radius:5px;
@@ -60,7 +59,7 @@ input[type="submit"]
 	height:30px;
 	line-height:30px;
 	padding:10px;
-	background-color:#000000;
+	background-color:#253D3D;
 	color:white;
 	text-align:left;
 	
@@ -74,7 +73,7 @@ input[type="submit"]
 {
 	font-style:italic;
 	padding:10px;
-	background-color:#000000;
+	background-color:#253D3D;
 	color:white;
 	text-align:left;
 	
