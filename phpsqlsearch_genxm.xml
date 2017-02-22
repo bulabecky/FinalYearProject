@@ -1,6 +1,6 @@
-<?
+<?php
 // Start XML file, create parent node
-echo "<?xml version='1.0' ?>";
+echo("<?xml version="1.0" encoding="UTF-8"?>");
 echo ("<script>console.log('opening of page');</script>");
 $dom = new DOMDocument("1.0");
 $node = $dom->createElement("markers");
