@@ -65,7 +65,7 @@
               infowincontent.appendChild(text);
               var x = document.createElement("IFRAME");
               x.setAttribute("src", 'video');
-              document.body.appendChild(x);
+              infowincontent.appendChild(x);
               var icon = customLabel[type] || {};
               var marker = new google.maps.Marker({
                 map: map,
