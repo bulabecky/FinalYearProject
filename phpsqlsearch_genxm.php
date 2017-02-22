@@ -1,29 +1,22 @@
 <?php
-require("dbinfo.php");
-
 // Start XML file, create parent node
 $doc = domxml_new_doc("1.0");
 $node = $doc->create_element("markers");
 $parnode = $doc->append_child($node);
 
 // Opens a connection to a mysqli server
-$connection=mysqli_connect ('localhost', $username, $password);
-if (!$connection) {
-  die('Not connected : ' . mysqli_error());
-}
-
-// Set the active mysqli database
-$db_selected = mysqli_select_db($database, $connection);
-if (!$db_selected) {
-  die ('Can\'t use db : ' . mysqli_error());
-}
-
+$con = mysqli_connect("localhost","root","Beckyboo4","register");
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
 // Select all the rows in the markers table
-$query = ($connection,'SELECT * FROM 'markers' WHERE 1');
-$result = mysqli_query($query);
-if (!$result) {
-  die('Invalid query: ' . mysqli_error());
-}
+$result = mysqli_query($con,'SELECT * FROM markers');
+    if (!$result) {
+        die('Could not query:' . mysqli_error());
+    }
+
 
 header("Content-type: text/xml");
 
