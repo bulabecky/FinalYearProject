@@ -1,6 +1,6 @@
 <?php
 
-
+echo"<?xml version="1.0" encoding="utf-16"?>";
 // Start XML file, create parent node
 
 $dom = new DOMDocument("1.0");
