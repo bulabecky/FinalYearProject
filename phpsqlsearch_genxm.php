@@ -26,7 +26,7 @@ if (!$result) {
 
 
 // Start XML file, echo parent node
-echo '<markers>';
+echo ('<markers>');
 
 // Iterate through the rows, printing XML nodes for each
 while ($row = mysqli_fetch_assoc($result)){
