@@ -94,7 +94,7 @@
     <script>
       var customLabel = {
          Festival: {
-          label: 'R'
+          label: 'F'
         },
         Band: {
           label: 'B'
