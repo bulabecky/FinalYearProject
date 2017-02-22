@@ -27,6 +27,8 @@ include("auth.php");
 
     <script type="text/javascript" src="../js/jquery.js"></script>
 <script src="../testAjax.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../comment_style.css">
 </head>
 
 <body>
