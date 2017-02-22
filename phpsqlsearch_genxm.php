@@ -36,8 +36,8 @@ while ($row = mysqli_fetch_assoc($result)){
   echo ("<script>console.log('Heuston, we are in!');</script>");
   // Add to XML document node
 
-  echo "<marker "; echo __LINE__;exit;
-  echo 'name="' . parseToXML($row['name']) . '" ';
+  echo "<marker "; 
+  echo 'name="' . parseToXML($row['name']) . '" ';echo __LINE__;exit;
   echo 'address="' . parseToXML($row['address']) . '" ';
   echo 'lat="' . $row['lat'] . '" ';
   echo 'lng="' . $row['lng'] . '" ';
