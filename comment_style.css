@@ -44,6 +44,7 @@ input[type="submit"]
 	margin-top:10px;
 	border-radius:5px;
 	font-size:17px;
+	float: right;
 	
 }
 .comment_div
