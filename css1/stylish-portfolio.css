@@ -12,6 +12,9 @@ body {
     height: 100%;
     background-color:#303030;
 }
+p {
+    color: whitesmoke;
+}
 
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
