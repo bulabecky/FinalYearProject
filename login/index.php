@@ -90,7 +90,7 @@ include("auth.php");
 
     <!-- Map -->
     <section id="map" class="map">
-        <div id="mapid"></div>
+        <div id="mapid"  style="width: 100%; height: 700px;"></div>
         <script src="../../LeafletMap/KML.js"></script>
         <script src="../../LeafletMap/testIndex.js"></script>
     </section>
