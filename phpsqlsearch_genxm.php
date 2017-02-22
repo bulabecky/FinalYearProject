@@ -8,7 +8,7 @@ $xmlStr=str_replace('<','&lt;',$htmlStr);
 $xmlStr=str_replace('>','&gt;',$xmlStr);
 $xmlStr=str_replace('"','&quot;',$xmlStr);
 $xmlStr=str_replace("'",'&#39;',$xmlStr);
-$xmlStr=str_replace("&",'&amp;',$xmlStr);echo __LINE__;exit;
+$xmlStr=str_replace("&",'&amp;',$xmlStr);
 return $xmlStr;
 }
 
@@ -36,7 +36,7 @@ while ($row = mysqli_fetch_assoc($result)){
   // Add to XML document node
   
   echo '<marker ';
-  echo 'name="' . parseToXML($row['name']) . '" ';
+  echo 'name="' . parseToXML($row['name']) . '" ';echo __LINE__;exit;
   echo 'address="' . parseToXML($row['address']) . '" ';
   echo 'lat="' . $row['lat'] . '" ';
   echo 'lng="' . $row['lng'] . '" ';
