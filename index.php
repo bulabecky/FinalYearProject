@@ -168,7 +168,7 @@
       function doNothing() {}
     </script>  
       <div id="comment-section" style="float:left;">
-    <h1>Leave a comment!</h1>
+          <h4>Leave a comment</h4>
 
   <form method="post" action="" onsubmit="return post();">
   <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
