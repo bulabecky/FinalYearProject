@@ -96,7 +96,9 @@ include("auth.php");
     <!-- Map -->
     <section id="map" class="map">
         <div id="mapid" style="float: left;">
-             <h1>Leave a comment!</h1>
+            
+        </div>
+         <h1>Leave a comment!</h1>
 
   <form style= "float: right;" method="post" action="" onsubmit="return post();">
   <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
@@ -140,8 +142,6 @@ include("auth.php");
     ?>
   </div>
 
-        </div>
-        
         <script src="../../LeafletMap/KML.js"></script>
         <script src="../../LeafletMap/testIndex.js"></script>
     </section>
