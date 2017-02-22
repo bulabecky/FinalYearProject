@@ -24,6 +24,10 @@ include("auth.php");
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../comment_style.css">
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script src="../testAjax.js"></script>
 </head>
 
 <body>
