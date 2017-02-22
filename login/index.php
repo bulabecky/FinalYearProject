@@ -95,10 +95,10 @@ include("auth.php");
 
     <!-- Map -->
     <section id="map" class="map">
-        <div id="mapid">
+        <div id="mapid" style="float: left;">
              <h1>Leave a comment!</h1>
 
-  <form style= "margin-left: 100%;" method="post" action="" onsubmit="return post();">
+  <form style= "float: right;" method="post" action="" onsubmit="return post();">
   <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
   <br>
   <input type="text" id="username" placeholder="Your Name">
@@ -128,7 +128,7 @@ include("auth.php");
       
       ?>
 
-      <div class="comment_div" style= "margin-left: 70%;""> 
+      <div class="comment_div" style= "float: right;">
         <p class="name">Posted By: <?php echo $name;?></p>
           <p class="comment"><?php echo $comment;?></p> 
         <p class="time"><?php echo $datetime;?></p>
