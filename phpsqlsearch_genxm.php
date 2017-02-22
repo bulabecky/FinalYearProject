@@ -1,6 +1,5 @@
 <?php
 
-echo"<?xml version="1.0" encoding="utf-16"?>";
 // Start XML file, create parent node
 
 $dom = new DOMDocument("1.0");
@@ -9,7 +8,7 @@ $parnode = $dom->appendChild($node);
 
 // Opens a connection to a MySQL server
 
-   $con = mysqli_connect("localhost","root","Beckyboo4","map");
+   $con = mysqli_connect("localhost","root","Bekyboo4","map");
     // Check connection
     if (mysqli_connect_errno())
       {
