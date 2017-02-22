@@ -37,14 +37,14 @@ while ($row = mysqli_fetch_assoc($result)){
   // Add to XML document node
 
   echo "<marker "; 
-  echo 'name="' . parseToXML($row['name']) . '" ';echo __LINE__;exit;
+  echo 'name="' . parseToXML($row['name']) . '" ';
   echo 'address="' . parseToXML($row['address']) . '" ';
   echo 'lat="' . $row['lat'] . '" ';
   echo 'lng="' . $row['lng'] . '" ';
   echo 'type="' . $row['type'] . '" ';
   echo '/>';
 }
-
+echo __LINE__;exit;
 // End XML file
 echo '</markers>';
 
