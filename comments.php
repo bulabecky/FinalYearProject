@@ -9,7 +9,7 @@
 
 <body>
 
-  <h1>Like what you see? Leave a comment!</h1>
+  <h1>Leave a comment!</h1>
 
   <form method="post" action="" onsubmit="return post();">
   <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
