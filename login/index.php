@@ -95,10 +95,10 @@ include("auth.php");
 
     <!-- Map -->
     <section id="map" class="map">
-        <div id="mapid"></div>
-         <h1>Leave a comment!</h1>
+        <div id="mapid">
+             <h1>Leave a comment!</h1>
 
-  <form style= "margin-left: 50%;" method="post" action="" onsubmit="return post();">
+  <form style= "margin-left: 70%;" method="post" action="" onsubmit="return post();">
   <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
   <br>
   <input type="text" id="username" placeholder="Your Name">
@@ -128,7 +128,7 @@ include("auth.php");
       
       ?>
 
-      <div class="comment_div" style= "margin-left: 50%;""> 
+      <div class="comment_div" style= "margin-left: 70%;""> 
         <p class="name">Posted By: <?php echo $name;?></p>
           <p class="comment"><?php echo $comment;?></p> 
         <p class="time"><?php echo $datetime;?></p>
@@ -139,6 +139,9 @@ include("auth.php");
     mysqli_close($con) or die(mysqli_error());
     ?>
   </div>
+            
+        </div>
+        
         <script src="../../LeafletMap/KML.js"></script>
         <script src="../../LeafletMap/testIndex.js"></script>
     </section>
