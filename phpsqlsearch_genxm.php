@@ -12,7 +12,7 @@ return $xmlStr;
 }
 
 // Opens a connection to a mysqli server
-$con = mysqli_connect("localhost","root","Beckyboo4","map");
+$con = mysqli_connect("localhost","root","Beckybo4","map");
 // Check connection
 if (mysqli_connect_errno())
   {
