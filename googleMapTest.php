@@ -10,7 +10,7 @@
         #map_canvas { width:100%; height: 100%; z-index: 0; }
     </style>
      <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=$"
     </script>
     <script type='text/javascript'>
  
