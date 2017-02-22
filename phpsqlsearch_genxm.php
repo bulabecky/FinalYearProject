@@ -7,7 +7,7 @@ $parnode = $dom->appendChild($node);
 
 // Opens a connection to a MySQL server
 
-$con = mysqli_connect("localhost","root","Beckyboo4","`map");
+$con = mysqli_connect("localhost","root","Beckyboo4","map");
     // Check connection
     if (mysqli_connect_errno())
       {
