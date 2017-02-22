@@ -1,12 +1,15 @@
 <?php
-ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
-// Start XML file, create parent node
 
-$dom = new DOMDocument("1.0");
-$node = $dom->createElement("markers");
-$parnode = $dom->appendChild($node);
 
-// Opens a connection to a MySQL server
+function parseToXML($htmlStr)
+{
+$xmlStr=str_replace('<','&lt;',$htmlStr);
+$xmlStr=str_replace('>','&gt;',$xmlStr);
+$xmlStr=str_replace('"','&quot;',$xmlStr);
+$xmlStr=str_replace("'",'&#39;',$xmlStr);
+$xmlStr=str_replace("&",'&amp;',$xmlStr);
+return $xmlStr;
+}
 
    $con = mysqli_connect("localhost","root","Beckyboo4","map");
     // Check connection
@@ -21,21 +24,24 @@ $parnode = $dom->appendChild($node);
         die('Could not query:' . mysqli_error());
     }
 
-header("Content-type: text/xml");echo __LINE__;exit;
+header("Content-type: text/xml");
 
-// Iterate through the rows, adding XML nodes for each
+// Start XML file, echo parent node
+echo '<markers>';
 
-while ($row = @mysql_fetch_assoc($result)){
+// Iterate through the rows, printing XML nodes for each
+while ($row = @mysqli_fetch_assoc($result)){
   // Add to XML document node
-  $node = $dom->createElement("marker");
-  $newnode = $parnode->appendChild($node);
-  $newnode->setAttribute("name",$row['name']);
-  $newnode->setAttribute("address", $row['address']);
-  $newnode->setAttribute("lat", $row['lat']);
-  $newnode->setAttribute("lng", $row['lng']);
-  $newnode->setAttribute("type", $row['type']);
+  echo '<marker ';
+  echo 'name="' . parseToXML($row['name']) . '" ';
+  echo 'address="' . parseToXML($row['address']) . '" ';
+  echo 'lat="' . $row['lat'] . '" ';
+  echo 'lng="' . $row['lng'] . '" ';
+  echo 'type="' . $row['type'] . '" ';
+  echo '/>';
 }
 
-echo $dom->saveXML();
+// End XML file
+echo '</markers>';
 
 ?>
