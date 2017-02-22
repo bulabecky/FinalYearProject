@@ -1,4 +1,4 @@
-<?
+<?php
 header("Content-type: text/xml");
 require("dbinfo.php");
 function parseToXML($htmlStr) 
