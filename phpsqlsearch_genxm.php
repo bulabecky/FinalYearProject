@@ -12,12 +12,10 @@ return $xmlStr;
 }
 
 // Opens a connection to a mysqli server
-$con = mysqli_connect("localhost","root","Beckybo4","FYP");
-// Check connection
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
+$connection=mysqlii_connect ('localhost', $username, $password);
+if (!$connection) {
+  die('Not connected : ' . mysqli_error());
+}
 
 // Set the active mysqli database
 $db_selected = mysqli_select_db($database, $connection);
@@ -26,7 +24,7 @@ if (!$db_selected) {
 }
 
 // Select all the rows in the markers table
-$query = ($con,"SELECT * FROM markers WHERE 1");
+$query = "SELECT * FROM markers WHERE 1";
 $result = mysqli_query($query);
 if (!$result) {
   die('Invalid query: ' . mysqli_error());
