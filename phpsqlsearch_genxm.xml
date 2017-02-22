@@ -1,4 +1,4 @@
-<?php
+<?
 // Start XML file, create parent node
 
 $dom = new DOMDocument("1.0");
@@ -24,7 +24,7 @@ $con = mysqli_connect("localhost","root","Beckyboo4","map");
 
 // Iterate through the rows, adding XML nodes for each
 
-while ($row = @mysql_fetch_assoc($result)){
+while ($row = @mysqli_fetch_assoc($result)){
   // Add to XML document node
   $node = $dom->createElement("marker");
   $newnode = $parnode->appendChild($node);
