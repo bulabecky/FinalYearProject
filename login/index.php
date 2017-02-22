@@ -93,7 +93,7 @@ include("auth.php");
         <div id="mapid"  style="width: 100%; height: 700px;"></div>
         <script src="../../LeafletMap/KML.js"></script>
         <script src="../../LeafletMap/testIndex.js"></script>
-        <form method="post" action="" onsubmit="return post();">
+        <form method="post" action="" onsubmit="return post();" style="float: right; height:700px; width:50%;">
   <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
   <br>
   <input type="text" id="username" placeholder="Your Name">
