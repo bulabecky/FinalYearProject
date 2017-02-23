@@ -174,7 +174,6 @@
   <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
   <br>
   <input type="text" id="username" placeholder="Your Name">
-  <br>
   <input type="submit" value="Post Comment">
   </form>
 
