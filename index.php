@@ -71,7 +71,7 @@
                     <h2 id="heading">Cosán Ceol</h2>
                     <p class="lead">Cosán ceol is an interactive map appliction highlighting Irish Music.<br>
                     This website has been created for the requirements of a Final Year Project By Rebecca McGowan.</p>
-                    <img src="img/rebecca.jpg" class="img-circle" width="200" height="200">
+                    <img src="Images/newLogo.png" class="img-circle" width="200" height="200">
                 </div>
             </div>
             <!-- /.row -->
