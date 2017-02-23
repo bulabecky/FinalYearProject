@@ -99,7 +99,7 @@
           label: 'FB'
         },
         Band: {
-          label: 'B'
+          label: 'RB'
         }
       };
 
