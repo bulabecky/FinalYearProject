@@ -95,6 +95,9 @@
          Festival: {
           label: 'F'
         },
+        FolkBand: {
+          label: 'FB'
+        },
         Band: {
           label: 'B'
         }
