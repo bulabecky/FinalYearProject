@@ -240,7 +240,7 @@
                             <div class="fb-share-button" data-href="http://cosanceol.tk/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcosanceol.tk%2F&amp;src=sdkpreparse">Share</a></div>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                            <a class="twitter-share-button" href="https://twitter.com/intent/tweettext=Cosán%20Ceol" data-size="large">Tweet</a>
                         </li>
                     </ul>
                     <hr class="small">
