@@ -131,7 +131,6 @@
               infowincontent.appendChild(text);
               var x = document.createElement("IFRAME");
               x.setAttribute("src", video);
-              iframe.setAttribute('allowFullScreen');
               infowincontent.appendChild(x);
               var icon = customLabel[type] || {};
               var marker = new google.maps.Marker({
