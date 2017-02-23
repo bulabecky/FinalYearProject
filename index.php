@@ -28,7 +28,6 @@
   </head>
 
   <body>
-  <a href="comments.php">test</a>
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
@@ -132,6 +131,7 @@
               infowincontent.appendChild(text);
               var x = document.createElement("IFRAME");
               x.setAttribute("src", video);
+              iframe.setAttribute('allowFullScreen');
               infowincontent.appendChild(x);
               var icon = customLabel[type] || {};
               var marker = new google.maps.Marker({
