@@ -229,7 +229,6 @@
                     <br>
                     <ul class="list-inline">
                         <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
                             <div id="fb-root"></div>
                               <script>(function(d, s, id) {
                                 var js, fjs = d.getElementsByTagName(s)[0];
