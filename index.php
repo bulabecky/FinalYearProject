@@ -229,7 +229,7 @@
                     <br>
                     <ul class="list-inline">
                         <li>
-
+                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
                             <div id="fb-root"></div>
                             <script>(function(d, s, id) {
                               var js, fjs = d.getElementsByTagName(s)[0];
@@ -238,26 +238,9 @@
                               js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
                               fjs.parentNode.insertBefore(js, fjs);
                             }(document, 'script', 'facebook-jssdk'));</script>
-                            <div class="fb-share-button" data-href="http://cosanceol.tk/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcosanceol.tk%2F&amp;src=sdkpreparse">Share</a></div>
                         </li>
                         <li>
-                            <a href="https://twitter.com/intent/tweet?text=Look%20at%20my%20map%20on%20CosánCeol!"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                            <script>window.twttr = (function(d, s, id) {
-                              var js, fjs = d.getElementsByTagName(s)[0],
-                                t = window.twttr || {};
-                              if (d.getElementById(id)) return t;
-                              js = d.createElement(s);
-                              js.id = id;
-                              js.src = "https://platform.twitter.com/widgets.js";
-                              fjs.parentNode.insertBefore(js, fjs);
-
-                              t._e = [];
-                              t.ready = function(f) {
-                                t._e.push(f);
-                              };
-
-                              return t;
-                            }(document, "script", "twitter-wjs"));</script>
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
                         </li>
                     </ul>
                     <hr class="small">
