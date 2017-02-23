@@ -95,9 +95,6 @@
          Festival: {
           label: 'F'
         },
-        FolkBand: {
-          label: 'FB'
-        },
         Band: {
           label: 'B'
         }
@@ -232,6 +229,7 @@
                     <br>
                     <ul class="list-inline">
                         <li>
+
                             <div id="fb-root"></div>
                             <script>(function(d, s, id) {
                               var js, fjs = d.getElementsByTagName(s)[0];
@@ -243,7 +241,7 @@
                             <div class="fb-share-button" data-href="http://cosanceol.tk/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcosanceol.tk%2F&amp;src=sdkpreparse">Share</a></div>
                         </li>
                         <li>
-                            <a class="twitter-share-button" href="https://twitter.com/intent/tweettext=Cosán%20Ceol" data-size="small">Tweet</a>
+                            <a href="https://twitter.com/intent/tweet?text=Look%20at%20my%20map%20on%20CosánCeol!"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
                             <script>window.twttr = (function(d, s, id) {
                               var js, fjs = d.getElementsByTagName(s)[0],
                                 t = window.twttr || {};
