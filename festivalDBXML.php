@@ -38,7 +38,7 @@ while ($row = @mysqli_fetch_assoc($result)){
   echo 'lat="' . $row['lat'] . '" ';
   echo 'lng="' . $row['lng'] . '" ';
   echo 'type="' . $row['type'] . '" ';
-  echo 'website="' . parseToXML($row['website']) . '" ';
+  echo 'website="' . parseToXML("<a href ='".$row['website'] ."'>website</a>") . '" ';
   echo '/>';
 }
 
