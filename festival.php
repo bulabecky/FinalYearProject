@@ -107,7 +107,7 @@
           label: 'RB'
         },
         IriishTraditional: {
-          label: 'Trad'
+          label: 'T'
         }
       };
 
@@ -353,9 +353,8 @@
         // Enable map zooming with mouse scroll when the user clicks the map
     $('.map').on('click', onMapClickHandler);
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
-    </script>
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
+      </script>
 
   </body>
 </html>
