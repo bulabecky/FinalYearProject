@@ -24,7 +24,7 @@ return $xmlStr;
         die('Could not query:' . mysqli_error());
     }
 
-header("Content-type: text/xml");
+header('Content-type: text/xml; charset=UTF-8');
 
 // Start XML file, echo parent node
 echo '<markers>';
