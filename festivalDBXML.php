@@ -19,7 +19,7 @@ return $xmlStr;
       }
 
 
-    $result = mysqli_query($con,'SELECT * FROM festivals');
+    $result = mysqli_query($con,'SELECT * FROM festivals where 1');
     if (!$result) {
         die('Could not query:' . mysqli_error());
     }
