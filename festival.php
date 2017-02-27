@@ -125,7 +125,7 @@
             Array.prototype.forEach.call(markers, function(markerElem) {
               var name = markerElem.getAttribute('name');
               var address = markerElem.getAttribute('address');
-              var video = markerElem.getAttribute('website');
+              var website = markerElem.getAttribute('website');
               var type = markerElem.getAttribute('type');
               var point = new google.maps.LatLng(
                   parseFloat(markerElem.getAttribute('lat')),
