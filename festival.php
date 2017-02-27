@@ -100,6 +100,9 @@
          Folk: {
           label: 'F'
         },
+        Trad: {
+          label: 'T'
+        },
           Celtic: {
             label: 'C'
         }
