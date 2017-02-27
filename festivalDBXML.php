@@ -11,7 +11,7 @@ $xmlStr=str_replace("&",'&amp;',$xmlStr);
 return $xmlStr;
 }
 
-   $con = mysqli_connect("localhost","root","Beckyboo4","map");
+   $con = mysqli_connect("localhost","root","Bckyboo4","map");
     // Check connection
     if (mysqli_connect_errno())
       {
