@@ -97,15 +97,22 @@
 
     <script>
       var customLabel = {
-         Festival: {
+         Folk: {
           label: 'F'
         },
-        FolkBand: {
-          label: 'FB'
+          Celtic: {
+            label: 'C'
         },
+<<<<<<< HEAD
         Band: {
           label: 'RB'
         }
+=======
+          Trad: {
+            label: 'T'
+          }
+        
+>>>>>>> bdead317d1e358a5eaca801ceda0e2c595244e03
       };
 
         function initMap() {
