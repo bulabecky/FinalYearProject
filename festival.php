@@ -103,9 +103,6 @@
         FolkBand: {
           label: 'FB'
         },
-        IrishTraditional: {
-          label: 'FB'
-        },
         Band: {
           label: 'RB'
         }
@@ -119,7 +116,7 @@
         var infoWindow = new google.maps.InfoWindow;
 
           // Change this depending on the name of your PHP or XML file
-          downloadUrl('http://cosanceol.tk/festivalDBXML.php', function(data) {
+          downloadUrl('http://cosanceol.tk/phpsqlsearch_genxm.php', function(data) {
             var xml = data.responseXML;
             var markers = xml.documentElement.getElementsByTagName('marker');
             Array.prototype.forEach.call(markers, function(markerElem) {
@@ -140,6 +137,9 @@
               var text = document.createElement('text');
               text.textContent = address
               infowincontent.appendChild(text);
+              var x = document.createElement("IFRAME");
+              x.setAttribute("src", video);
+              infowincontent.appendChild(x);
               var icon = customLabel[type] || {};
               var marker = new google.maps.Marker({
                 map: map,
