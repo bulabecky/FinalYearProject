@@ -24,7 +24,7 @@ return $xmlStr;
         die('Could not query:' . mysqli_error());
     }
 
-header("Content-type: text/xml charset=cp1250_bin");
+header("Content-type: text/xml");
 
 // Start XML file, echo parent node
 echo '<markers>';

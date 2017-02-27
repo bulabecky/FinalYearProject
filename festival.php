@@ -91,7 +91,7 @@
     <div id="map"style="float: right;">
       </div>
 <div class="col-lg-12 text-center"> 
-<a href="login/login.php" class="btn btn-lg btn-dark">Festival Map</a>
+<a href="festival.php" class="btn btn-lg btn-dark">Festival Map</a>
 </div>
     </div>
 
@@ -103,11 +103,11 @@
         FolkBand: {
           label: 'FB'
         },
+        IrishTraditional: {
+          label: 'FB'
+        },
         Band: {
           label: 'RB'
-        },
-        IrishTraditional: {
-          label: 'T'
         }
       };
 
@@ -140,7 +140,9 @@
               var text = document.createElement('text');
               text.textContent = address
               infowincontent.appendChild(text);
-              
+              var x = document.createElement("IFRAME");
+              x.setAttribute("src", video);
+              infowincontent.appendChild(x);
               var icon = customLabel[type] || {};
               var marker = new google.maps.Marker({
                 map: map,
@@ -353,8 +355,9 @@
         // Enable map zooming with mouse scroll when the user clicks the map
     $('.map').on('click', onMapClickHandler);
     </script>
-   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
-      </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
+    </script>
 
   </body>
 </html>
