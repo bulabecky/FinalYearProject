@@ -19,13 +19,12 @@ return $xmlStr;
       }
 
 
-    $result = mysqli_query($con,'SELECT * FROM festivals where 1');
+    $result = mysqli_query($con,'SELECT * FROM festival where 1');
     if (!$result) {
         die('Could not query:' . mysqli_error());
     }
-    $mysqli->query('SET names utf8');
 
-header('Content-type: text/xml; charset=UTF-8');
+header("Content-type: text/xml");
 
 // Start XML file, echo parent node
 echo '<markers>';
@@ -39,7 +38,7 @@ while ($row = @mysqli_fetch_assoc($result)){
   echo 'lat="' . $row['lat'] . '" ';
   echo 'lng="' . $row['lng'] . '" ';
   echo 'type="' . $row['type'] . '" ';
-  echo 'website="' . parseToXML($row['website']) . '" ';
+  echo 'url="' . parseToXML($row['url']) . '" ';
   echo '/>';
 }
 
