@@ -105,6 +105,9 @@
         },
         Band: {
           label: 'RB'
+        }''
+        IriishTraditional: {
+          label: 'Trad'
         }
       };
 
