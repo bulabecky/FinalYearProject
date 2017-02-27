@@ -140,9 +140,6 @@
               var text = document.createElement('text');
               text.textContent = address
               infowincontent.appendChild(text);
-              var x = document.createElement("IFRAME");
-              x.setAttribute("src", video);
-              infowincontent.appendChild(x);
               var icon = customLabel[type] || {};
               var marker = new google.maps.Marker({
                 map: map,
