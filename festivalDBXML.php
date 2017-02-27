@@ -19,7 +19,7 @@ return $xmlStr;
       }
 
 
-    $result = mysqli_query($con,'SELECT * FROM markers where 1');
+    $result = mysqli_query($con,'SELECT * FROM festivals');
     if (!$result) {
         die('Could not query:' . mysqli_error());
     }
@@ -38,7 +38,7 @@ while ($row = @mysqli_fetch_assoc($result)){
   echo 'lat="' . $row['lat'] . '" ';
   echo 'lng="' . $row['lng'] . '" ';
   echo 'type="' . $row['type'] . '" ';
-  echo 'video="' . parseToXML($row['video']) . '" ';
+  echo 'website="' . parseToXML($row['website']) . '" ';
   echo '/>';
 }
 
