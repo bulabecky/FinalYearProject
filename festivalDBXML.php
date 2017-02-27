@@ -23,6 +23,7 @@ return $xmlStr;
     if (!$result) {
         die('Could not query:' . mysqli_error());
     }
+    $mysqli->query('SET names utf8');
 
 header('Content-type: text/xml; charset=UTF-8');
 
