@@ -88,7 +88,12 @@
                 </div>
             </div>
         </section>
-    <div id="map"style="float: right;"></div>
+    <div id="map"style="float: right;">
+      </div>
+<div class="col-lg-12 text-center"> 
+<a href="login/login.php" class="btn btn-lg btn-dark">Festival Map</a>
+</div>
+    </div>
 
     <script>
       var customLabel = {
@@ -213,10 +218,7 @@
     mysqli_close($con) or die(mysqli_error());
     ?>
   </div>
-</div>
-<div class="col-lg-12 text-center"> 
-<a href="login/login.php" class="btn btn-lg btn-dark">Festival Map</a>
-</div>
+
      <footer id="bottom">
         <div class="container">
             <div class="row">
