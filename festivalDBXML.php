@@ -11,7 +11,7 @@ $xmlStr=str_replace("&",'&amp;',$xmlStr);
 return $xmlStr;
 }
 
-   $con = mysqli_connect("localhost","root","Bckyboo4","map");
+   $con = mysqli_connect("localhost","root","Beckyboo4","map");
     // Check connection
     if (mysqli_connect_errno())
       {
@@ -23,6 +23,7 @@ return $xmlStr;
     if (!$result) {
         die('Could not query:' . mysqli_error());
     }
+    echo("<script>console.log('connect to table');</script>");
 
 header("Content-type: text/xml");
 
