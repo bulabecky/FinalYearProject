@@ -106,7 +106,7 @@
         Band: {
           label: 'RB'
         },
-        IriishTraditional: {
+        IrishTraditional: {
           label: 'T'
         }
       };
