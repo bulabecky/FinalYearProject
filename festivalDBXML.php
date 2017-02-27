@@ -19,11 +19,10 @@ return $xmlStr;
       }
 
 
-    $result = mysqli_query($con,'SELECT * FROM festivals where 1');
+    $result = mysqli_query($con,'SELECT * FROM markers where 1');
     if (!$result) {
         die('Could not query:' . mysqli_error());
     }
-    echo("<script>console.log('connect to table');</script>");
 
 header("Content-type: text/xml");
 
@@ -39,7 +38,7 @@ while ($row = @mysqli_fetch_assoc($result)){
   echo 'lat="' . $row['lat'] . '" ';
   echo 'lng="' . $row['lng'] . '" ';
   echo 'type="' . $row['type'] . '" ';
-  echo 'website="' . parseToXML($row['website']) . '" ';
+  echo 'video="' . parseToXML($row['video']) . '" ';
   echo '/>';
 }
 
