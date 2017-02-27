@@ -214,6 +214,9 @@
     ?>
   </div>
 </div>
+<div class="col-lg-12 text-center"> 
+<a href="login/login.php" class="btn btn-lg btn-dark">Festival Map</a>
+</div>
      <footer id="bottom">
         <div class="container">
             <div class="row">
