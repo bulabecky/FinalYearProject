@@ -48,6 +48,9 @@
                 <a href="login/registration.php" onclick=$("#menu-close").click();>Sign Up</a>
             </li>
             <li>
+                <a href="login/registration.php" onclick=$("#menu-close").click();>Sign Up</a>
+            </li>
+            <li>
                 <a href="#bottom" onclick=$("#menu-close").click();>Contact</a>
             </li>
         </ul>
@@ -88,8 +91,10 @@
                 </div>
             </div>
         </section>
+    <section id="Map">
     <div id="map"style="float: right;">
       </div>
+    </section>
       <div class="col-lg-12 text-center"> 
       <a href="festival.php" class="btn btn-lg btn-dark">Festival Map</a>
       </div>
