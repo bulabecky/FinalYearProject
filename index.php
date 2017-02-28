@@ -22,7 +22,7 @@
        * element that contains the map. */
       #map {
         height: 90%;
-        width: 60%;
+        width: 100%;
       }
     </style>
   </head>

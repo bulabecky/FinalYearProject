@@ -91,25 +91,11 @@
     <div id="map"style="float: right;">
       </div>
 <div class="col-lg-12 text-center"> 
-<a href="festival.php" class="btn btn-lg btn-dark">Festival Map</a>
+<a href="index.php" class="btn btn-lg btn-dark">Artist Maps</a>
 </div>
     </div>
 
     <script>
-     // var customLabel = {
-       //  Folk: {
-      //    label: 'F'
-      //  },
-      //  Trad: {
-       //   label: 'T'
-      //  },
-      //  Harp: {
-      //    label: 'H'
-      //  },
-      //  Celtic: {
-      //      label: 'C'
-      //  }
-      //};
       var iconBase ='http://maps.google.com/mapfiles/ms/micons/';
       var icons = {
         Trad: {
@@ -155,11 +141,9 @@
               var text = document.createElement('text');
               text.textContent = address
               infowincontent.appendChild(text);
-              //var icon = customLabel[type] || {};
               var marker = new google.maps.Marker({
                 map: map,
                 position: point,
-                //label: icon.label
                 icon: icons[type].icon
               });
               marker.addListener('click', function() {
