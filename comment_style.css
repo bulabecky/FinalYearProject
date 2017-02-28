@@ -31,6 +31,7 @@ input[type="text"]
 	font-size:17px;
 	padding:10px;
 	font-family:helvetica;
+
 	
 }
 input[type="submit"]
@@ -52,6 +53,7 @@ input[type="submit"]
 	background-color:white;
 	margin-top:15px;
 	text-align:right;
+	position: center;
 	
 }
 .comment_div .name
@@ -62,12 +64,14 @@ input[type="submit"]
 	background-color:#253D3D;
 	color:white;
 	text-align:left;
+	position: center;
 	
 }
 .comment_div .comment
 {
 	padding:10px;
     color: black;
+    position: center;
 
 	
 }
@@ -78,5 +82,6 @@ input[type="submit"]
 	background-color:#253D3D;
 	color:white;
 	text-align:left;
+	position: center;
 	
 }
