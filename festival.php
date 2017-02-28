@@ -179,8 +179,9 @@
       }
 
       function doNothing() {}
-    </script>  
-      <div id="comment-section" style="position: center;">
+    </script>
+    <div class="col-lg-12 text-center">      
+      <div id="comment-section">
           <h4>Leave a comment</h4>
 
   <form method="post" action="" onsubmit="return post();">
@@ -223,6 +224,7 @@
 
     mysqli_close($con) or die(mysqli_error());
     ?>
+  </div>
   </div>
 
      <footer id="bottom">
