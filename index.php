@@ -95,16 +95,19 @@
 </div>
     </div>
 
-     <script>
-      var iconBase ='http://maps.google.com/mapfiles/ms/micons/';
-      var icons = {
-        Band: {
-          icon: iconBase + 'ylw-pushpin.png'
+    <script>
+      var customLabel = {
+         Festival: {
+          label: 'F'
         },
         FolkBand: {
-         icon: iconBase +'red-pushpin.png'
+          label: 'FB'
+        },
+        Band: {
+          label: 'RB'
         }
       };
+
 
         function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -120,7 +123,7 @@
             Array.prototype.forEach.call(markers, function(markerElem) {
               var name = markerElem.getAttribute('name');
               var address = markerElem.getAttribute('address');
-              var url = markerElem.getAttribute('url');
+              var video = markerElem.getAttribute('video');
               var type = markerElem.getAttribute('type');
               var point = new google.maps.LatLng(
                   parseFloat(markerElem.getAttribute('lat')),
@@ -135,10 +138,14 @@
               var text = document.createElement('text');
               text.textContent = address
               infowincontent.appendChild(text);
+              var x = document.createElement("IFRAME");
+              x.setAttribute("src", video);
+              infowincontent.appendChild(x);
+              var icon = customLabel[type] || {};
               var marker = new google.maps.Marker({
                 map: map,
                 position: point,
-                icon: icons[type].icon
+                label: icon.label
               });
               marker.addListener('click', function() {
                 infoWindow.setContent(infowincontent);
@@ -346,8 +353,8 @@
         // Enable map zooming with mouse scroll when the user clicks the map
     $('.map').on('click', onMapClickHandler);
     </script>
-     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
     </script>
 
   </body>
