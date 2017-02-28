@@ -116,13 +116,13 @@
           icon: iconBase + 'ylw-pushpin.png'
         },
         Folk: {
-         icon: iconBase +'mm_20_blue.png'
+         icon: iconBase +'red-pushpin.png'
         },
         Harp: {
-        icon: iconBase + 'mm_20_red.png'
+        icon: iconBase + 'ltblu-pushpin.png'
        },
         Celtic: {
-          icon: iconBase +'mm_20_blue.png'
+          icon: iconBase +'purple-pushpin.png'
         }
       };
 
