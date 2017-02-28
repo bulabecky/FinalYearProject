@@ -110,10 +110,10 @@
       //      label: 'C'
       //  }
       //};
-      var iconBase ='http://maps.google.com/mapfiles/kml/pushpin/';
+      var iconBase ='http://labs.google.com/ridefinder/images/';
       var icons = {
         Trad: {
-          icon: iconBase + 'ylw-pushpin.png'
+          icon: iconBase + 'mm_20_yellow.png'
         }
       };
 
