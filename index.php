@@ -99,36 +99,35 @@
     var gmarkers = [];
     var infoWindow = [];
 
-     var iconBase ='http://maps.google.com/mapfiles/ms/micons/';
      var icons = {
 
        FolkBand: {
-        icon: iconBase + 'orange-dot.png'
+        icon: 'http://maps.google.com/mapfiles/ms/micons/orange-dot.png'
        },
         Festival: {
-          icon: iconBase +'red-dot.png'
+          icon: 'http://maps.google.com/mapfiles/ms/micons/red-dot.png'
         },
         Fiddle: {
-          icon: iconBase +'blue-dot.png'
+          icon: 'http://maps.google.com/mapfiles/ms/micons/blue-dot.png'
         },
         Banjo: {
-        icon: iconBase + 'green-dot.png'
+        icon: 'http://maps.google.com/mapfiles/ms/micons/green-dot.png'
         },
 
         Singer: {
-        icon: iconBase + 'yellow-dot.png'
+        icon: 'http://maps.google.com/mapfiles/ms/micons/yellow-dot.png'
        },
 
        Guitarist: {
-        icon: iconBase + 'ltblue-dot.png'
+        icon: 'http://maps.google.com/mapfiles/ms/micons/ltblue-dot.png'
        },
 
        Uilleann : {
-        icon: iconBase + 'pink-dot.png'
+        icon: 'http://maps.google.com/mapfiles/ms/micons/pink-dot.png'
        },
 
         Band: {
-          icon: iconBase +'purple-dot.png'
+          icon: i'http://maps.google.com/mapfiles/ms/micons/purple-dot.png'
         }
      };
 
