@@ -53,9 +53,9 @@ input[type="submit"]
 	background-color:white;
 	margin-top:15px;
 	position: relative;
- 	 min-height: 1px;
- 	 padding-right: 15px;
- 	 padding-left: 15px;
+ 	min-height: 1px;
+ 	padding-right: 15px;
+ 	padding-left: 15px;
 
 
 }
@@ -63,19 +63,27 @@ input[type="submit"]
 {
 	height:30px;
 	line-height:30px;
-	padding:10px;
+	padding-right: 15px;
+ 	padding-left: 15px;
 	background-color:#253D3D;
-	color:white;	
+	position: relative;
+ 	min-height: 1px;	
 }
 .comment_div .comment
 {
-	padding:10px;
     color: black;
+    position: relative;
+ 	min-height: 1px;
+ 	padding-right: 15px;
+ 	padding-left: 15px;
 }
 .comment_div .time
 {
 	font-style:italic;
-	padding:10px;
 	background-color:#253D3D;
 	color:white;
+	position: relative;
+ 	min-height: 1px;
+ 	padding-right: 15px;
+ 	padding-left: 15px;
 }
