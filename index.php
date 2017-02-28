@@ -213,7 +213,7 @@
   <input type="submit" value="Post Comment">
   </form>
 
-  <div class="col-lg-12 text-center">
+  <div id="all_comments">
   <?php
     $con = mysqli_connect("localhost","root","Beckyboo4","register");
     // Check connection
@@ -234,19 +234,17 @@
       $datetime = $row[2];
       
       ?>
-      <div class="col-lg-12 text-center">
+
       <div class="comment_div"> 
         <p class="name">Posted By: <?php echo $name;?></p>
           <p class="comment"><?php echo $comment;?></p> 
         <p class="time"><?php echo $datetime;?></p>
-      </div>
       </div>
     <?php
     }
 
     mysqli_close($con) or die(mysqli_error());
     ?>
-  </div>
   </div>
 
      <footer id="bottom">
