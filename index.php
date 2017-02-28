@@ -48,7 +48,7 @@
                 <a href="login/registration.php" onclick=$("#menu-close").click();>Sign Up</a>
             </li>
             <li>
-                <a href="#coments" onclick=$("#menu-close").click();>Leave a Comment</a>
+                <a href="#comment-section" onclick=$("#menu-close").click();>Leave a Comment</a>
             </li>
             <li>
                 <a href="#bottom" onclick=$("#menu-close").click();>Contact</a>
@@ -204,7 +204,6 @@
 
       function doNothing() {}
     </script>
-    <section id="coments"> 
     <div class="col-lg-12 text-center">    
       <div id="comment-section">
           <h4>Leave a comment</h4>
@@ -250,7 +249,6 @@
     mysqli_close($con) or die(mysqli_error());
     ?>
   </div>
-  </section> 
 
      <footer id="bottom">
         <div class="container">
