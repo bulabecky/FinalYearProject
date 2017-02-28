@@ -122,9 +122,15 @@
         Banjo: {
         icon: iconBase + 'green-dot.png'
         },
+
         Singer: {
         icon: iconBase + 'yellow-dot.png'
        },
+
+       Guitarist: {
+        icon: iconBase + 'ltblue-dot.png'
+       },
+
         Band: {
           icon: iconBase +'purple-dot.png'
         }
