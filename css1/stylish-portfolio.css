@@ -10,14 +10,17 @@ html,
 body {
     width: 100%;
     height: 100%;
-    background-color: darkslategrey;
+    background-color:#75b975;
+}
+p {
+    color: whitesmoke;
 }
 
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .lead {
-    color:floralwhite;
+    color:whitesmoke;
 }
 
 .text-vertical-center {
@@ -31,17 +34,18 @@ body {
     padding: 0;
     font-size: 4.5em;
     font-weight: 700;
-    color:floralwhite
+    color:whitesmoke
 }
 h3 {
     color: aliceblue;
 }
+h4 {
+    color: whitesmoke;
+}
 #heading {
-    color: floralwhite;
+    color: whitesmoke;
 }
-h2 {
-    color: red;
-}
+
 /* Custom Button Styles */
 
 .btn-dark {
@@ -173,7 +177,7 @@ hr.small {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    filter: grayscale(100%);
+    
 }
 
 /* About */
@@ -213,27 +217,6 @@ hr.small {
 }
 
 /* Call to Action */
-
-
-
-/* Map */
-
-.map {
-    height: 500px;
-    width:50%;
-}
-
-@media(max-width:768px) {
-    .map {
-        height: 75%;
-    }
-}
-
-.map iframe {
-    pointer-events: none;
-}
-
-/* Footer */
 
 footer {
     padding: 200px 0;

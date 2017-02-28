@@ -19,7 +19,7 @@ return $xmlStr;
       }
 
 
-    $result = mysqli_query($con,'SELECT * FROM markers where 1');
+    $result = mysqli_query($con,'SELECT * FROM festival where 1');
     if (!$result) {
         die('Could not query:' . mysqli_error());
     }
@@ -32,18 +32,13 @@ echo '<markers>';
 // Iterate through the rows, printing XML nodes for each
 while ($row = @mysqli_fetch_assoc($result)){
   // Add to XML document node
-<<<<<<< HEAD
-
-  echo '<marker '; echo __LINE__;exit;
-=======
   echo '<marker ';
->>>>>>> d51ecd35236664b08aa3d2a0f09774aab38f63da
   echo 'name="' . parseToXML($row['name']) . '" ';
   echo 'address="' . parseToXML($row['address']) . '" ';
   echo 'lat="' . $row['lat'] . '" ';
   echo 'lng="' . $row['lng'] . '" ';
   echo 'type="' . $row['type'] . '" ';
-  echo 'video="' . parseToXML($row['video']) . '" ';
+  echo 'url="' . parseToXML($row['url']) . '" ';
   echo '/>';
 }
 
