@@ -17,7 +17,6 @@
       <link rel="stylesheet" type="text/css" href="comment_style.css">
 <script type="text/javascript" src="js/jquery.js"></script>
 <script src="testAjax.js"></script>
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -28,7 +27,7 @@
     </style>
   </head>
 
-  <body onload="load()">
+  <body>
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
