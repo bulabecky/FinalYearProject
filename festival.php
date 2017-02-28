@@ -99,16 +99,16 @@
       var iconBase ='http://maps.google.com/mapfiles/ms/micons/';
       var icons = {
         Trad: {
-          icon: iconBase + 'ylw-pushpin.png'
+          icon: iconBase + 'orange-dot.png'
         },
         Folk: {
-         icon: iconBase +'red-pushpin.png'
+         icon: iconBase +'red-dot.png'
         },
         Harp: {
-        icon: iconBase + 'ltblu-pushpin.png'
+        icon: iconBase + 'blue-dot.png'
        },
         Celtic: {
-          icon: iconBase +'purple-pushpin.png'
+          icon: iconBase +'green-dot.png'
         }
       };
 
