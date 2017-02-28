@@ -95,15 +95,15 @@
 </div>
     </div>
 
-    <script>
+     <script>
       var iconBase ='http://maps.google.com/mapfiles/ms/micons/';
       var icons = {
-        FolkBand: {
+        Band: {
           icon: iconBase + 'ylw-pushpin.png'
         },
-        Band: {
+        FolkBand: {
          icon: iconBase +'red-pushpin.png'
-        }
+        };
       };
 
         function initMap() {
@@ -114,7 +114,7 @@
         var infoWindow = new google.maps.InfoWindow;
 
           // Change this depending on the name of your PHP or XML file
-         downloadUrl('http://cosanceol.tk/mapDBXML.php', function(data) {
+          downloadUrl('http://cosanceol.tk/mapDBXML.php', function(data) {
             var xml = data.responseXML;
             var markers = xml.documentElement.getElementsByTagName('marker');
             Array.prototype.forEach.call(markers, function(markerElem) {
@@ -147,6 +147,7 @@
             });
           });
         }
+
 
 
       function downloadUrl(url, callback) {
