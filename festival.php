@@ -110,10 +110,10 @@
       //      label: 'C'
       //  }
       //};
-      var iconBase ='http://google.com/mapfiles/ms/micons/';
+      var iconBase ='http://maps.google.com/mapfiles/ms/micons/';
       var icons = {
         Trad: {
-          icon: iconBase + 'yellow-dot.png'
+          icon: iconBase + 'ylw-pushpin.png'
         },
         Folk: {
          icon: iconBase +'mm_20_blue.png'
