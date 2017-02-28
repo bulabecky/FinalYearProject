@@ -125,7 +125,6 @@
               var point = new google.maps.LatLng(
                   parseFloat(markerElem.getAttribute('lat')),
                   parseFloat(markerElem.getAttribute('lng')));
-
               var infowincontent = document.createElement('div');
               var strong = document.createElement('strong');
               strong.textContent = name
@@ -138,6 +137,7 @@
               var x = document.createElement("IFRAME");
               x.setAttribute("src", video);
               infowincontent.appendChild(x);
+
               var marker = new google.maps.Marker({
                 map: map,
                 position: point,
@@ -150,6 +150,7 @@
             });
           });
         }
+
 
       function downloadUrl(url, callback) {
         var request = window.ActiveXObject ?
