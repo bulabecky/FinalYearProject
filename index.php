@@ -122,6 +122,9 @@
         Banjo: {
         icon: iconBase + 'blue-pushpin.png'
        },
+        Singer: {
+        icon: iconBase + 'pink-pushpin.png'
+       },
         Band: {
           icon: iconBase +'purple-pushpin.png'
         }
