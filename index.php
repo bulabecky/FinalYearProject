@@ -111,7 +111,7 @@
      var icons = {
 
        FolkBand: {
-        icon: iconBase + 'ltblu-pushpin.png'
+        icon: iconBase + 'orange.png'
        },
         Festival: {
           icon: iconBase +'red-pushpin.png'
