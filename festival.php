@@ -110,7 +110,7 @@
       //      label: 'C'
       //  }
       //};
-      var iconBase ='http://maps.google.com/mapfiles/kml/pushpin/'
+      var iconBase ='http://maps.google.com/mapfiles/kml/pushpin/';
       var icons = {
         Trad: {
           icon: iconBase + 'ylw-pushpin.png'
