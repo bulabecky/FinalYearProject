@@ -27,7 +27,7 @@
     </style>
   </head>
 
-  <body>
+  <body onload="load()">
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
@@ -90,12 +90,21 @@
         </section>
     <div id="map"style="float: right;">
       </div>
+      <form action="#">
+          <input type="checkbox" id="festivalbox" onclick="boxclick(this,'Festival')" checked/>
+              <label>Festival</label>
+          <input type="checkbox" id="bandbox" onclick="boxclick(this,'Band')" checked/>
+              <label>Band</label>
+      </form>
 <div class="col-lg-12 text-center"> 
 <a href="festival.php" class="btn btn-lg btn-dark">Festival Map</a>
 </div>
     </div>
 
     <script>
+    var gmarkers = [];
+    var infoWindow = [];
+
      var iconBase ='http://maps.google.com/mapfiles/ms/micons/';
      var icons = {
 
@@ -137,14 +146,14 @@
           downloadUrl('http://cosanceol.tk/mapDBXML.php', function(data) {
             var xml = data.responseXML;
             var markers = xml.documentElement.getElementsByTagName('marker');
-            Array.prototype.forEach.call(markers, function(markerElem) {
-              var name = markerElem.getAttribute('name');
-              var address = markerElem.getAttribute('address');
-              var video = markerElem.getAttribute('video');
-              var type = markerElem.getAttribute('type');
+             for (var i = 0; i < markers.length; i++) {
+              var name = markers[i].getAttribute('name');
+              var address = markers[i].getAttribute('address');
+              var video = markers[i]getAttribute('video');
+              var type = markers[i].getAttribute('type');
               var point = new google.maps.LatLng(
-                  parseFloat(markerElem.getAttribute('lat')),
-                  parseFloat(markerElem.getAttribute('lng')));
+                  parseFloat(markers[i].getAttribute('lat')),
+                  parseFloat(markers[i].getAttribute('lng')));
 
               var infowincontent = document.createElement('div');
               var strong = document.createElement('strong');
@@ -158,21 +167,30 @@
               var x = document.createElement("IFRAME");
               x.setAttribute("src", video);
               infowincontent.appendChild(x);
+
               var marker = new google.maps.Marker({
                 map: map,
                 position: point,
                 //label: icon.label
                 icon: icons[type].icon
               });
-              marker.addListener('click', function() {
-                infoWindow.setContent(infowincontent);
+              marker.mycategory = type;
+              gmarkers.push(marker);
+              // marker.addListener('click', function() {
+              //   infoWindow.setContent(infowincontent);
+              //   infoWindow.open(map, marker);
+              // });
+          
+               bindInfoWindow(marker, map, infoWindow, html);
+            }
+              });
+            }
+            function bindInfoWindow(marker, map, infoWindow, html) {
+              google.maps.event.addListener(marker, 'click', function() {
+                infoWindow.setContent(html);
                 infoWindow.open(map, marker);
               });
-            });
-          });
-        }
-
-
+            }
 
       function downloadUrl(url, callback) {
         var request = window.ActiveXObject ?
@@ -191,6 +209,38 @@
       }
 
       function doNothing() {}
+
+       function show(category) {
+           for (var i=0; i<gmarkers.length; i++) {
+             if (gmarkers[i].mycategory == category) {
+               gmarkers[i].setVisible(true);
+             }
+           }
+           // == check the checkbox ==
+           document.getElementById(category+"box").checked = true;
+         }
+
+         // == hides all markers of a particular category, and ensures the checkbox is cleared ==
+         function hide(category) {
+           for (var i=0; i<gmarkers.length; i++) {
+             if (gmarkers[i].mycategory == category) {
+               gmarkers[i].setVisible(false);
+             }
+           }
+           // == clear the checkbox ==
+           document.getElementById(category+"box").checked = false;
+           // == close the info window, in case its open on a marker that we just hid
+           infoWindow.close();
+         }
+
+         // == a checkbox has been clicked ==
+              function boxclick(box,category) {
+                if (box.checked) {
+                  show(category);
+                } else {
+                  hide(category);
+                }
+      }
     </script>  
       <div id="comment-section" style="float:left;">
           <h4>Leave a comment</h4>
