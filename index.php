@@ -123,6 +123,10 @@
         icon: iconBase + 'ltblue-dot.png'
        },
 
+       Uilleann : {
+        icon: iconBase + 'pink-dot.png'
+       },
+
         Band: {
           icon: iconBase +'purple-dot.png'
         }
