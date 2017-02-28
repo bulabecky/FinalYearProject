@@ -48,7 +48,7 @@
                 <a href="login/registration.php" onclick=$("#menu-close").click();>Sign Up</a>
             </li>
             <li>
-                <a href="login/registration.php" onclick=$("#menu-close").click();>Sign Up</a>
+                <a href="#coments" onclick=$("#menu-close").click();>Leave a Comment</a>
             </li>
             <li>
                 <a href="#bottom" onclick=$("#menu-close").click();>Contact</a>
@@ -91,10 +91,8 @@
                 </div>
             </div>
         </section>
-    <section id="Map">
     <div id="map"style="float: right;">
       </div>
-    </section>
       <div class="col-lg-12 text-center"> 
       <a href="festival.php" class="btn btn-lg btn-dark">Festival Map</a>
       </div>
@@ -205,7 +203,8 @@
       }
 
       function doNothing() {}
-    </script> 
+    </script>
+    <section id="coments"> 
     <div class="col-lg-12 text-center">    
       <div id="comment-section">
           <h4>Leave a comment</h4>
@@ -251,6 +250,7 @@
     mysqli_close($con) or die(mysqli_error());
     ?>
   </div>
+  </section> 
 
      <footer id="bottom">
         <div class="container">
