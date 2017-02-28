@@ -64,12 +64,10 @@ input[type="submit"]
 {
 	height:30px;
 	margin-top:15px;
-	line-height:30px;
 	padding-right: 15px;
  	padding-left: 15px;
 	background-color:#253D3D;
 	position: relative;
- 	padding:10px;
  	 width: 100%;	
  	 float: left;
 }
@@ -80,20 +78,19 @@ input[type="submit"]
     position: relative;
  	padding-right: 15px;
  	padding-left: 15px;
- 	 width: 100%;
- 	 padding:10px;
- 	 float: left;
+ 	width: 100%;
+ 	float: left;
 }
 .comment_div .time
 {
 	font-style:italic;
-	background-color:#253D3D;
-	color:white;
+	height:30px;
 	margin-top:15px;
-	position: relative;
- 	padding-right: 15px;
+	padding-right: 15px;
  	padding-left: 15px;
- 	 width: 100%;
- 	 padding:10px;
+	background-color:#253D3D;
+	position: relative;
+ 	 width: 100%;	
  	 float: left;
+}
 }
