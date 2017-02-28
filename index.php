@@ -121,6 +121,7 @@
         },
         Banjo: {
         icon: iconBase + 'green-dot.png'
+        },
         Singer: {
         icon: iconBase + 'yellow-dot.png'
        },
