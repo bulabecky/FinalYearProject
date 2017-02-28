@@ -119,6 +119,9 @@
         Fiddle: {
           icon: iconBase +'grn-pushpin.png'
         },
+        Banjo: {
+        icon: iconBase + 'blue-pushpin.png'
+       },
         Band: {
           icon: iconBase +'purple-pushpin.png'
         }
