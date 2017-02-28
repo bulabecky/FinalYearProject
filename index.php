@@ -164,9 +164,9 @@
               var text = document.createElement('text');
               text.textContent = address
               infowincontent.appendChild(text);
-              var x = document.createElement("IFRAME");
+             /* var x = document.createElement("IFRAME");
               x.setAttribute("src", video);
-              infowincontent.appendChild(x);
+              infowincontent.appendChild(x);*/
 
               var marker = new google.maps.Marker({
                 map: map,
