@@ -148,12 +148,24 @@
         for (var i = 0; i < markers.length; i++) {
           var name = markers[i].getAttribute("name");
           var address = markers[i].getAttribute("address");
+          var video = markers[i].getAttribute("video");
           var type = markers[i].getAttribute("type");
           var point = new google.maps.LatLng(
               parseFloat(markers[i].getAttribute("lat")),
               parseFloat(markers[i].getAttribute("lng")));
-          var html = "<b>" + name + "</b> <br/>" + address;
-          var icon = customIcons[type] || {};
+          
+          var infowincontent = document.createElement('div');
+              var strong = document.createElement('strong');
+              strong.textContent = name
+              infowincontent.appendChild(strong);
+              infowincontent.appendChild(document.createElement('br'));
+
+              var text = document.createElement('text');
+              text.textContent = address
+              infowincontent.appendChild(text);
+              var x = document.createElement("IFRAME");
+              x.setAttribute("src", video);
+              infowincontent.appendChild(x);
 
           var marker = new google.maps.Marker({
             map: map,
@@ -186,7 +198,7 @@
          document.getElementById(category+"box").checked = false;
          // == close the info window, in case its open on a marker that we just hid
          infoWindow.close();
-       };
+       }
   </script>
               
       <div id="comment-section" style="float:left;">
