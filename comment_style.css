@@ -52,7 +52,11 @@ input[type="submit"]
 	width:450px;
 	background-color:white;
 	margin-top:15px;
-	
+	position: relative;
+ 	 min-height: 1px;
+ 	 padding-right: 15px;
+ 	 padding-left: 15px;
+
 
 }
 .comment_div .name
