@@ -96,17 +96,6 @@
     </div>
 
     <script>
-     // var customLabel = {
-       //  Festival: {
-       //   label: 'F'
-       // },
-      //  FolkBand: {
-       //   label: 'FB'
-       // },
-       // Band: {
-       //   label: 'RB'
-       // }
-     // };
      var iconBase ='http://maps.google.com/mapfiles/ms/micons/';
      var icons = {
 
@@ -169,11 +158,9 @@
               var x = document.createElement("IFRAME");
               x.setAttribute("src", video);
               infowincontent.appendChild(x);
-              //var icon = customLabel[type] || {};
               var marker = new google.maps.Marker({
                 map: map,
                 position: point,
-                //label: icon.label
                 icon: icons[type].icon
               });
               marker.addListener('click', function() {
