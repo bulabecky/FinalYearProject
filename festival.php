@@ -29,7 +29,7 @@
 
   <body>
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
+        <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
@@ -46,6 +46,12 @@
             </li>
             <li>
                 <a href="login/registration.php" onclick=$("#menu-close").click();>Sign Up</a>
+            </li>
+            <li>
+                <a href="#map" onclick=$("#menu-close").click();>Search the Map</a>
+            </li>
+            <li>
+                <a href="#comment-section" onclick=$("#menu-close").click();>Leave a Comment</a>
             </li>
             <li>
                 <a href="#bottom" onclick=$("#menu-close").click();>Contact</a>
