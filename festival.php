@@ -110,10 +110,10 @@
       //      label: 'C'
       //  }
       //};
-      var iconBase ='http://labs.google.com/ridefinder/images/';
+      var iconBase ='http://google.com/mapfiles/ms/micons/';
       var icons = {
         Trad: {
-          icon: iconBase + 'mm_20_yellow.png'
+          icon: iconBase + 'yellow-dot.png'
         },
         Folk: {
          icon: iconBase +'mm_20_blue.png'
