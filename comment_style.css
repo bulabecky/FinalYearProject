@@ -65,7 +65,7 @@ input[type="submit"]
 	height:30px;
 	margin-top:15px;
 	padding-right: 15px;
-
+ 	padding-left: 15px;
 	background-color:#253D3D;
 	position: relative;
  	 width: 100%;	
@@ -92,5 +92,4 @@ input[type="submit"]
 	position: relative;
  	 width: 100%;	
  	 float: left;
-}
 }
