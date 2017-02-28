@@ -39,7 +39,7 @@ input[type="submit"]
 	width:150px;
 	height:40px;
 	border:none;
-	background-color:#2E64FE;
+	background-color:#215721;
 	color:white;
 	margin-top:10px;
 	border-radius:5px;
@@ -72,6 +72,6 @@ input[type="submit"]
 {
 	font-style:italic;
 	padding:10px;
-	background-color:#253D3D;
+	background-color:#215721;
 	color:white;
 }
