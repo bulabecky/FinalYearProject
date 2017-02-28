@@ -151,7 +151,7 @@
                 map: map,
                 position: point,
                 //label: icon.label
-                icon: icons[feature.type].icon
+                icon: icons[type].icon
               });
               marker.addListener('click', function() {
                 infoWindow.setContent(infowincontent);
