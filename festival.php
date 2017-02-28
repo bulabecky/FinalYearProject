@@ -148,7 +148,7 @@
               text.textContent = address
               infowincontent.appendChild(text);
               var x = document.createElement("IFRAME");
-              x.setAttribute("src", url);
+              x.setAttribute("a href", url);
               infowincontent.appendChild(x);
               var marker = new google.maps.Marker({
                 map: map,
