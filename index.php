@@ -114,17 +114,18 @@
         var infoWindow = new google.maps.InfoWindow;
 
           // Change this depending on the name of your PHP or XML file
-          downloadUrl('http://cosanceol.tk/mapDBXML.php', function(data) {
+         downloadUrl('http://cosanceol.tk/mapDBXML.php', function(data) {
             var xml = data.responseXML;
             var markers = xml.documentElement.getElementsByTagName('marker');
             Array.prototype.forEach.call(markers, function(markerElem) {
               var name = markerElem.getAttribute('name');
               var address = markerElem.getAttribute('address');
-              var video = markerElem.getAttribute('video');
+              var url = markerElem.getAttribute('url');
               var type = markerElem.getAttribute('type');
               var point = new google.maps.LatLng(
                   parseFloat(markerElem.getAttribute('lat')),
                   parseFloat(markerElem.getAttribute('lng')));
+
               var infowincontent = document.createElement('div');
               var strong = document.createElement('strong');
               strong.textContent = name
@@ -134,10 +135,6 @@
               var text = document.createElement('text');
               text.textContent = address
               infowincontent.appendChild(text);
-              var x = document.createElement("IFRAME");
-              x.setAttribute("src", video);
-              infowincontent.appendChild(x);
-
               var marker = new google.maps.Marker({
                 map: map,
                 position: point,
