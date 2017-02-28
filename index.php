@@ -171,8 +171,7 @@
               var marker = new google.maps.Marker({
                 map: map,
                 position: point,
-                //label: icon.label
-                icon: icons[type].icon
+                icon: icon.icon
               });
               marker.mycategory = type;
               gmarkers.push(marker);
@@ -211,29 +210,28 @@
       function doNothing() {}
 
        function show(category) {
-           for (var i=0; i<gmarkers.length; i++) {
-             if (gmarkers[i].mycategory == category) {
-               gmarkers[i].setVisible(true);
+             for (var i=0; i<gmarkers.length; i++) {
+               if (gmarkers[i].mycategory == category) {
+                 gmarkers[i].setVisible(true);
+               }
              }
-           }
            // == check the checkbox ==
-           document.getElementById(category+"box").checked = true;
-         }
+            document.getElementById(category+"box").checked = true;
+            }
 
          // == hides all markers of a particular category, and ensures the checkbox is cleared ==
          function hide(category) {
-           for (var i=0; i<gmarkers.length; i++) {
-             if (gmarkers[i].mycategory == category) {
-               gmarkers[i].setVisible(false);
+             for (var i=0; i<gmarkers.length; i++) {
+               if (gmarkers[i].mycategory == category) {
+                 gmarkers[i].setVisible(false);
+               }
              }
-           }
            // == clear the checkbox ==
-           document.getElementById(category+"box").checked = false;
-           // == close the info window, in case its open on a marker that we just hid
-           infoWindow.close();
-         }
-
-         // == a checkbox has been clicked ==
+            document.getElementById(category+"box").checked = false;
+               // == close the info window, in case its open on a marker that we just hid
+               infoWindow.close();
+             }
+                     // == a checkbox has been clicked ==
               function boxclick(box,category) {
                 if (box.checked) {
                   show(category);
