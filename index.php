@@ -118,8 +118,7 @@
         },
         Fiddle: {
           icon: iconBase +'grn-pushpin.png'
-
-        }
+        },
         Band: {
           icon: iconBase +'purple-pushpin.png'
         }
