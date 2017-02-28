@@ -127,7 +127,7 @@
        },
 
         Band: {
-          icon: i'http://maps.google.com/mapfiles/ms/micons/purple-dot.png'
+          icon: 'http://maps.google.com/mapfiles/ms/micons/purple-dot.png'
         }
      };
 
