@@ -131,7 +131,6 @@
           center: new google.maps.LatLng(53.350140, -6.266155),
           zoom: 6
         });
-        
         var infoWindow = new google.maps.InfoWindow;
 
           // Change this depending on the name of your PHP or XML file
@@ -162,6 +161,7 @@
               var marker = new google.maps.Marker({
                 map: map,
                 position: point,
+                //label: icon.label
                 icon: icons[type].icon
               });
               marker.addListener('click', function() {
