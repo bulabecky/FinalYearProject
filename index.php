@@ -126,6 +126,10 @@
         icon: 'http://maps.google.com/mapfiles/ms/micons/pink-dot.png'
        },
 
+       TinWhistle : {
+        icon: 'http://maps.google.com/mapfiles/marker_white.png'
+       },
+
         Band: {
           icon: 'http://maps.google.com/mapfiles/ms/micons/purple-dot.png'
         }
@@ -167,7 +171,7 @@
               var marker = new google.maps.Marker({
                 map: map,
                 position: point,
-                icon: icons[type].icon
+                icon: icon.icon
               });
               marker.addListener('click', function() {
                 infoWindow.setContent(infowincontent);
