@@ -113,6 +113,9 @@
        FolkBand: {
         icon: iconBase + 'ltblu-pushpin.png'
        },
+        Festival: {
+          icon: iconBase +'red-pushpin.png'
+        },
         Band: {
           icon: iconBase +'purple-pushpin.png'
         }
