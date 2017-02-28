@@ -177,7 +177,7 @@
               marker.mycategory = type;
                 gmarkers.push(marker);
 
-                bindInfoWindow(marker, map, infoWindow, html);
+
               marker.addListener('click', function() {
                 infoWindow.setContent(infowincontent);
                 infoWindow.open(map, marker);
