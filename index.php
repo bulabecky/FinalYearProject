@@ -114,19 +114,18 @@
         icon: iconBase + 'orange-dot.png'
        },
         Festival: {
-          icon: iconBase +'red-pushpin.png'
+          icon: iconBase +'red-dot.png'
         },
         Fiddle: {
-          icon: iconBase +'grn-pushpin.png'
+          icon: iconBase +'blue-dot.png'
         },
         Banjo: {
-        icon: iconBase + 'blue-pushpin.png'
-       },
+        icon: iconBase + 'green-dot.png'
         Singer: {
-        icon: iconBase + 'pink-pushpin.png'
+        icon: iconBase + 'yellow-dot.png'
        },
         Band: {
-          icon: iconBase +'purple-pushpin.png'
+          icon: iconBase +'purple-dot.png'
         }
      };
 
