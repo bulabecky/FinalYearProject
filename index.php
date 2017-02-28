@@ -234,11 +234,12 @@
       $datetime = $row[2];
       
       ?>
-
+      <div class="col-lg-12 text-center">
       <div class="comment_div"> 
         <p class="name">Posted By: <?php echo $name;?></p>
           <p class="comment"><?php echo $comment;?></p> 
         <p class="time"><?php echo $datetime;?></p>
+      </div>
       </div>
     <?php
     }
