@@ -49,15 +49,15 @@ input[type="submit"]
 }
 .comment_div
 {
-	width:450px;
 	background-color:white;
 	margin-top:15px;
 	position: relative;
  	min-height: 1px;
  	padding-right: 15px;
  	padding-left: 15px;
- 	 width: 100%;
- 	 float: left;
+ 	width: 100%;
+ 	padding:10px;
+ 	float: left;
 
 
 }
@@ -70,6 +70,7 @@ input[type="submit"]
 	background-color:#253D3D;
 	position: relative;
  	min-height: 1px;
+ 	padding:10px;
  	 width: 100%;	
  	 float: left;
 }
@@ -81,6 +82,7 @@ input[type="submit"]
  	padding-right: 15px;
  	padding-left: 15px;
  	 width: 100%;
+ 	 padding:10px;
  	 float: left;
 }
 .comment_div .time
@@ -93,5 +95,6 @@ input[type="submit"]
  	padding-right: 15px;
  	padding-left: 15px;
  	 width: 100%;
+ 	 padding:10px;
  	 float: left;
 }
