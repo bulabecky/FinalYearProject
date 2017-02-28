@@ -96,15 +96,13 @@
     </div>
 
     <script>
-      var customLabel = {
-         Festival: {
-          label: 'F'
-        },
+      var iconBase ='http://maps.google.com/mapfiles/ms/micons/';
+      var icons = {
         FolkBand: {
-          label: 'FB'
+          icon: iconBase + 'ylw-pushpin.png'
         },
         Band: {
-          label: 'RB'
+         icon: iconBase +'red-pushpin.png'
         }
       };
 
@@ -140,11 +138,10 @@
               var x = document.createElement("IFRAME");
               x.setAttribute("src", video);
               infowincontent.appendChild(x);
-              var icon = customLabel[type] || {};
               var marker = new google.maps.Marker({
                 map: map,
                 position: point,
-                label: icon.label
+                icon: icons[type].icon
               });
               marker.addListener('click', function() {
                 infoWindow.setContent(infowincontent);

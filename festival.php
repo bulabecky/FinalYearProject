@@ -91,7 +91,7 @@
     <div id="map"style="float: right;">
       </div>
 <div class="col-lg-12 text-center"> 
-<a href="index.php" class="btn btn-lg btn-dark">Artist Maps</a>
+<a href="index.php" class="btn btn-lg btn-dark">Artist Map</a>
 </div>
     </div>
 
