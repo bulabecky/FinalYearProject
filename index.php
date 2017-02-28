@@ -103,7 +103,7 @@
         },
         FolkBand: {
          icon: iconBase +'red-pushpin.png'
-        };
+        }
       };
 
         function initMap() {
