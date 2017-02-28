@@ -114,6 +114,15 @@
       var icons = {
         Trad: {
           icon: iconBase + 'mm_20_yellow.png'
+        },
+        Folk: {
+         icon: iconBase +'mm_20_blue.png'
+        },
+        Harp: {
+        icon: iconBase + 'mm_20_red.png'
+       },
+        Celtic: {
+          icon: iconBase +'mm_20_blue.png'
         }
       };
 
