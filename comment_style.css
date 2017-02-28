@@ -63,6 +63,7 @@ input[type="submit"]
 .comment_div .name
 {
 	height:30px;
+	margin-top:15px;
 	line-height:30px;
 	padding-right: 15px;
  	padding-left: 15px;
@@ -75,6 +76,7 @@ input[type="submit"]
 .comment_div .comment
 {
     color: black;
+    margin-top:15px;
     position: relative;
  	padding-right: 15px;
  	padding-left: 15px;
@@ -87,6 +89,7 @@ input[type="submit"]
 	font-style:italic;
 	background-color:#253D3D;
 	color:white;
+	margin-top:15px;
 	position: relative;
  	padding-right: 15px;
  	padding-left: 15px;
