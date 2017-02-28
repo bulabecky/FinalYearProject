@@ -103,7 +103,10 @@
         Trad: {
           label: 'T'
         },
-          Celtic: {
+        Harp: {
+          label: 'H'
+        },
+        Celtic: {
             label: 'C'
         }
       };
