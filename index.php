@@ -48,6 +48,9 @@
                 <a href="login/registration.php" onclick=$("#menu-close").click();>Sign Up</a>
             </li>
             <li>
+                <a href="#map" onclick=$("#menu-close").click();>Search the Map</a>
+            </li>
+            <li>
                 <a href="#comment-section" onclick=$("#menu-close").click();>Leave a Comment</a>
             </li>
             <li>
