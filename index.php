@@ -90,14 +90,6 @@
         </section>
     <div id="map"style="float: right;">
       </div>
-      <form action="#">
-<input type="checkbox" id="restaurantbox" onclick="boxclick(this,'Festival')" checked/>
-<label>Festival</label>
-<input type="checkbox" id="barbox" onclick="boxclick(this,'FolkBand')" checked/>
-<label>Folk Band</label>
-<input type="checkbox" id="barbox" onclick="boxclick(this,'Band')" checked/>
-<label>Band</label>
-</form>
 <div class="col-lg-12 text-center"> 
 <a href="festival.php" class="btn btn-lg btn-dark">Festival Map</a>
 </div>
@@ -134,7 +126,13 @@
      };
 
 
-       var infoWindow = new google.maps.InfoWindow;
+        function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: new google.maps.LatLng(53.350140, -6.266155),
+          zoom: 6
+        });
+        
+        var infoWindow = new google.maps.InfoWindow;
 
           // Change this depending on the name of your PHP or XML file
           downloadUrl('http://cosanceol.tk/mapDBXML.php', function(data) {
@@ -194,7 +192,6 @@
 
       function doNothing() {}
     </script>  
-              
       <div id="comment-section" style="float:left;">
           <h4>Leave a comment</h4>
 
@@ -373,8 +370,8 @@
         // Enable map zooming with mouse scroll when the user clicks the map
     $('.map').on('click', onMapClickHandler);
     </script>
-   <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
     </script>
 
   </body>
