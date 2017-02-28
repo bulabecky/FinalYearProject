@@ -96,18 +96,24 @@
     </div>
 
     <script>
-      var customLabel = {
-         Folk: {
-          label: 'F'
-        },
+     // var customLabel = {
+       //  Folk: {
+      //    label: 'F'
+      //  },
+      //  Trad: {
+       //   label: 'T'
+      //  },
+      //  Harp: {
+      //    label: 'H'
+      //  },
+      //  Celtic: {
+      //      label: 'C'
+      //  }
+      //};
+      var iconBase ='http://maps.google.com/mapfiles/kml/pushpin/'
+      var icons = {
         Trad: {
-          label: 'T'
-        },
-        Harp: {
-          label: 'H'
-        },
-        Celtic: {
-            label: 'C'
+          icon: iconBase + 'ylw-pushpin.png'
         }
       };
 
@@ -140,11 +146,12 @@
               var text = document.createElement('text');
               text.textContent = address
               infowincontent.appendChild(text);
-              var icon = customLabel[type] || {};
+              //var icon = customLabel[type] || {};
               var marker = new google.maps.Marker({
                 map: map,
                 position: point,
-                label: icon.label
+                //label: icon.label
+                icon: icons[feature.type].icon
               });
               marker.addListener('click', function() {
                 infoWindow.setContent(infowincontent);
