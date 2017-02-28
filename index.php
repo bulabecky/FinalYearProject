@@ -186,7 +186,7 @@
          document.getElementById(category+"box").checked = false;
          // == close the info window, in case its open on a marker that we just hid
          infoWindow.close();
-       }
+       };
   </script>
               
       <div id="comment-section" style="float:left;">
