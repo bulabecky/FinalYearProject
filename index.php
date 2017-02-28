@@ -90,16 +90,10 @@
         </section>
     <div id="map"style="float: right;">
       </div>
-      <form action="#">
-          <input type="checkbox" id="festivalbox" onclick="boxclick(this,'Festival')" checked/>
-              <label>Festival</label>
-          <input type="checkbox" id="bandbox" onclick="boxclick(this,'Band')" checked/>
-              <label>Band</label>
-      </form>
-<div class="col-lg-12 text-center"> 
-<a href="festival.php" class="btn btn-lg btn-dark">Festival Map</a>
-</div>
-    </div>
+      <div class="col-lg-12 text-center"> 
+      <a href="festival.php" class="btn btn-lg btn-dark">Festival Map</a>
+      </div>
+          </div>
 
     <script>
     var gmarkers = [];
