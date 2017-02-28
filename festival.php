@@ -182,7 +182,7 @@
   <input type="submit" value="Post Comment">
   </form>
 
-  <div id="all_comments">
+  <div id="all_comments" style="position: center;">
   <?php
     $con = mysqli_connect("localhost","root","Beckyboo4","register");
     // Check connection
