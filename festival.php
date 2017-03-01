@@ -140,19 +140,23 @@ var infoWindow = [];
 
 //set up icons
 var customIcons = {
-Trad: {
-icon: 'http://maps.google.com/mapfiles/ms/orange-dot.png'
-},
-Harp: {
-icon: 'http://maps.google.com/mapfiles/ms/green-dot.png'
-},
-Celtic: {
-icon: 'http://maps.google.com/mapfiles/ms/blue-dot.png'
-},
-Folk: {
-icon: 'http://maps.google.com/mapfiles/ms/red-dot.png'
-}
-};
+              Trad: {
+                icon: 'http://maps.google.com/mapfiles/ms/micons/ltblue-dot.png'
+               },
+
+               Folk : {
+                icon: 'http://maps.google.com/mapfiles/ms/micons/pink-dot.png'
+               },
+
+               Harp : {
+                icon: 'http://maps.google.com/mapfiles/marker_white.png'
+               },
+
+                Celtic: {
+                  icon: 'http://maps.google.com/mapfiles/ms/micons/purple-dot.png'
+                }
+             };
+
 
 
 //load function
