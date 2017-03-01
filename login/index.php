@@ -24,7 +24,7 @@ include("auth.php");
       
       <link rel="stylesheet" type="text/css" href="../comment_style.css">
 <script type="text/javascript" src="../js/jquery.js"></script>
-<script src="testAjax.js"></script>
+<script src="testAjax.js"></script>     
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -85,7 +85,7 @@ include("auth.php");
                     <h2 id="heading">Cosán Ceol</h2>
                     <p class="lead">Cosán ceol is an interactive map appliction highlighting Irish Music.<br>
                     This website has been created for the requirements of a Final Year Project By Rebecca McGowan.</p>
-                    <img src="Images/newLogo.png">
+                    <img src="../Images/newLogo.png">
                 </div>
             </div>
             <!-- /.row -->
@@ -315,10 +315,10 @@ include("auth.php");
        
         <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
     </footer>
-    <script src="js/jquery.js"></script>
+    <script src="../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script>
