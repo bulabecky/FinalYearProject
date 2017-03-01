@@ -112,7 +112,12 @@
       <label>Guitarist</label>
       <input type="checkbox" id="Uilleannbox" onclick="boxclick(this,'Uilleann')" checked/>
       <label>Uilleann</label>
+       <input type="checkbox" id="FolkBandbox" onclick="boxclick(this,'FolkBand')" checked/>
+      <label>Folk Band</label>
+       <input type="checkbox" id="TinWhistlebox" onclick="boxclick(this,'TinWhistle')" checked/>
+      <label>Tin Whistle</label>
       </form>
+     
       <div class="col-lg-12 text-center"> 
       <a href="festival.php" class="btn btn-lg btn-dark">Festival Map</a>
       </div>
