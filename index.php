@@ -206,7 +206,7 @@
     var marker = new google.maps.Marker({
       map: map,
       position: point,
-      icon: icon.icon
+      icon: icons[type].icon
     });
     marker.mycategory = type;
     gmarkers.push(marker);
