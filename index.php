@@ -209,7 +209,7 @@
 
               marker.addListener('click', function() {
                 infoWindow.setContent(infowincontent);
-                bindInfoWindow(marker, map, infoWindow, html);
+                infoWindow.open(map, marker);
               });
             };
           });
