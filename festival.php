@@ -151,7 +151,8 @@
                var t = document.createTextNode("Festival Website");
                 x.setAttribute("href", url);
                 x.appendChild(t);
-                infowincontent.appendChild(x);
+                infowincontent.body.appendChild(x);
+
              /* var x = document.createElement("IFRAME");
               x.setAttribute("src", url);
               infowincontent.appendChild(x);*/
