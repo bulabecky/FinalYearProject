@@ -146,7 +146,7 @@
               strong.textContent = name
               infowincontent.appendChild(strong);
               infowincontent.appendChild(document.createElement('br'));
-              var html ="<br><br>";
+              var html ="<br/><br/>";
 
               var text = document.createElement('text');
               text.textContent = address
