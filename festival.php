@@ -146,12 +146,12 @@
               strong.textContent = name
               infowincontent.appendChild(strong);
               infowincontent.appendChild(document.createElement('br'));
-              var html ="<br/><br/>";
-
+              
               var text = document.createElement('text');
               text.textContent = address
               infowincontent.appendChild(text);
-              
+              var html = kmlLayerEvent.featureData.description.split("<br>")[0];
+
               var x = document.createElement("A");
               var t = document.createTextNode("Festival Website");
               x.setAttribute("href",url); 
