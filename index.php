@@ -97,7 +97,7 @@
     <div id="map"style="float: right;">
       </div>
       <form action="#">
-      <input type="checkbox" id="festivalbox" onclick="boxclick(this,'Festival')" checked/>
+      <input type="checkbox" id="Festivalbox" onclick="boxclick(this,'Festival')" checked/>
       <label>Festivals</label>
       <input type="checkbox" id="Uilleannbox" onclick="boxclick(this,'Uilleann')" checked/>
       <label>Uilleann</label>
