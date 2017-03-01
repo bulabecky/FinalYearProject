@@ -257,6 +257,14 @@
          // == close the info window, in case its open on a marker that we just hid
          infoWindow.close();
        }
+          function boxclick(box,category) {
+        if (box.checked) {
+          show(category);
+        } else {
+          hide(category);
+        }
+      }
+
 
 
 
