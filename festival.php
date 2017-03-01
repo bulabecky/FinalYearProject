@@ -99,6 +99,16 @@
         </section>
     <div id="map"style="float: right;">
       </div>
+      <form action="#">
+      <input type="checkbox" id="Tradbox" onclick="boxclick(this,'Trad')" checked/>
+      <label>Traditonal Music</label>
+      <input type="checkbox" id="Folkbox" onclick="boxclick(this,'Folk')" checked/>
+      <label>Folk Music</label>
+      <input type="checkbox" id="Harpbox" onclick="boxclick(this,'Harp')" checked/>
+      <label>Harp</label>
+      <input type="checkbox" id="Celticbox" onclick="boxclick(this,'Celtic')" checked/>
+      <label>Celtic</label>
+      </form>
 <div class="col-lg-12 text-center"> 
 <a href="index.php" class="btn btn-lg btn-dark">Artist Map</a>
 </div>
