@@ -73,6 +73,7 @@ include("auth.php");
             <h1 id="heading">Cosán Ceol</h1>
             <h3>Journey through Irish Music</h3>
             <br>
+            <h3 style="color: floralwhite;">Welcome <?php echo $_SESSION['username']; ?>!</h3>
             <a href="#map" class="btn btn-dark btn-lg">Start Searching</a>
         </div>
     </header>
