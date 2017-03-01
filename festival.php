@@ -147,9 +147,14 @@
               var text = document.createElement('text');
               text.textContent = address
               infowincontent.appendChild(text);
-              var x = document.createElement("IFRAME");
+             
+              var a = document.createElement('a');
+              a.href = url;
+                infowincontent.appendChild(a);
+
+             /* var x = document.createElement("IFRAME");
               x.setAttribute("src", url);
-              infowincontent.appendChild(x);
+              infowincontent.appendChild(x);*/
               var marker = new google.maps.Marker({
                 map: map,
                 position: point,
