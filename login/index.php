@@ -101,118 +101,192 @@ include("auth.php");
     </section>
    <div id="map"style="float: right;">
       </div>
+       <form action="#">
+      <input type="checkbox" id="Festivalbox" onclick="boxclick(this,'Festival')" checked/>
+      <label>Festival</label>
+      <input type="checkbox" id="Bandbox" onclick="boxclick(this,'Band')" checked/>
+      <label>Band</label>
+      <input type="checkbox" id="Fiddlebox" onclick="boxclick(this,'Fiddle')" checked/>
+      <label>Fiddle</label>
+      <input type="checkbox" id="Banjobox" onclick="boxclick(this,'Banjo')" checked/>
+      <label>Banjo</label>
+      <input type="checkbox" id="Singerbox" onclick="boxclick(this,'Singer')" checked/>
+      <label>Singer</label>
+      <input type="checkbox" id="Guitaristbox" onclick="boxclick(this,'Guitarist')" checked/>
+      <label>Guitarist</label>
+      <input type="checkbox" id="Uilleannbox" onclick="boxclick(this,'Uilleann')" checked/>
+      <label>Uilleann</label>
+       <input type="checkbox" id="FolkBandbox" onclick="boxclick(this,'FolkBand')" checked/>
+      <label>Folk Band</label>
+       <input type="checkbox" id="TinWhistlebox" onclick="boxclick(this,'TinWhistle')" checked/>
+      <label>Tin Whistle</label>
+      </form>
+     
       <div class="col-lg-12 text-center"> 
       <a href="festival.php" class="btn btn-lg btn-dark">Festival Map</a>
       </div>
           </div>
 
-    <script>
-    var gmarkers = [];
-    var infoWindow = [];
 
-     var icons = {
+        <script type="text/javascript">
+    //<![CDATA[
 
-       FolkBand: {
-        icon: 'http://maps.google.com/mapfiles/ms/micons/orange-dot.png'
-       },
-        Festival: {
-          icon: 'http://maps.google.com/mapfiles/ms/micons/red-dot.png'
-        },
-        Fiddle: {
-          icon: 'http://maps.google.com/mapfiles/ms/micons/blue-dot.png'
-        },
-        Banjo: {
-        icon: 'http://maps.google.com/mapfiles/ms/micons/green-dot.png'
-        },
+//set up globals
+var gmarkers = [];
+var infoWindow = [];
 
-        Singer: {
-        icon: 'http://maps.google.com/mapfiles/ms/micons/yellow-dot.png'
-       },
+//set up icons
+var customIcons = {
+ FolkBand: {
+                icon: 'http://maps.google.com/mapfiles/ms/micons/orange-dot.png'
+               },
+                Festival: {
+                  icon: 'http://maps.google.com/mapfiles/ms/micons/red-dot.png'
+                },
+                Fiddle: {
+                  icon: 'http://maps.google.com/mapfiles/ms/micons/blue-dot.png'
+                },
+                Banjo: {
+                icon: 'http://maps.google.com/mapfiles/ms/micons/green-dot.png'
+                },
 
-       Guitarist: {
-        icon: 'http://maps.google.com/mapfiles/ms/micons/ltblue-dot.png'
-       },
+                Singer: {
+                icon: 'http://maps.google.com/mapfiles/ms/micons/yellow-dot.png'
+               },
 
-       Uilleann : {
-        icon: 'http://maps.google.com/mapfiles/ms/micons/pink-dot.png'
-       },
+               Guitarist: {
+                icon: 'http://maps.google.com/mapfiles/ms/micons/ltblue-dot.png'
+               },
 
-       TinWhistle : {
-        icon: 'http://maps.google.com/mapfiles/marker_white.png'
-       },
+               Uilleann : {
+                icon: 'http://maps.google.com/mapfiles/ms/micons/pink-dot.png'
+               },
 
-        Band: {
-          icon: 'http://maps.google.com/mapfiles/ms/micons/purple-dot.png'
+               TinWhistle : {
+                icon: 'http://maps.google.com/mapfiles/marker_white.png'
+               },
+
+                Band: {
+                  icon: 'http://maps.google.com/mapfiles/ms/micons/purple-dot.png'
+                }
+             };
+
+//load function
+function load() {
+
+//initialise map
+var map = new google.maps.Map(document.getElementById("map"), {
+center: new google.maps.LatLng(53.350140, -6.266155),
+zoom: 7
+});
+var infoWindow = new google.maps.InfoWindow;
+//ok
+
+
+
+//set up pins from xmlgen.php file
+  // Change this depending on the name of your PHP file
+downloadUrl("http://cosanceol.tk/mapDBXML.php", function(data) {
+  var xml = data.responseXML;
+  var markers = xml.documentElement.getElementsByTagName("marker");
+  for (var i = 0; i < markers.length; i++) {
+    var name = markers[i].getAttribute("name");
+    var address = markers[i].getAttribute("address");
+    var video = markers[i].getAttribute("video");
+    var type = markers[i].getAttribute("type");
+    var point = new google.maps.LatLng(
+        parseFloat(markers[i].getAttribute("lat")),
+        parseFloat(markers[i].getAttribute("lng")));
+    var infowincontent = document.createElement('div');
+                      var strong = document.createElement('strong');
+                      strong.textContent = name
+                      infowincontent.appendChild(strong);
+                      infowincontent.appendChild(document.createElement('br'));
+
+                      var text = document.createElement('text');
+                      text.textContent = address
+                      infowincontent.appendChild(text);
+                      infowincontent.appendChild(document.createElement('br'));
+                      var x = document.createElement("IFRAME");
+                      x.setAttribute("src", video);
+                      infowincontent.appendChild(x);
+    var icon = customIcons[type] || {};
+
+    var marker = new google.maps.Marker({
+      map: map,
+      position: point,
+      icon: icon.icon
+    });
+    marker.mycategory = type;
+    gmarkers.push(marker);
+
+    bindInfoWindow(marker, map, infoWindow, infowincontent);
+}
+  });
+}
+
+    function bindInfoWindow(marker, map, infoWindow, infowincontent) {
+      google.maps.event.addListener(marker, 'click', function() {
+        infoWindow.setContent(infowincontent);
+        infoWindow.open(map, marker);
+      });
+    }
+
+    function downloadUrl(url, callback) {
+      var request = window.ActiveXObject ?
+          new ActiveXObject('Microsoft.XMLHTTP') :
+          new XMLHttpRequest;
+
+      request.onreadystatechange = function() {
+        if (request.readyState == 4) {
+          request.onreadystatechange = doNothing;
+          callback(request, request.status);
         }
-     };
+      };
+
+      request.open('GET', url, true);
+      request.send(null);
+    }
+
+    function doNothing() {}
 
 
-        function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: new google.maps.LatLng(53.350140, -6.266155),
-          zoom: 7
-        });
-        var infoWindow = new google.maps.InfoWindow;
+// == shows all markers of a particular category, and ensures the checkbox is checked ==
+ function show(category) {
+   for (var i=0; i<gmarkers.length; i++) {
+     if (gmarkers[i].mycategory == category) {
+       gmarkers[i].setVisible(true);
+     }
+   }
+   // == check the checkbox ==
+   document.getElementById(category+"box").checked = true;
+ }
 
-          // Change this depending on the name of your PHP or XML file
-          downloadUrl('http://cosanceol.tk/mapDBXML.php', function(data) {
-            var xml = data.responseXML;
-            var markers = xml.documentElement.getElementsByTagName('marker');
-            Array.prototype.forEach.call(markers, function(markerElem) {
-              var name = markerElem.getAttribute('name');
-              var address = markerElem.getAttribute('address');
-              var video = markerElem.getAttribute('video');
-              var type = markerElem.getAttribute('type');
-              var point = new google.maps.LatLng(
-                  parseFloat(markerElem.getAttribute('lat')),
-                  parseFloat(markerElem.getAttribute('lng')));
+ // == hides all markers of a particular category, and ensures the checkbox is cleared ==
+ function hide(category) {
+   for (var i=0; i<gmarkers.length; i++) {
+     if (gmarkers[i].mycategory == category) {
+       gmarkers[i].setVisible(false);
+     }
+   }
+   // == clear the checkbox ==
+   document.getElementById(category+"box").checked = false;
+   // == close the info window, in case its open on a marker that we just hid
+   infoWindow.close();
+ }
 
-              var infowincontent = document.createElement('div');
-              var strong = document.createElement('strong');
-              strong.textContent = name
-              infowincontent.appendChild(strong);
-              infowincontent.appendChild(document.createElement('br'));
-
-              var text = document.createElement('text');
-              text.textContent = address
-              infowincontent.appendChild(text);
-              infowincontent.appendChild(document.createElement('br'));
-              var x = document.createElement("IFRAME");
-              x.setAttribute("src", video);
-              infowincontent.appendChild(x);
-              var marker = new google.maps.Marker({
-                map: map,
-                position: point,
-                icon: icons[type].icon
-              });
-              marker.addListener('click', function() {
-                infoWindow.setContent(infowincontent);
-                infoWindow.open(map, marker);
-              });
-            });
-          });
+ // == a checkbox has been clicked ==
+      function boxclick(box,category) {
+        if (box.checked) {
+          show(category);
+        } else {
+          hide(category);
         }
-
-
-
-      function downloadUrl(url, callback) {
-        var request = window.ActiveXObject ?
-            new ActiveXObject('Microsoft.XMLHTTP') :
-            new XMLHttpRequest;
-
-        request.onreadystatechange = function() {
-          if (request.readyState == 4) {
-            request.onreadystatechange = doNothing;
-            callback(request, request.status);
-          }
-        };
-
-        request.open('GET', url, true);
-        request.send(null);
       }
 
-      function doNothing() {}
-    </script>
+    //]]>
+
+  </script>
     <div class="col-lg-12 text-center">    
       <div id="comment-section">
           <h4>Leave a comment</h4>
