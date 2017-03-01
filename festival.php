@@ -150,7 +150,8 @@
               
 
 
-              var x = document.getElementById('url').href;
+              var x = document.createElement("A");
+              x.setAttribute("href", 'url');
               infowincontent.appendChild(x);
               var marker = new google.maps.Marker({
                 map: map,
