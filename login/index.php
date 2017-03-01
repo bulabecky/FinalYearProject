@@ -35,7 +35,6 @@ include("auth.php");
     </style>
   </head>
 <body>
-  <p style="color: floralwhite;">Welcome <?php echo $_SESSION['username']; ?>!</p>
   <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
