@@ -7,33 +7,36 @@ include("auth.php");
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <title>Cosán Ceol</title>
 
-       <!-- Bootstrap Core CSS -->
-    <link href="../css1/bootstrap1.min.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="css1/bootstrap1.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../css1/stylish-portfolio.css" rel="stylesheet">
+    <link href="css1/stylish-portfolio.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="../comment_style.css">
-<script type="text/javascript" src="../js/jquery.js"></script>
-<script src="../testAjax.js"></script>
-</head>
-
+      
+      <link rel="stylesheet" type="text/css" href="comment_style.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script src="testAjax.js"></script>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 90%;
+        width: 100%;
+      }
+    </style>
+  </head>
 <body>
   <p style="color: floralwhite;">Welcome <?php echo $_SESSION['username']; ?>!</p>
-<a href="logout.php">Logout</a>
-   <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+  <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
@@ -47,13 +50,19 @@ include("auth.php");
                 <a href="#about" onclick=$("#menu-close").click();>About</a>
             </li>
             <li>
-                <a href="#services" onclick=$("#menu-close").click();>Log In</a>
+                <a href="login/login.php" onclick=$("#menu-close").click();>Log In</a>
             </li>
             <li>
-                <a href="#portfolio" onclick=$("#menu-close").click();>Sign Up</a>
+                <a href="login/registration.php" onclick=$("#menu-close").click();>Sign Up</a>
             </li>
             <li>
-                <a href="#map" onclick=$("#menu-close").click();>Contact</a>
+                <a href="#map" onclick=$("#menu-close").click();>Search the Map</a>
+            </li>
+            <li>
+                <a href="#comment-section" onclick=$("#menu-close").click();>Leave a Comment</a>
+            </li>
+            <li>
+                <a href="#bottom" onclick=$("#menu-close").click();>Contact</a>
             </li>
         </ul>
     </nav>
@@ -74,7 +83,9 @@ include("auth.php");
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 id="heading">Cosán Ceol</h2>
-                    <p class="lead">Cosán ceol is an interactive map appliction highlighting Irish Music. </p>
+                    <p class="lead">Cosán ceol is an interactive map appliction highlighting Irish Music.<br>
+                    This website has been created for the requirements of a Final Year Project By Rebecca McGowan.</p>
+                    <img src="Images/newLogo.png">
                 </div>
             </div>
             <!-- /.row -->
@@ -86,21 +97,170 @@ include("auth.php");
     <section id="SignIn">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <a href="login/login.php" class="btn btn-lg btn-dark">Log In</a>
-                    <a href="login/registration.php" class="btn btn-lg btn-dark">Register Me!</a>
+                    <a href="logout.php" class="btn btn-lg btn-dark">Log Out</a>
                 </div>
             </div>
         </section>
+    <div id="map"style="float: right;">
+      </div>
+      <div class="col-lg-12 text-center"> 
+      <a href="festival.php" class="btn btn-lg btn-dark">Festival Map</a>
+      </div>
+          </div>
 
-    <!-- Map -->
-    <section id="map" class="map">
-        <div id="mapid"  style="width: 100%; height: 700px;"></div>
-        <script src="../../LeafletMap/KML.js"></script>
-        <script src="../../LeafletMap/testIndex.js"></script>
-    </section>
+    <script>
+    var gmarkers = [];
+    var infoWindow = [];
 
-    <!-- Footer -->
-       <footer>
+     var icons = {
+
+       FolkBand: {
+        icon: 'http://maps.google.com/mapfiles/ms/micons/orange-dot.png'
+       },
+        Festival: {
+          icon: 'http://maps.google.com/mapfiles/ms/micons/red-dot.png'
+        },
+        Fiddle: {
+          icon: 'http://maps.google.com/mapfiles/ms/micons/blue-dot.png'
+        },
+        Banjo: {
+        icon: 'http://maps.google.com/mapfiles/ms/micons/green-dot.png'
+        },
+
+        Singer: {
+        icon: 'http://maps.google.com/mapfiles/ms/micons/yellow-dot.png'
+       },
+
+       Guitarist: {
+        icon: 'http://maps.google.com/mapfiles/ms/micons/ltblue-dot.png'
+       },
+
+       Uilleann : {
+        icon: 'http://maps.google.com/mapfiles/ms/micons/pink-dot.png'
+       },
+
+       TinWhistle : {
+        icon: 'http://maps.google.com/mapfiles/marker_white.png'
+       },
+
+        Band: {
+          icon: 'http://maps.google.com/mapfiles/ms/micons/purple-dot.png'
+        }
+     };
+
+
+        function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: new google.maps.LatLng(53.350140, -6.266155),
+          zoom: 6
+        });
+        var infoWindow = new google.maps.InfoWindow;
+
+          // Change this depending on the name of your PHP or XML file
+          downloadUrl('http://cosanceol.tk/mapDBXML.php', function(data) {
+            var xml = data.responseXML;
+            var markers = xml.documentElement.getElementsByTagName('marker');
+            Array.prototype.forEach.call(markers, function(markerElem) {
+              var name = markerElem.getAttribute('name');
+              var address = markerElem.getAttribute('address');
+              var video = markerElem.getAttribute('video');
+              var type = markerElem.getAttribute('type');
+              var point = new google.maps.LatLng(
+                  parseFloat(markerElem.getAttribute('lat')),
+                  parseFloat(markerElem.getAttribute('lng')));
+
+              var infowincontent = document.createElement('div');
+              var strong = document.createElement('strong');
+              strong.textContent = name
+              infowincontent.appendChild(strong);
+              infowincontent.appendChild(document.createElement('br'));
+
+              var text = document.createElement('text');
+              text.textContent = address
+              infowincontent.appendChild(text);
+              var x = document.createElement("IFRAME");
+              x.setAttribute("src", video);
+              infowincontent.appendChild(x);
+              var marker = new google.maps.Marker({
+                map: map,
+                position: point,
+                icon: icons[type].icon
+              });
+              marker.addListener('click', function() {
+                infoWindow.setContent(infowincontent);
+                infoWindow.open(map, marker);
+              });
+            });
+          });
+        }
+
+
+
+      function downloadUrl(url, callback) {
+        var request = window.ActiveXObject ?
+            new ActiveXObject('Microsoft.XMLHTTP') :
+            new XMLHttpRequest;
+
+        request.onreadystatechange = function() {
+          if (request.readyState == 4) {
+            request.onreadystatechange = doNothing;
+            callback(request, request.status);
+          }
+        };
+
+        request.open('GET', url, true);
+        request.send(null);
+      }
+
+      function doNothing() {}
+    </script>
+    <div class="col-lg-12 text-center">    
+      <div id="comment-section">
+          <h4>Leave a comment</h4>
+
+  <form method="post" action="" onsubmit="return post();">
+  <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
+  <br>
+  <input type="text" id="username" placeholder="Your Name">
+  <br>
+  <input type="submit" value="Post Comment">
+  </form>
+
+  <div id="all_comments">
+  <?php
+    $con = mysqli_connect("localhost","root","Beckyboo4","register");
+    // Check connection
+    if (mysqli_connect_errno())
+      {
+      echo "Failed to connect to MySQL: " . mysqli_connect_error();
+      }
+
+
+    $result = mysqli_query($con,'SELECT name, comment, post_time FROM comments order by post_time desc');
+    if (!$result) {
+        die('Could not query:' . mysqli_error());
+    }
+
+   while ($row = mysqli_fetch_row($result)) {
+      $name = $row[0];
+      $comment = $row[1];
+      $datetime = $row[2];
+      
+      ?>
+
+      <div class="comment_div"> 
+        <p class="name">Posted By: <?php echo $name;?></p>
+          <p class="comment"><?php echo $comment;?></p> 
+        <p class="time"><?php echo $datetime;?></p>
+      </div>
+    <?php
+    }
+
+    mysqli_close($con) or die(mysqli_error());
+    ?>
+  </div>
+
+     <footer id="bottom">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -118,25 +278,43 @@ include("auth.php");
                     <br>
                     <ul class="list-inline">
                         <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                            <div id="fb-root"></div>
+                              <script>(function(d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0];
+                                if (d.getElementById(id)) return;
+                                js = d.createElement(s); js.id = id;
+                                js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
+                                fjs.parentNode.insertBefore(js, fjs);
+                              }(document, 'script', 'facebook-jssdk'));</script>
+                              <div class="fb-share-button" data-href="http://cosanceol.tk/" data-layout="fa fa-facebook fa-fw fa-3x" data-mobile-iframe="true"><a class="fa fa-facebook fa-fw fa-3x" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcosanceol.tk%2F&amp;src=sdkpreparse"></a></div>
                         </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                         <li>
+                            <a href="https://twitter.com/intent/tweet?text=Look%20at%20my%20map%20on%20CosánCeol!"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                            <script>window.twttr = (function(d, s, id) {
+                              var js, fjs = d.getElementsByTagName(s)[0],
+                                t = window.twttr || {};
+                              if (d.getElementById(id)) return t;
+                              js = d.createElement(s);
+                              js.id = id;
+                              js.src = "https://platform.twitter.com/widgets.js";
+                              fjs.parentNode.insertBefore(js, fjs);
+
+                              t._e = [];
+                              t.ready = function(f) {
+                                t._e.push(f);
+                              };
+
+                              return t;
+                            }(document, "script", "twitter-wjs"));</script>
                         </li>
                     </ul>
                     <hr class="small">
-                    <p class="text-muted">Copyright &copy; cosanceol.tk 2017</p>
+                    <p>Copyright &copy; cosanceol.tk 2017</p>
                 </div>
             </div>
-        </div>
+       
         <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
     </footer>
-
-
-    <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
@@ -144,7 +322,7 @@ include("auth.php");
 
     <!-- Custom Theme JavaScript -->
     <script>
-    // Closes the sidebar menu
+      // Closes the sidebar menu
     $("#menu-close").click(function(e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
@@ -215,7 +393,9 @@ include("auth.php");
         // Enable map zooming with mouse scroll when the user clicks the map
     $('.map').on('click', onMapClickHandler);
     </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
+    </script>
 
-</body>
-
+  </body>
 </html>
