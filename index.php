@@ -258,10 +258,7 @@ function show(category) {
         } else {
           hide(category);
         }
-        // == rebuild the side bar
-        makeSidebar();
-      }
-
+        
       function myclick(i) {
         google.maps.event.trigger(gmarkers[i],"click");
       }
