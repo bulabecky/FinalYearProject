@@ -170,7 +170,7 @@ var infoWindow = new google.maps.InfoWindow;
 
 //set up pins from xmlgen.php file
   // Change this depending on the name of your PHP file
-downloadUrl("http://cosanceol.tk/mapDBXML.php", function(data) {
+downloadUrl("http://cosanceol.tk/festivalDBXML.php", function(data) {
   var xml = data.responseXML;
   var markers = xml.documentElement.getElementsByTagName("marker");
   for (var i = 0; i < markers.length; i++) {
