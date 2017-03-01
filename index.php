@@ -208,7 +208,7 @@
         infowindow.setContent(contentString); 
         infowindow.open(map,marker);
         });
-}
+})
 
 
 function show(category) {
@@ -268,7 +268,7 @@ function show(category) {
 
       function doNothing() {}
 
-      
+
     </script>
     <div class="col-lg-12 text-center">    
       <div id="comment-section">
