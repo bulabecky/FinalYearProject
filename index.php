@@ -27,7 +27,7 @@
     </style>
   </head>
 
-  <body onload="initMap()">
+  <body onload="load()">
   <a href="test.php">Test</a>
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
@@ -99,21 +99,7 @@
       </div>
       <form action="#">
       <input type="checkbox" id="Festivalbox" onclick="boxclick(this,'Festival')" checked/>
-      <label>Festivals</label>
-      <input type="checkbox" id="Uilleannbox" onclick="boxclick(this,'Uilleann')" checked/>
-      <label>Uilleann</label>
-      <input type="checkbox" id="FolkBandbox" onclick="boxclick(this,'FolkBand')" checked/>
-      <label>Folk Band</label>
-      <input type="checkbox" id="Fiddlebox" onclick="boxclick(this,'Fiddle')" checked/>
-      <label>Fiddle</label>
-      <input type="checkbox" id="Banjobox" onclick="boxclick(this,'Banjo')" checked/>
-      <label>Banjo</label>
-      <input type="checkbox" id="Singerbix" onclick="boxclick(this,'Singer')" checked/>
-      <label>Singer</label>
-      <input type="checkbox" id="Guitaristbox" onclick="boxclick(this,'Guitarist')" checked/>
-      <label>Guitarist</label>
-      <input type="checkbox" id="TinWhistlebox" onclick="boxclick(this,'TinWhistle')" checked/>
-      <label>Tin Whistle</label>
+      <label>Festival</label>
       <input type="checkbox" id="Bandbox" onclick="boxclick(this,'Band')" checked/>
       <label>Band</label>
       </form>
