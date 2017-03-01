@@ -152,7 +152,7 @@
               infowincontent.appendChild(text);
               
               var x = document.createElement("A");
-              var t = document.createTextNode("<p></br>Festival Website</p>");
+              var t = document.createTextNode("Festival Website");
               x.setAttribute("href",url); 
               x.appendChild(t);
               infowincontent.appendChild(x);
@@ -166,7 +166,9 @@
                 icon: icons[type].icon
               });
               marker.addListener('click', function() {
-                infoWindow.setContent(infowincontent);
+                infoWindow.setContent("<h4>" + markers[i].name + "<br />" + 
+                  markers[i].address + "<br />" + markers[i].url + 
+                  "</p>");
                 infoWindow.open(map, marker);
               });
             });
