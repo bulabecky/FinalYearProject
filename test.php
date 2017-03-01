@@ -30,9 +30,8 @@ function load() {
 
 //initialise map
 var map = new google.maps.Map(document.getElementById("map"), {
-center: new google.maps.LatLng(47.6145, -122.3418),
-zoom: 13,
-mapTypeId: 'roadmap'
+center: new google.maps.LatLng(53.350140, -6.266155),
+zoom: 6
 });
 var infoWindow = new google.maps.InfoWindow;
 //ok
@@ -137,10 +136,10 @@ downloadUrl("http://cosanceol.tk/mapDBXML.php", function(data) {
 <div id="map" style="width: 700px; height: 500px"></div>
 
 <form action="#">
-<input type="checkbox" id="restaurantbox" onclick="boxclick(this,'restaurant')" checked/>
-<label>restaurant</label>
-<input type="checkbox" id="barbox" onclick="boxclick(this,'bar')" checked/>
-<label>bar</label>
+<input type="checkbox" id="Festivalbox" onclick="boxclick(this,'Festival')" checked/>
+<label>Festival</label>
+<input type="checkbox" id="Bandbox" onclick="boxclick(this,'Band')" checked/>
+<label>Band</label>
 </form>
 
 </body>
