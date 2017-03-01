@@ -24,6 +24,9 @@
         height: 90%;
         width: 100%;
       }
+      .link {
+        color:black;
+      }
     </style>
   </head>
 
@@ -150,7 +153,7 @@
               
               var x = document.createElement("A");
               var t = document.createTextNode("Festival Website");
-              t.setAttribute("href","bootstrap1");
+              t.setAttribute("class","link");
               x.setAttribute("href",url);
 
               x.appendChild(t);
