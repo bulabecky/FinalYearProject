@@ -149,8 +149,8 @@
               infowincontent.appendChild(text);
               
               var x = document.createElement("A");
-              var t = document.createTextNode("Tutorials");
-              x.setAttribute("href", url);
+              var t = document.createTextNode("Festival Website");
+              x.setAttribute("href style='color:Black;'",url);
               x.appendChild(t);
               infowincontent.appendChild(x);
 
