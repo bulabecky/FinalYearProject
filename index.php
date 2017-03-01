@@ -207,12 +207,20 @@
               marker.mycategory = type;
               gmarkers.push(marker);
 
-              marker.addListener('click', function() {
-                infoWindow.setContent(infowincontent);
-                infoWindow.open(map, marker);
+              bindInfoWindow(marker, map, infoWindow, html);
+            }
+
+
+                    function bindInfoWindow(marker, map, infoWindow, html) {
+            google.maps.event.addListener(marker, 'click', function() {
+              infoWindow.setContent(html);
+              infoWindow.open(map, marker);
+            });
+          }
+
               });
             };
-          });
+          };
         }
 
 
