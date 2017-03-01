@@ -122,6 +122,7 @@
       </div>
           </div>
 
+
          <script "text/javascript">
             var gmarkers = [];
             var infoWindow = [];
