@@ -122,8 +122,8 @@
           </div>
 
     <script>
-   // var gmarkers = [];
-    //var infoWindow = [];
+   var gmarkers = [];
+    var infoWindow = [];
 
      var icons = {
 
@@ -167,7 +167,7 @@
           center: new google.maps.LatLng(53.350140, -6.266155),
           zoom: 6
         });
-        //var infoWindow = new google.maps.InfoWindow;
+        
 
         var gmarkers = [];
          var infoWindow = new google.maps.InfoWindow;
@@ -175,15 +175,15 @@
           // Change this depending on the name of your PHP or XML file
           downloadUrl('http://cosanceol.tk/mapDBXML.php', function(data) {
             var xml = data.responseXML;
-  var markers = xml.documentElement.getElementsByTagName("marker");
-  for (var i = 0; i < markers.length; i++) {
-    var name = markers[i].getAttribute("name");
-    var address = markers[i].getAttribute("address");
-    var video = markers[i].getAttribute("video");
-    var type = markers[i].getAttribute("type");
-    var point = new google.maps.LatLng(
-        parseFloat(markers[i].getAttribute("lat")),
-        parseFloat(markers[i].getAttribute("lng")))
+            var markers = xml.documentElement.getElementsByTagName("marker");
+              for (var i = 0; i < markers.length; i++) {
+              var name = markers[i].getAttribute("name");
+              var address = markers[i].getAttribute("address");
+              var video = markers[i].getAttribute("video");
+              var type = markers[i].getAttribute("type");
+              var point = new google.maps.LatLng(
+                  parseFloat(markers[i].getAttribute("lat")),
+                  parseFloat(markers[i].getAttribute("lng")))
 
               var infowincontent = document.createElement('div');
               var strong = document.createElement('strong');
