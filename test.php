@@ -50,7 +50,19 @@ downloadUrl("http://cosanceol.tk/mapDBXML.php", function(data) {
     var point = new google.maps.LatLng(
         parseFloat(markers[i].getAttribute("lat")),
         parseFloat(markers[i].getAttribute("lng")));
-    var html = "<b>" + name + "</b> <br/>" + address;
+    var infowincontent = document.createElement('div');
+                      var strong = document.createElement('strong');
+                      strong.textContent = name
+                      infowincontent.appendChild(strong);
+                      infowincontent.appendChild(document.createElement('br'));
+
+                      var text = document.createElement('text');
+                      text.textContent = address
+                      infowincontent.appendChild(text);
+                      infowincontent.appendChild(document.createElement('br'));
+                      var x = document.createElement("IFRAME");
+                      x.setAttribute("src", video);
+                      infowincontent.appendChild(x);
     var icon = customIcons[type] || {};
 
     var marker = new google.maps.Marker({
@@ -61,14 +73,14 @@ downloadUrl("http://cosanceol.tk/mapDBXML.php", function(data) {
     marker.mycategory = type;
     gmarkers.push(marker);
 
-    bindInfoWindow(marker, map, infoWindow, html);
+    bindInfoWindow(marker, map, infoWindow, infowincontent);
 }
   });
 }
 
-    function bindInfoWindow(marker, map, infoWindow, html) {
+    function bindInfoWindow(marker, map, infoWindow, infowincontent) {
       google.maps.event.addListener(marker, 'click', function() {
-        infoWindow.setContent(html);
+        infoWindow.setContent(infowincontent);
         infoWindow.open(map, marker);
       });
     }
