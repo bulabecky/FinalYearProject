@@ -176,6 +176,7 @@ include("auth.php");
               var text = document.createElement('text');
               text.textContent = address
               infowincontent.appendChild(text);
+              infowincontent.appendChild(document.createElement('br'));
               var x = document.createElement("IFRAME");
               x.setAttribute("src", video);
               infowincontent.appendChild(x);
