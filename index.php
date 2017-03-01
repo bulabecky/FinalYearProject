@@ -170,7 +170,7 @@
         //var infoWindow = new google.maps.InfoWindow;
 
         var gmarkers = [];
-        var infoWindow = new google.maps.InfoWindow({}); 
+         var infoWindow = new google.maps.InfoWindow;
 
           // Change this depending on the name of your PHP or XML file
           downloadUrl('http://cosanceol.tk/mapDBXML.php', function(data) {
