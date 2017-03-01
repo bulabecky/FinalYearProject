@@ -176,7 +176,7 @@ downloadUrl("http://cosanceol.tk/mapDBXML.php", function(data) {
   for (var i = 0; i < markers.length; i++) {
     var name = markers[i].getAttribute("name");
     var address = markers[i].getAttribute("address");
-    var video = markers[i].getAttribute("video");
+    var url = markers[i].getAttribute("url");
     var type = markers[i].getAttribute("type");
     var point = new google.maps.LatLng(
         parseFloat(markers[i].getAttribute("lat")),
