@@ -16,10 +16,10 @@ var infoWindow = [];
 
 //set up icons
 var customIcons = {
-restaurant: {
+Festival: {
 icon: 'http://labs.google.com/ridefinder/images/mm_20_blue.png'
 },
-bar: {
+Band: {
 icon: 'http://labs.google.com/ridefinder/images/mm_20_red.png'
 }
 };
