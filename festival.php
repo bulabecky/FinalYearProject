@@ -196,10 +196,10 @@ downloadUrl("http://cosanceol.tk/festivalDBXML.php", function(data) {
                       infowincontent.appendChild(text);
                       infowincontent.appendChild(document.createElement('br'));
                       var x = document.createElement("A");
-           var t = document.createTextNode("Festival Website");
-            x.setAttribute("href", url);
-            x.appendChild(t);
-            infowincontent.appendChild(x);
+ +               var t = document.createTextNode("Festival Website");
+ +                x.setAttribute("href", url);
+ +                x.appendChild(t);
+ +                infowincontent.appendChild(x);
                      /* var a = document.createElement("IFRAME");
                       a.setAttribute("src", video);
                       infowincontent.appendChild(a);*/
