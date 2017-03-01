@@ -146,6 +146,7 @@
               strong.textContent = name
               infowincontent.appendChild(strong);
               infowincontent.appendChild(document.createElement('br'));
+              var html ="<br><br>";
 
               var text = document.createElement('text');
               text.textContent = address
@@ -153,7 +154,7 @@
               
               var x = document.createElement("A");
               var t = document.createTextNode("Festival Website");
-              x.setAttribute("href",url);
+              x.setAttribute("href",url); 
               x.appendChild(t);
               infowincontent.appendChild(x);
 
