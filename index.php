@@ -122,112 +122,112 @@
       </div>
           </div>
 
-         <script>
-    var gmarkers = [];
-    var infoWindow = [];
+         <script "text/javascript">
+            var gmarkers = [];
+            var infoWindow = [];
 
-     var icons = {
+             var icons = {
 
-       FolkBand: {
-        icon: 'http://maps.google.com/mapfiles/ms/micons/orange-dot.png'
-       },
-        Festival: {
-          icon: 'http://maps.google.com/mapfiles/ms/micons/red-dot.png'
-        },
-        Fiddle: {
-          icon: 'http://maps.google.com/mapfiles/ms/micons/blue-dot.png'
-        },
-        Banjo: {
-        icon: 'http://maps.google.com/mapfiles/ms/micons/green-dot.png'
-        },
+               FolkBand: {
+                icon: 'http://maps.google.com/mapfiles/ms/micons/orange-dot.png'
+               },
+                Festival: {
+                  icon: 'http://maps.google.com/mapfiles/ms/micons/red-dot.png'
+                },
+                Fiddle: {
+                  icon: 'http://maps.google.com/mapfiles/ms/micons/blue-dot.png'
+                },
+                Banjo: {
+                icon: 'http://maps.google.com/mapfiles/ms/micons/green-dot.png'
+                },
 
-        Singer: {
-        icon: 'http://maps.google.com/mapfiles/ms/micons/yellow-dot.png'
-       },
+                Singer: {
+                icon: 'http://maps.google.com/mapfiles/ms/micons/yellow-dot.png'
+               },
 
-       Guitarist: {
-        icon: 'http://maps.google.com/mapfiles/ms/micons/ltblue-dot.png'
-       },
+               Guitarist: {
+                icon: 'http://maps.google.com/mapfiles/ms/micons/ltblue-dot.png'
+               },
 
-       Uilleann : {
-        icon: 'http://maps.google.com/mapfiles/ms/micons/pink-dot.png'
-       },
+               Uilleann : {
+                icon: 'http://maps.google.com/mapfiles/ms/micons/pink-dot.png'
+               },
 
-       TinWhistle : {
-        icon: 'http://maps.google.com/mapfiles/marker_white.png'
-       },
+               TinWhistle : {
+                icon: 'http://maps.google.com/mapfiles/marker_white.png'
+               },
 
-        Band: {
-          icon: 'http://maps.google.com/mapfiles/ms/micons/purple-dot.png'
-        }
-     };
-
-
-        function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: new google.maps.LatLng(53.350140, -6.266155),
-          zoom: 6
-        });
-        var infoWindow = new google.maps.InfoWindow;
-
-          // Change this depending on the name of your PHP or XML file
-          downloadUrl('http://cosanceol.tk/mapDBXML.php', function(data) {
-            var xml = data.responseXML;
-            var markers = xml.documentElement.getElementsByTagName('marker');
-            Array.prototype.forEach.call(markers, function(markerElem) {
-              var name = markerElem.getAttribute('name');
-              var address = markerElem.getAttribute('address');
-              var video = markerElem.getAttribute('video');
-              var type = markerElem.getAttribute('type');
-              var point = new google.maps.LatLng(
-                  parseFloat(markerElem.getAttribute('lat')),
-                  parseFloat(markerElem.getAttribute('lng')));
-
-              var infowincontent = document.createElement('div');
-              var strong = document.createElement('strong');
-              strong.textContent = name
-              infowincontent.appendChild(strong);
-              infowincontent.appendChild(document.createElement('br'));
-
-              var text = document.createElement('text');
-              text.textContent = address
-              infowincontent.appendChild(text);
-              infowincontent.appendChild(document.createElement('br'));
-              var x = document.createElement("IFRAME");
-              x.setAttribute("src", video);
-              infowincontent.appendChild(x);
-              var marker = new google.maps.Marker({
-                map: map,
-                position: point,
-                icon: icons[type].icon
-              });
-              marker.addListener('click', function() {
-                infoWindow.setContent(infowincontent);
-                infoWindow.open(map, marker);
-              });
-            });
-          });
-        }
+                Band: {
+                  icon: 'http://maps.google.com/mapfiles/ms/micons/purple-dot.png'
+                }
+             };
 
 
+                function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  center: new google.maps.LatLng(53.350140, -6.266155),
+                  zoom: 6
+                });
+                var infoWindow = new google.maps.InfoWindow;
 
-      function downloadUrl(url, callback) {
-        var request = window.ActiveXObject ?
-            new ActiveXObject('Microsoft.XMLHTTP') :
-            new XMLHttpRequest;
+                  // Change this depending on the name of your PHP or XML file
+                  downloadUrl('http://cosanceol.tk/mapDBXML.php', function(data) {
+                    var xml = data.responseXML;
+                    var markers = xml.documentElement.getElementsByTagName('marker');
+                    Array.prototype.forEach.call(markers, function(markerElem) {
+                      var name = markerElem.getAttribute('name');
+                      var address = markerElem.getAttribute('address');
+                      var video = markerElem.getAttribute('video');
+                      var type = markerElem.getAttribute('type');
+                      var point = new google.maps.LatLng(
+                          parseFloat(markerElem.getAttribute('lat')),
+                          parseFloat(markerElem.getAttribute('lng')));
 
-        request.onreadystatechange = function() {
-          if (request.readyState == 4) {
-            request.onreadystatechange = doNothing;
-            callback(request, request.status);
-          }
-        };
+                      var infowincontent = document.createElement('div');
+                      var strong = document.createElement('strong');
+                      strong.textContent = name
+                      infowincontent.appendChild(strong);
+                      infowincontent.appendChild(document.createElement('br'));
 
-        request.open('GET', url, true);
-        request.send(null);
-      }
+                      var text = document.createElement('text');
+                      text.textContent = address
+                      infowincontent.appendChild(text);
+                      infowincontent.appendChild(document.createElement('br'));
+                      var x = document.createElement("IFRAME");
+                      x.setAttribute("src", video);
+                      infowincontent.appendChild(x);
+                      var marker = new google.maps.Marker({
+                        map: map,
+                        position: point,
+                        icon: icons[type].icon
+                      });
+                      marker.addListener('click', function() {
+                        infoWindow.setContent(infowincontent);
+                        infoWindow.open(map, marker);
+                      });
+                    });
+                  });
+                }
 
-      function doNothing() {}
+
+
+              function downloadUrl(url, callback) {
+                var request = window.ActiveXObject ?
+                    new ActiveXObject('Microsoft.XMLHTTP') :
+                    new XMLHttpRequest;
+
+                request.onreadystatechange = function() {
+                  if (request.readyState == 4) {
+                    request.onreadystatechange = doNothing;
+                    callback(request, request.status);
+                  }
+                };
+
+                request.open('GET', url, true);
+                request.send(null);
+              }
+
+              function doNothing() {}
     </script>
     <div class="col-lg-12 text-center">    
       <div id="comment-section">
