@@ -122,8 +122,9 @@
       </div>
           </div>
 
-      <script>
+        <script>
     var gmarkers = [];
+    var infoWindow = [];
 
      var icons = {
 
@@ -167,7 +168,7 @@
           center: new google.maps.LatLng(53.350140, -6.266155),
           zoom: 6
         });
-        var infowindow = new google.maps.InfoWindow
+        var infoWindow = new google.maps.InfoWindow;
 
           // Change this depending on the name of your PHP or XML file
           downloadUrl('http://cosanceol.tk/mapDBXML.php', function(data) {
@@ -200,16 +201,13 @@
                 position: point,
                 icon: icons[type].icon
               });
-              marker.mycategory = category;                                 
-        marker.myname = name;
-        gmarkers.push(marker);
-
-    google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent(contentString); 
-        infowindow.open(map,marker);
-        });
-}
-
+              marker.addListener('click', function() {
+                infoWindow.setContent(infowincontent);
+                infoWindow.open(map, marker);
+              });
+            });
+          });
+        }
 
 
 
