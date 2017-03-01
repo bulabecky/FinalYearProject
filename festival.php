@@ -150,12 +150,14 @@
               var text = document.createElement('text');
               text.textContent = address
               infowincontent.appendChild(text);
+              infowincontent.appendChild(document.createElement('br'));
               
               var x = document.createElement("A");
               var t = document.createTextNode("Festival Website");
               x.setAttribute("href",url); 
               x.appendChild(t);
               infowincontent.appendChild(x);
+              infowincontent.appendChild(document.createElement('br'));
 
              /* var x = document.createElement("IFRAME");
               x.setAttribute("src", url);
@@ -166,9 +168,7 @@
                 icon: icons[type].icon
               });
               marker.addListener('click', function() {
-                infoWindow.setContent("<h4>" + markers[i].name + "<br />" + 
-                  markers[i].address + "<br />" + markers[i].url + 
-                  "</p>");
+                infoWindow.setContent(infowincontent);
                 infoWindow.open(map, marker);
               });
             });
