@@ -1,0 +1,77 @@
+body
+{
+	text-align:center;
+	font-family:helvetica;
+}
+h1
+{
+	color:floralwhite;
+	text-align:center;
+	margin-top:100px;
+
+}
+textarea
+{
+	width:500px;
+	height:100px;
+	border:1px solid silver;
+	border-radius:5px;
+	font-size:17px;
+	padding:10px;
+	font-family:helvetica;
+	
+}
+input[type="text"]
+{
+	width:300px;
+	height:35px;
+	border:1px solid silver;
+	margin-top:10px;
+	border-radius:5px;
+	font-size:17px;
+	padding:10px;
+	font-family:helvetica;
+
+	
+}
+input[type="submit"]
+{
+	width:150px;
+	height:40px;
+	border:none;
+	background-color:#215721;
+	color:white;
+	margin-top:10px;
+	border-radius:5px;
+	font-size:17px;
+	
+	
+}
+.comment_div
+{
+	width:100%;
+	background-color:white;
+	margin-top:20px;
+	position: relative;
+
+}
+.comment_div .name
+{
+	height:30px;
+	line-height:30px;
+	padding:10px;
+	background-color:#215721;
+	color:white;	
+}
+.comment_div .comment
+{
+	padding:10px;
+    color: black;
+}
+.comment_div .time
+{
+	font-style:italic;
+	padding:10px;
+	background-color:#215721;
+	color:white;
+}

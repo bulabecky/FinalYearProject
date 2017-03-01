@@ -5,26 +5,24 @@ include("auth.php");
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
-      <head>
+< <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <title>Cosán Ceol</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../css1/bootstrap1.min.css" rel="stylesheet">
+    <link href="css1/bootstrap1.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../css1/stylish-portfolio.css" rel="stylesheet">
+    <link href="css1/stylish-portfolio.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
       
-      <link rel="stylesheet" type="text/css" href="../comment_style.css">
-<script type="text/javascript" src="../js/jquery.js"></script>
-<script src=",,/testAjax.js"</script>     
+      <link rel="stylesheet" type="text/css" href="comment_style.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script src="testAjax.js"></script>
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -100,8 +98,8 @@ include("auth.php");
                     <a href="logout.php" class="btn btn-lg btn-dark">Log Out</a>
                 </div>
             </div>
-        </section>
-    <div id="map"style="float: right;">
+    </section>
+   <div id="map"style="float: right;">
       </div>
       <div class="col-lg-12 text-center"> 
       <a href="festival.php" class="btn btn-lg btn-dark">Festival Map</a>
@@ -315,10 +313,10 @@ include("auth.php");
        
         <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
     </footer>
-    <script src="../js/jquery.js"></script>
+    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script>
@@ -393,8 +391,8 @@ include("auth.php");
         // Enable map zooming with mouse scroll when the user clicks the map
     $('.map').on('click', onMapClickHandler);
     </script>
-     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
     </script>
 
   </body>
