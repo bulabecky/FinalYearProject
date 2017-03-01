@@ -207,13 +207,13 @@
                  marker.mycategory = type;
                  gmarkers.push(marker);
 
-                bindInfoWindow(marker, map, infoWindow, html);
+                bindInfoWindow(marker, map, infoWindow);
                   }
                  });
                 }
 
 
-           function bindInfoWindow(marker, map, infoWindow, html) {
+           function bindInfoWindow(marker, map, infoWindow) {
                 google.maps.event.addListener(marker, 'click', function() {
                   infoWindow.setContent(html);
                   infoWindow.open(map, marker);
