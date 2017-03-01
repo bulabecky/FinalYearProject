@@ -204,42 +204,39 @@
                 icon: icons[type].icon
               });
 
-              marker.mycategory = type;
-              gmarkers.push(marker);
+                 marker.mycategory = type;
+                 gmarkers.push(marker);
 
-              bindInfoWindow(marker, map, infoWindow, html);
-            }
-
-
-                    function bindInfoWindow(marker, map, infoWindow, html) {
-            google.maps.event.addListener(marker, 'click', function() {
-              infoWindow.setContent(html);
-              infoWindow.open(map, marker);
-            });
-          }
-
-              });
-            };
+                bindInfoWindow(marker, map, infoWindow, html);
+                  }
+                 });
+                }
 
 
+           function bindInfoWindow(marker, map, infoWindow, html) {
+                google.maps.event.addListener(marker, 'click', function() {
+                  infoWindow.setContent(html);
+                  infoWindow.open(map, marker);
+                });
+              }
 
-      function downloadUrl(url, callback) {
-        var request = window.ActiveXObject ?
-            new ActiveXObject('Microsoft.XMLHTTP') :
-            new XMLHttpRequest;
+              function downloadUrl(url, callback) {
+                var request = window.ActiveXObject ?
+                    new ActiveXObject('Microsoft.XMLHTTP') :
+                    new XMLHttpRequest;
 
-        request.onreadystatechange = function() {
-          if (request.readyState == 4) {
-            request.onreadystatechange = doNothing;
-            callback(request, request.status);
-          }
-        };
+                request.onreadystatechange = function() {
+                  if (request.readyState == 4) {
+                    request.onreadystatechange = doNothing;
+                    callback(request, request.status);
+                  }
+                };
 
-        request.open('GET', url, true);
-        request.send(null);
-      }
+                request.open('GET', url, true);
+                request.send(null);
+              }
 
-      function doNothing() {}
+              function doNothing() {}
 
        function show(category) {
          for (var i=0; i<gmarkers.length; i++) {
