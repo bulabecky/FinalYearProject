@@ -149,7 +149,7 @@
               infowincontent.appendChild(text);
              
               var x = document.createElement("LINK");
-              x.setAttribute("src", url);
+              x.setAttribute("href", url);
               infowincontent.appendChild(x)
 
              /* var x = document.createElement("IFRAME");
