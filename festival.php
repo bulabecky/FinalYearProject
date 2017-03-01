@@ -152,9 +152,8 @@
               infowincontent.appendChild(text);
               
               var x = document.createElement("A");
-              var t = document.createTextNode("Festival Website").setAttribute("class","link");
+              var t = document.createTextNode("Festival Website");
               x.setAttribute("href",url);
-
               x.appendChild(t);
               infowincontent.appendChild(x);
 
