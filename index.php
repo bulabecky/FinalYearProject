@@ -215,7 +215,7 @@
 
            function bindInfoWindow(marker, map, infoWindow) {
                 google.maps.event.addListener(marker, 'click', function() {
-                  infoWindow.setContent(html);
+                  infoWindow.setContent(infowincontent);
                   infoWindow.open(map, marker);
                 });
               }
