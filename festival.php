@@ -147,12 +147,14 @@
               var text = document.createElement('text');
               text.textContent = address
               infowincontent.appendChild(text);
-              
-
-
-              var x = document.createElement("A");
-              x.setAttribute("href", 'url');
-              infowincontent.appendChild(x);
+               var x = document.createElement("A");
+               var t = document.createTextNode("Festival Website");
+                x.setAttribute("href", url);
+                x.appendChild(t);
+                infowincontent.appendChild(x);
+             /* var x = document.createElement("IFRAME");
+              x.setAttribute("src", url);
+              infowincontent.appendChild(x);*/
               var marker = new google.maps.Marker({
                 map: map,
                 position: point,
