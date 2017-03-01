@@ -148,7 +148,7 @@
               text.textContent = address
               infowincontent.appendChild(text);
              
-              var x = document.createElement("a");
+              var x = document.createElement("LINK");
               x.setAttribute("src", url);
               infowincontent.appendChild(x)
 
