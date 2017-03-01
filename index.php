@@ -124,7 +124,6 @@
 
       <script>
     var gmarkers = [];
-    var infoWindow = [];
 
      var icons = {
 
@@ -168,7 +167,7 @@
           center: new google.maps.LatLng(53.350140, -6.266155),
           zoom: 6
         });
-        var infoWindow = new google.maps.InfoWindow;
+        var infowindow = new google.maps.InfoWindow
 
           // Change this depending on the name of your PHP or XML file
           downloadUrl('http://cosanceol.tk/mapDBXML.php', function(data) {
@@ -201,14 +200,54 @@
                 position: point,
                 icon: icons[type].icon
               });
-              marker.addListener('click', function() {
-                infoWindow.setContent(infowincontent);
-                infoWindow.open(map, marker);
-              });
-            });
-          });
-        }
+              marker.mycategory = category;                                 
+        marker.myname = name;
+        gmarkers.push(marker);
 
+    google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent(contentString); 
+        infowindow.open(map,marker);
+        });
+}
+
+
+function show(category) {
+        for (var i=0; i<gmarkers.length; i++) {
+          if (gmarkers[i].mycategory == category) {
+            gmarkers[i].setVisible(true);
+          }
+        }
+        // == check the checkbox ==
+        document.getElementById(category+"box").checked = true;
+      }
+
+      // == hides all markers of a particular category, and ensures the checkbox is cleared ==
+      function hide(category) {
+        for (var i=0; i<gmarkers.length; i++) {
+          if (gmarkers[i].mycategory == category) {
+            gmarkers[i].setVisible(false);
+          }
+        }
+        // == clear the checkbox ==
+        document.getElementById(category+"box").checked = false;
+        // == close the info window, in case its open on a marker that we just hid
+        infowindow.close();
+      }
+
+      // == a checkbox has been clicked ==
+      function boxclick(box,category) {
+        if (box.checked) {
+          show(category);
+        } else {
+          hide(category);
+        }
+        // == rebuild the side bar
+        makeSidebar();
+      }
+
+      function myclick(i) {
+        google.maps.event.trigger(gmarkers[i],"click");
+      }
 
 
       function downloadUrl(url, callback) {
@@ -228,6 +267,8 @@
       }
 
       function doNothing() {}
+
+      
     </script>
     <div class="col-lg-12 text-center">    
       <div id="comment-section">
