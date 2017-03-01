@@ -150,6 +150,7 @@
               
               var x = document.createElement("A");
               var t = document.createTextNode("Festival Website");
+              t.setAttribute("href","bootstrap1");
               x.setAttribute("href",url);
 
               x.appendChild(t);
