@@ -150,7 +150,7 @@ include("auth.php");
         function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           center: new google.maps.LatLng(53.350140, -6.266155),
-          zoom: 6
+          zoom: 7
         });
         var infoWindow = new google.maps.InfoWindow;
 
