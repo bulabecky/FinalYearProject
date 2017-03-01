@@ -122,8 +122,9 @@
       </div>
           </div>
 
-        <script>
+         <script>
     var gmarkers = [];
+    var infoWindow = [];
 
      var icons = {
 
@@ -200,9 +201,6 @@
                 position: point,
                 icon: icons[type].icon
               });
-              marker.mycategory = category;                                 
-              marker.myname = name;
-               gmarkers.push(marker);
               marker.addListener('click', function() {
                 infoWindow.setContent(infowincontent);
                 infoWindow.open(map, marker);
