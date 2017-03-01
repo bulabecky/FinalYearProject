@@ -184,7 +184,7 @@
                 var point = new google.maps.LatLng(
                     parseFloat(markers[i].getAttribute("lat")),
                     parseFloat(markers[i].getAttribute("lng")));
-                var html = "<b>" + name + "</b> <br/>" + address +"<br/" + video;
+               
 
 
               var infowincontent = document.createElement('div');
@@ -201,8 +201,8 @@
               x.setAttribute("src", video);
               infowincontent.appendChild(x);
              var xml = data.responseXML;
-  var markers = xml.documentElement.getElementsByTagName("marker");
-
+              var html = "<b>" + name + "</b> <br/>" + address +"<br/" + x;
+  
     var marker = new google.maps.Marker({
       map: map,
       position: point,
