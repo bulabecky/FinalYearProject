@@ -16,14 +16,39 @@ var infoWindow = [];
 
 //set up icons
 var customIcons = {
-Festival: {
-icon: 'http://labs.google.com/ridefinder/images/mm_20_blue.png'
-},
-Band: {
-icon: 'http://labs.google.com/ridefinder/images/mm_20_red.png'
-}
-};
+ FolkBand: {
+                icon: 'http://maps.google.com/mapfiles/ms/micons/orange-dot.png'
+               },
+                Festival: {
+                  icon: 'http://maps.google.com/mapfiles/ms/micons/red-dot.png'
+                },
+                Fiddle: {
+                  icon: 'http://maps.google.com/mapfiles/ms/micons/blue-dot.png'
+                },
+                Banjo: {
+                icon: 'http://maps.google.com/mapfiles/ms/micons/green-dot.png'
+                },
 
+                Singer: {
+                icon: 'http://maps.google.com/mapfiles/ms/micons/yellow-dot.png'
+               },
+
+               Guitarist: {
+                icon: 'http://maps.google.com/mapfiles/ms/micons/ltblue-dot.png'
+               },
+
+               Uilleann : {
+                icon: 'http://maps.google.com/mapfiles/ms/micons/pink-dot.png'
+               },
+
+               TinWhistle : {
+                icon: 'http://maps.google.com/mapfiles/marker_white.png'
+               },
+
+                Band: {
+                  icon: 'http://maps.google.com/mapfiles/ms/micons/purple-dot.png'
+                }
+             };
 
 //load function
 function load() {
