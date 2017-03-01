@@ -263,7 +263,7 @@
    // == clear the checkbox ==
    document.getElementById(category+"box").checked = false;
    // == close the info window, in case its open on a marker that we just hid
-   infoWindow.close();
+   //infoWindow.close();
  }
 
  // == a checkbox has been clicked ==
