@@ -208,8 +208,12 @@
         infowindow.setContent(contentString); 
         infowindow.open(map,marker);
         });
-})
-             function downloadUrl(url, callback) {
+}
+
+
+
+
+      function downloadUrl(url, callback) {
         var request = window.ActiveXObject ?
             new ActiveXObject('Microsoft.XMLHTTP') :
             new XMLHttpRequest;
@@ -226,45 +230,6 @@
       }
 
       function doNothing() {}
-
-
-function show(category) {
-        for (var i=0; i<gmarkers.length; i++) {
-          if (gmarkers[i].mycategory == category) {
-            gmarkers[i].setVisible(true);
-          }
-        }
-        // == check the checkbox ==
-        document.getElementById(category+"box").checked = true;
-      }
-
-      // == hides all markers of a particular category, and ensures the checkbox is cleared ==
-      function hide(category) {
-        for (var i=0; i<gmarkers.length; i++) {
-          if (gmarkers[i].mycategory == category) {
-            gmarkers[i].setVisible(false);
-          }
-        }
-        // == clear the checkbox ==
-        document.getElementById(category+"box").checked = false;
-        // == close the info window, in case its open on a marker that we just hid
-        infowindow.close();
-      }
-
-      // == a checkbox has been clicked ==
-      function boxclick(box,category) {
-        if (box.checked) {
-          show(category);
-        } else {
-          hide(category);
-        }
-        
-      function myclick(i) {
-        google.maps.event.trigger(gmarkers[i],"click");
-      }
-
-
-     
     </script>
     <div class="col-lg-12 text-center">    
       <div id="comment-section">
