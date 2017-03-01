@@ -214,10 +214,9 @@
 
 
            function bindInfoWindow(marker, map, infoWindow) {
-                google.maps.event.addListener(marker, 'click', function() {
-                  infoWindow.setContent(infowincontent);
-                  infoWindow.open(map, marker);
-                });
+               marker.addListener('click', function() {
+                infoWindow.setContent(infowincontent);
+                infoWindow.open(map, marker);
               }
 
               function downloadUrl(url, callback) {
