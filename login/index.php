@@ -11,17 +11,17 @@ include("auth.php");
     <title>Cosán Ceol</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css1/bootstrap1.min.css" rel="stylesheet">
+    <link href="../css1/bootstrap1.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css1/stylish-portfolio.css" rel="stylesheet">
+    <link href="../css1/stylish-portfolio.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
       
       <link rel="stylesheet" type="text/css" href="comment_style.css">
-<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
 <script src="testAjax.js"></script>
     <style>
       /* Always set the map height explicitly to define the size of the div
@@ -313,10 +313,10 @@ include("auth.php");
        
         <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
     </footer>
-    <script src="js/jquery.js"></script>
+    <script src="../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script>
