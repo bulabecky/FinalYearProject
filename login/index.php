@@ -123,7 +123,7 @@ include("auth.php");
       </form>
      
       <div class="col-lg-12 text-center"> 
-      <a href="festival.php" class="btn btn-lg btn-dark">Festival Map</a>
+      <a href="../festival.php" class="btn btn-lg btn-dark">Festival Map</a>
       </div>
           </div>
 
