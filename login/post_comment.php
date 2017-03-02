@@ -14,8 +14,11 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
 
 
       $name = $_POST['user_name'];
+      $ntest = $name;
       $name = mysqli_real_escape_string($con,$name);
+
       $comment = $_POST['user_comm'];
+      $ctest = $comment;
       $comment = mysqli_real_escape_string($con,$comment);
 
       $insert = mysqli_query($con,"INSERT INTO comments(name, comment, post_time) VALUES ('$name','$comment', '$date')");
@@ -24,8 +27,8 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
           ?>
 
           <div class="comment_div"> 
-            <p class="name">Posted By: <?php echo $name;?></p>
-              <p class="comment"><?php echo $comment;?></p> 
+            <p class="name">Posted By: <?php echo $ntest;?></p>
+              <p class="comment"><?php echo $ctest;?></p> 
             <p class="time"><?php echo $date;?></p>
           </div>
           
