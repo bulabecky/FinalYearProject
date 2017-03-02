@@ -51,12 +51,23 @@ VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
 ?>
 <div class="form">
 <h1 style="color:white;">Registration</h1>
-<form name="registration" action="" method="post">
+<form name="registration" action="" method="post" id=formID>
 <input type="text" name="username" placeholder="Username" required />
 <input type="email" name="email" placeholder="Email" required />
 <input type="password" name="password" placeholder="Password" required />
 <input type="submit" name="submit" value="Register" />
 </form>
+<script type="text/javascript">
+    var form = document.getElementById('formID'); // form has to have ID: <form id="formID">
+form.noValidate = true;
+form.addEventListener('submit', function(event) { // listen for form submitting
+        if (!event.target.checkValidity()) {
+            event.preventDefault(); // dismiss the default functionality
+            alert('Please, fill the form'); // error message
+        }
+    }, false);
+
+</script>
 </div>
 <?php } ?>
 </body>
