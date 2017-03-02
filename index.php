@@ -374,6 +374,7 @@ downloadUrl("http://cosanceol.tk/mapDBXML.php", function(data) {
 
                               return t;
                             }(document, "script", "twitter-wjs"));</script>
+                            <div class="twittwe-share-button" data-href="http://cosanceol.tk/"></div>
                         </li>
                     </ul>
                     <hr class="small">
