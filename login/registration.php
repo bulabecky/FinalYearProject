@@ -23,9 +23,8 @@
 </head>
 
 <body>
-  <button type="button" class="btn btn-lg btn-dark">
-  <span class="glyphicon glyphicon-home" aria-hidden="true"><a href="../index.php"> Home</a></span>
-</button>
+   <button type="button" class="btn btn-lg btn-dark" onclick="window.location.href='http://cosanceol.tk/index.php'" >Home
+</button> 
   <body onload="load()">
 <?php
 require('db.php');

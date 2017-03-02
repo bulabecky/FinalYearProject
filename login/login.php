@@ -24,7 +24,6 @@
 
 <body>
  <button type="button" class="btn btn-lg btn-dark" onclick="window.location.href='http://cosanceol.tk/index.php'" >Home
-  <!-- <span class="glyphicon glyphicon-home" aria-hidden="true"><a href="../index.php"> Home</a></span>-->
 </button> 
   <body>
  
