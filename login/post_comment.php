@@ -13,8 +13,9 @@ $con = mysqli_connect("localhost","root","Beckyboo4","register");
       $date = date("Y-m-d H:i:s");
 
 
-      $name = stripslashes($_POST['user_name']);
+      $name = $_POST['user_name'];
       $name = mysqli_real_escape_string($con,$name);
+      $name = stripcslashes($name);
       $comment = stripslashes($_POST['user_comm']);
       $comment = mysqli_real_escape_string($con,$comment);
 
