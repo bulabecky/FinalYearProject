@@ -47,7 +47,7 @@ include("auth.php");
                 <a href="#about" onclick=$("#menu-close").click();>About</a>
             </li>
             <li>
-                <a href="login/logout.php" onclick=$("#menu-close").click();>Log out</a>
+                <a href="logout.php" onclick=$("#menu-close").click();>Log out</a>
             </li>
             <li>
                 <a href="#map" onclick=$("#menu-close").click();>Search the Map</a>
