@@ -43,10 +43,9 @@ if (isset($_REQUEST['username'])){
 VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
         $result = mysqli_query($con,$query);
         if($result){
-            //echo "<div class='form'>
-//<h3>You are registered successfully.</h3>
-//<br/>Click here to <a href='login.php'>Login</a></div>";
-           echo("<script> window.location.href = 'http://cosanceol.tk/login/index.php'</script>";
+            echo "<div class='form'>
+<h3>You are registered successfully.</h3>
+<br/>Click here to <a href='login.php'>Login</a></div>";
         }
     }else{
 ?>
