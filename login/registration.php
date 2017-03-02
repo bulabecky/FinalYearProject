@@ -26,8 +26,7 @@
   <button type="button" class="btn btn-lg btn-dark">
   <span class="glyphicon glyphicon-home" aria-hidden="true"><a href="../index.php"> Home</a></span>
 </button>
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+ <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
@@ -41,17 +40,20 @@
                 <a href="#about" onclick=$("#menu-close").click();>About</a>
             </li>
             <li>
-                <a href="#services" onclick=$("#menu-close").click();>Log In</a>
+                <a href="login/logout.php" onclick=$("#menu-close").click();>Log out</a>
             </li>
             <li>
-                <a href="#portfolio" onclick=$("#menu-close").click();>Sign Up</a>
+                <a href="#map" onclick=$("#menu-close").click();>Search the Map</a>
             </li>
             <li>
-                <a href="#map" onclick=$("#menu-close").click();>Contact</a>
+                <a href="#comment-section" onclick=$("#menu-close").click();>Leave a Comment</a>
+            </li>
+            <li>
+                <a href="#bottom" onclick=$("#menu-close").click();>Contact</a>
             </li>
         </ul>
     </nav>
-  <body>
+  <body onload="load()">
 <?php
 require('db.php');
 // If form submitted, insert values into the database.
