@@ -41,7 +41,7 @@ if (isset($_REQUEST['username'])){
 
 
     $usercheck = $username;
-    $q = "SELECT username FROM users WHERE username='$usercheck'";
+    $q = "SELECT username FROM users WHERE (username='$usercheck')";
     $r =mysqli_query($con,$q);
 
     if (mysqli_num_rows($r) == 0) {
