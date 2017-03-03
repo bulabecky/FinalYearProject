@@ -28,9 +28,8 @@
   <body onload="load()">
 <?php
 require('db.php');
-$query = "SELECT * FROM emails WHERE email='".$email."'"
 // If form submitted, insert values into the database.
-if (isset($_REQUEST['username'])&& (mysqli_num_rows($query)==0)){
+if (isset($_REQUEST['username'])){
         // removes backslashes
 	$username = stripslashes($_REQUEST['username']);
         //escapes special characters in a string
@@ -49,16 +48,10 @@ VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
 <br/>Click here to <a href='login.php'>Login</a></div>";
         }
     }else{
-
-        echo "<div class='form'>
-<h3>This username already exists.</h3>
-<br/>Click here to <a href='register.php'>Retry</a></div>";
-
-    }
 ?>
 <div class="form">
 <h1 style="color:white;">Registration</h1>
-<form name="registration" action="" method="post" id=formI>
+<form name="registration" action="" method="post" id=formID>
 <input type="text" name="username" placeholder="Username" required />
 <input type="email" name="email" placeholder="Email" required />
 <input type="password" name="password" placeholder="Password" required />
