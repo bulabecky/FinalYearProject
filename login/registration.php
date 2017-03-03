@@ -40,7 +40,7 @@ if (isset($_REQUEST['username'])){
 	$trn_date = date("Y-m-d H:i:s");
 
 
-    $usercheck = $_REQUEST['username'];
+    $usercheck = $username;
     $q = "SELECT username FROM users WHERE username='$usercheck'";
     $r =mysqli_query($con,$q);
 
@@ -54,7 +54,7 @@ VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
 <br/>Click here to <a href='login.php'>Login</a></div>";
         }
     }
-        else{
+    else{
         echo 'Sorry this username is taken.';
     }
 }    
