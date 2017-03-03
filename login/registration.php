@@ -30,12 +30,6 @@
 require('db.php');
 // If form submitted, insert values into the database.
 if (isset($_REQUEST['username'])){
-
-    $usercheck = $_REQUEST['username'];
-    $q = "SELECT username FROM users WHERE username='$usercheck'";
-    $r =mysqli_query($con,$q);
-
-    if(mysqli_num_rows($r)==0) {
 	$username = stripslashes($_REQUEST['username']);
         //escapes special characters in a string
 	$username = mysqli_real_escape_string($con,$username); 
@@ -44,7 +38,14 @@ if (isset($_REQUEST['username'])){
 	$password = password_hash($_REQUEST['password']);
 	$password = mysqli_real_escape_string($con,$password);
 	$trn_date = date("Y-m-d H:i:s");
-        $query = "INSERT into `users` (username, password, email, trn_date)
+
+
+    $usercheck = $_REQUEST['username'];
+    $q = "SELECT username FROM users WHERE username='$usercheck'";
+    $r =mysqli_query($con,$q);
+
+    if (mysqli_num_rows($r) == 0) {
+         $query = "INSERT into `users` (username, password, email, trn_date)
 VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
         // $result = mysqli_query($con,$query);
         // if($result){
@@ -52,10 +53,15 @@ VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
 <h3>You are registered successfully.</h3>
 <br/>Click here to <a href='login.php'>Login</a></div>";
         }
-    else{
+        else{
         echo 'Sorry this username is taken.';
     }
 }
+
+
+
+       
+    
 ?>
 <div class="form">
 <h1 style="color:white;">Registration</h1>
