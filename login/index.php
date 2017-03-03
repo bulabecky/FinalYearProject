@@ -78,7 +78,7 @@ include("auth.php");
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 id="heading">Cosán Ceol</h2>
-                    <p class="lead">Cosán ceol is an interactive map appliction highlighting Irish Music.<br>
+                    <p class="lead">Cosán ceol is an interactive map application highlighting Irish Music.<br>
                     This website has been created for the requirements of a Final Year Project By Rebecca McGowan.</p>
                     <img src="../Images/newLogo.png">
                 </div>
