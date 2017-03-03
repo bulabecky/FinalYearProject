@@ -40,24 +40,6 @@ if (isset($_REQUEST['username'])){
 	$password = mysqli_real_escape_string($con,$password);
 	$trn_date = date("Y-m-d H:i:s");
 
-    $selectQuery = "SELECT * FROM `users` WHERE username='$username'";
-    $selectResult = mysqli_query($con,$selectQuery);
-
-        
-        if(mysqli_num_row($selectResult>0)){
-                echo "username already exists";
-            }
-         else {       
-
-            $insertQuery = "INSERT into `users` (username, password, email, trn_date) VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
-        $insertResult = mysqli_query($con,$insertQuery);
-            echo   "<div class='form'>
-                        <h3>You are registered successfully.</h3>
-                        <br/>Click here to <a href='login.php'>Login</a>
-                    </div>";
-        }
-    }
-
         ?>
         <div class="form">
             <h1 style="color:white;">Registration</h1>
