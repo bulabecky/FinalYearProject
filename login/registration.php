@@ -57,7 +57,7 @@ if (isset($_REQUEST['username'])){
             # code...
             echo   "<div class='form'>
                         <h3>Sorry this username is taken, please try again.</h3>
-                        <br/>Click here to <a href='login.php'>Login</a>
+                        <br/>Click here to <a href='registration.php'>try again</a>
                     </div>";
         }
     }
