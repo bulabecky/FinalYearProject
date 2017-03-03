@@ -39,41 +39,15 @@ if (isset($_REQUEST['username'])){
 	$password = stripslashes($_REQUEST['password']);
 	$password = mysqli_real_escape_string($con,$password);
 	$trn_date = date("Y-m-d H:i:s");
-
-   $query = mysqli_query($con, "SELECT * FROM users WHERE username='".$email."'");
-
-        if(mysqli_num_rows($query) > 0){
-
-        echo "username already exists";
-        }else{
-         // do something
-            $query = "INSERT into `users` (username, password, email, trn_date) VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
-            if (!mysqli_query($con,$query))
-            {
-        die('Error: ' . mysqli_error($con));
-            }
-            }
-
-    /*if (mysqli_num_rows($r) == 0) { // No: of rows returned. 0 results, Hence the username is Available.
-            $query = "INSERT into `users` (username, password, email, trn_date) VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
-            //code to INSERT into Database
-
-    } else { // The username is not available, print error message.
-
-                echo "<h3>Uh-oh, This username has already been registered.<br/>Click here to <a href='login.php'>Login</a></h3>";
-
-    }*/
-}
-
-//         $query = "INSERT into `users` (username, password, email, trn_date)
-// VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
-//         $result = mysqli_query($con,$query);
-//         if($result){
-//             echo "<div class='form'>
-// <h3>You are registered successfully.</h3>
-// <br/>Click here to <a href='login.php'>Login</a></div>";
-//         }
-//     }else{
+        $query = "INSERT into `users` (username, password, email, trn_date)
+VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
+        $result = mysqli_query($con,$query);
+        if($result){
+            echo "<div class='form'>
+<h3>You are registered successfully.</h3>
+<br/>Click here to <a href='login.php'>Login</a></div>";
+        }
+    }else{
 ?>
 <div class="form">
 <h1 style="color:white;">Registration</h1>
