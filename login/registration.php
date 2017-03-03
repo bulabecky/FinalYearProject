@@ -15,7 +15,7 @@
     <link href="../css1/stylish-portfolio.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
@@ -25,7 +25,7 @@
 <body>
    <button type="button" class="btn btn-lg btn-dark" onclick="window.location.href='http://cosanceol.tk/index.php'" >Home
 </button> 
-  <body>
+  <body onload="load()">
 <?php
 require('db.php');
 // If form submitted, insert values into the database.
@@ -52,13 +52,16 @@ if (isset($_REQUEST['username'])){
                         <br/>Click here to <a href='login.php'>Login</a>
                     </div>";
         }
-    }elseif (mysqli_num_rows($selectResult) > 0){
-            echo    "<div class='form'>
-                        <h3>This username is already taken.</h3>
-                        <br/>Click here to <a href='registration.php'>Try Again</a>
+
+        elseif (mysqli_num_rows($selectResult) >0) {
+            # code...
+            echo   "<div class='form'>
+                        <h3>You need a new user name, this one is taken!.</h3>
+                        <br/>Click here to <a href='login.php'>Login</a>
                     </div>";
         }
-        else{
+    }
+    else{
         ?>
         <div class="form">
             <h1 style="color:white;">Registration</h1>
