@@ -41,7 +41,7 @@ if (isset($_REQUEST['username'])){
     $password = mysqli_real_escape_string($con,$password);
     $trn_date = date("Y-m-d H:i:s");
 
-$query = mysql_query("SELECT username FROM users WHERE username='$username'");
+$query = mysqli_query("SELECT username FROM users WHERE username='$username'");
 
 if (mysql_num_rows($query) == 0)
 {
