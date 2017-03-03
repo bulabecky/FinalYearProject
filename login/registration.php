@@ -47,21 +47,17 @@ if (isset($_REQUEST['username'])){
     if (mysqli_num_rows($r) == 0) {
          $query = "INSERT into `users` (username, password, email, trn_date)
 VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
-        // $result = mysqli_query($con,$query);
-        // if($result){
+ $result = mysqli_query($con,$query);
+        if($result){
             echo "<div class='form'>
 <h3>You are registered successfully.</h3>
 <br/>Click here to <a href='login.php'>Login</a></div>";
         }
+    }
         else{
         echo 'Sorry this username is taken.';
     }
-}
-
-
-
-       
-    
+}    
 ?>
 <div class="form">
 <h1 style="color:white;">Registration</h1>
