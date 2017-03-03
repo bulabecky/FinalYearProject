@@ -46,8 +46,9 @@ VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
             echo "<div class='form'>
 <h3>You are registered successfully.</h3>
 <br/>Click here to <a href='login.php'>Login</a></div>";
-        }
-    
+     }
+    }
+?>
 <div class="form">
 <h1 style="color:white;">Registration</h1>
 <form name="registration" action="" method="post" id=formID>
