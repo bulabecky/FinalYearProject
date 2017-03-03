@@ -28,14 +28,8 @@
   <body onload="load()">
 <?php
 require('db.php');
-$query = mysqli_query("SELECT username FROM users WHERE username='$username'");
-
-  if (mysqli_num_rows($query) != 0)
-  {
-      echo "Username already exists";
-  }
 // If form submitted, insert values into the database.
-else (isset($_REQUEST['username'])){
+if (isset($_REQUEST['username'])){
         // removes backslashes
 	$username = stripslashes($_REQUEST['username']);
         //escapes special characters in a string
@@ -53,7 +47,7 @@ VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
 <h3>You are registered successfully.</h3>
 <br/>Click here to <a href='login.php'>Login</a></div>";
         }
-    }
+    }else{
 ?>
 <div class="form">
 <h1 style="color:white;">Registration</h1>
