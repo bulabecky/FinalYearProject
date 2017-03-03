@@ -41,22 +41,17 @@ if (isset($_REQUEST['username'])){
 	$trn_date = date("Y-m-d H:i:s");
         $query = "INSERT into `users` (username, password, email, trn_date)
 VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
-        
-        
-        $sql = 'SELECT * FROM users where username = "'.$_GET['username'].'"';
         $result = mysqli_query($con,$query);
-        $res = mysqli_query($con,$sql);
-        if($res && mysql_num_rows($res)>0){
-            echo 'taken';
-        }
-    }else{
-        echo "<div class='form'>
+        if($result){
+            echo "<div class='form'>
 <h3>You are registered successfully.</h3>
 <br/>Click here to <a href='login.php'>Login</a></div>";
+        }
+    }else{
 ?>
 <div class="form">
 <h1 style="color:white;">Registration</h1>
-<form name="registration" action="" method="post" id=formID>
+<form name="registration" action="" method="post" id=formI>
 <input type="text" name="username" placeholder="Username" required />
 <input type="email" name="email" placeholder="Email" required />
 <input type="password" name="password" placeholder="Password" required />
