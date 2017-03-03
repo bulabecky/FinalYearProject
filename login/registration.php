@@ -40,10 +40,21 @@ if (isset($_REQUEST['username'])){
 	$password = mysqli_real_escape_string($con,$password);
 	$trn_date = date("Y-m-d H:i:s");
 
-    $q = "SELECT user_id FROM users WHERE username='$filtered_username_variable'";
-    $r = mysqli_query ($con, $q);
+   $query = mysqli_query($con, "SELECT * FROM users WHERE username='".$email."'");
 
-    if (mysqli_num_rows($r) == 0) { // No: of rows returned. 0 results, Hence the username is Available.
+        if(mysqli_num_rows($query) > 0){
+
+        echo "username already exists";
+        }else{
+         // do something
+            $query = "INSERT into `users` (username, password, email, trn_date) VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
+            if (!mysqli_query($con,$query))
+            {
+        die('Error: ' . mysqli_error($con));
+            }
+            }
+
+    /*if (mysqli_num_rows($r) == 0) { // No: of rows returned. 0 results, Hence the username is Available.
             $query = "INSERT into `users` (username, password, email, trn_date) VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
             //code to INSERT into Database
 
@@ -51,7 +62,7 @@ if (isset($_REQUEST['username'])){
 
                 echo "<h3>Uh-oh, This username has already been registered.<br/>Click here to <a href='login.php'>Login</a></h3>";
 
-    }
+    }*/
 }
 
 //         $query = "INSERT into `users` (username, password, email, trn_date)
