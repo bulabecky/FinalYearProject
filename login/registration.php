@@ -53,10 +53,11 @@ if (isset($_REQUEST['username'])){
                     </div>";
         }
     }elseif (mysqli_num_rows($selectResult) > 0){
-            echo   "<div class='form'>
-                        <h3>You username is already taken.</h3>
-                        <br/>Click here to <a href='login.php'>Login</a>
+            echo    "<div class='form'>
+                        <h3>This username is already taken.</h3>
+                        <br/>Click here to <a href='registration.php'>Try Again</a>
                     </div>";
+        }
         else{
         ?>
         <div class="form">
