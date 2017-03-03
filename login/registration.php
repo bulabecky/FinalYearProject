@@ -30,7 +30,7 @@
 require('db.php');
 $query = mysqli_query("SELECT username FROM users WHERE username='$username'");
 
-  if (mysql_num_rows($query) != 0)
+  if (mysqli_num_rows($query) != 0)
   {
       echo "Username already exists";
   }
