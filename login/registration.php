@@ -56,7 +56,7 @@ if (isset($_REQUEST['username'])){
         elseif (mysqli_num_rows($selectResult) >0) {
             # code...
             echo   "<div class='form'>
-                        <h3>You need a new user name, this one is taken!.</h3>
+                        <h3>Sorry this username is taken, please try again.</h3>
                         <br/>Click here to <a href='login.php'>Login</a>
                     </div>";
         }
