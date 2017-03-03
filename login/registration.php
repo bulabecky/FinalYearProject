@@ -30,18 +30,13 @@
 require('db.php');
 // If form submitted, insert values into the database.
 if (isset($_REQUEST['username'])){
-
-    $usercheck = $_REQUEST['username'];
-    $q = "SELECT username FROM users WHERE username='$usercheck'";
-    $r =mysqli_query($con,$q);
-
-    if(mysqli_num_rows($r)==0) {
+        // removes backslashes
 	$username = stripslashes($_REQUEST['username']);
         //escapes special characters in a string
 	$username = mysqli_real_escape_string($con,$username); 
 	$email = stripslashes($_REQUEST['email']);
 	$email = mysqli_real_escape_string($con,$email);
-	$password = password_hash($_REQUEST['password']);
+	$password = stripslashes($_REQUEST['password']);
 	$password = mysqli_real_escape_string($con,$password);
 	$trn_date = date("Y-m-d H:i:s");
         $query = "INSERT into `users` (username, password, email, trn_date)
