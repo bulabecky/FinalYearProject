@@ -44,7 +44,7 @@ if (isset($_REQUEST['username'])){
     $selectResult = mysqli_query($con,$selectQuery);
 
         
-        if($selectResult!=false){
+        if(mysqli_num_rows($selectResult) == 0){
             $insertQuery = "INSERT into `users` (username, password, email, trn_date) VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
             $insertResult = mysqli_query($con,$insertQuery);
             echo   "<div class='form'>
@@ -52,7 +52,13 @@ if (isset($_REQUEST['username'])){
                         <br/>Click here to <a href='login.php'>Login</a>
                     </div>";
         }
-    }else{
+    }elseif (mysqli_num_rows($selectResult) > 0){
+            echo    "<div class='form'>
+                        <h3>This username is already taken.</h3>
+                        <br/>Click here to <a href='registration.php'>Try Again</a>
+                    </div>";
+        }
+        else{
         ?>
         <div class="form">
             <h1 style="color:white;">Registration</h1>
