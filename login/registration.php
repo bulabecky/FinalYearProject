@@ -28,7 +28,7 @@
   <body onload="load()">
 <?php
 require('db.php');
-$query = mysqli_query($con, "SELECT * FROM emails WHERE email='".$email."'")
+$query = "SELECT * FROM emails WHERE email='".$email."'"
 // If form submitted, insert values into the database.
 if (isset($_REQUEST['username'])&& (mysqli_num_rows($query)==0)){
         // removes backslashes
