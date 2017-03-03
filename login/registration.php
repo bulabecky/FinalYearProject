@@ -28,8 +28,31 @@
   <body onload="load()">
 <?php
 require('db.php');
+$sql = 'SELECT * FROM users where username = "'.$_GET['username'].'"';
+$res = mysqli_query($sql);
+if($res && mysqli_num_rows($res)>0){
+  echo 'Sorry this username is taken';
+} else {
+  $username = stripslashes($_REQUEST['username']);
+        //escapes special characters in a string
+    $username = mysqli_real_escape_string($con,$username); 
+    $email = stripslashes($_REQUEST['email']);
+    $email = mysqli_real_escape_string($con,$email);
+    $password = stripslashes($_REQUEST['password']);
+    $password = mysqli_real_escape_string($con,$password);
+    $trn_date = date("Y-m-d H:i:s");
+        $query = "INSERT into `users` (username, password, email, trn_date)
+VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
+        $result = mysqli_query($con,$query);
+        if($result){
+            echo "<div class='form'>
+<h3>You are registered successfully.</h3>
+<br/>Click here to <a href='login.php'>Login</a></div>";
+        }
+}
+
 // If form submitted, insert values into the database.
-if (isset($_REQUEST['username'])){
+/*if (isset($_REQUEST['username'])){
     $userName = $_POST['userName'];
         $getData= $db->prepare("SELECT * FROM users WHERE username=?");
         $getData->bind_param('s', $userName);
@@ -59,7 +82,7 @@ VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
 <h3>You are registered successfully.</h3>
 <br/>Click here to <a href='login.php'>Login</a></div>";
         }
-    }
+    }*/
 ?>
 <div class="form">
 <h1 style="color:white;">Registration</h1>
