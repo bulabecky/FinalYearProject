@@ -25,7 +25,7 @@
 <body>
    <button type="button" class="btn btn-lg btn-dark" onclick="window.location.href='http://cosanceol.tk/index.php'" >Home
 </button> 
-  <body onload="load()">
+  <body>
 <?php
 require('db.php');
 // If form submitted, insert values into the database.
