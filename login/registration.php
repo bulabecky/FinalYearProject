@@ -39,9 +39,7 @@ if (isset($_REQUEST['username'])){
 	$password = mysqli_real_escape_string($con,$password);
 	$trn_date = date("Y-m-d H:i:s");
 
-
-    $usercheck = $username;
-    $q = "SELECT * FROM `users`  WHERE users.username ='". $usercheck. "'";
+    $q = "SELECT * FROM `users`  WHERE username ='". $username. "'";
     $r =mysqli_query($con,$q);
 
     if (mysqli_num_rows($r) == 0) {
