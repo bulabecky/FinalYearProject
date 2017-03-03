@@ -44,9 +44,9 @@ if (isset($_REQUEST['username'])){
     $selectResult = mysqli_query($con,$selectQuery);
 
         
-        if($selectResult){
+        if($selectResult!=false){
             $insertQuery = "INSERT into `users` (username, password, email, trn_date) VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
-        $insertResult = mysqli_query($con,$insertQuery);
+            $insertResult = mysqli_query($con,$insertQuery);
             echo   "<div class='form'>
                         <h3>You are registered successfully.</h3>
                         <br/>Click here to <a href='login.php'>Login</a>
