@@ -30,7 +30,19 @@
 require('db.php');
 // If form submitted, insert values into the database.
 if (isset($_REQUEST['username'])){
+    $userName = $_POST['userName'];
+        $getData= $db->prepare("SELECT * FROM users WHERE username=?");
+        $getData->bind_param('s', $userName);
+        if($getData->execute()){
+            $results = $getData->get_result();
+            if($results->num_rows>0){
+                $userNameErr = "User name already token";
+            }
+        }
+    }
+    else {
         // removes backslashes
+    
 	$username = stripslashes($_REQUEST['username']);
         //escapes special characters in a string
 	$username = mysqli_real_escape_string($con,$username); 
@@ -47,7 +59,7 @@ VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
 <h3>You are registered successfully.</h3>
 <br/>Click here to <a href='login.php'>Login</a></div>";
         }
-    }else{
+    }
 ?>
 <div class="form">
 <h1 style="color:white;">Registration</h1>
