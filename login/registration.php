@@ -39,15 +39,18 @@ if (isset($_REQUEST['username'])){
 	$password = stripslashes($_REQUEST['password']);
 	$password = mysqli_real_escape_string($con,$password);
 	$trn_date = date("Y-m-d H:i:s");
-        $query = "INSERT into `users` (username, password, email, trn_date)
-VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
-        $result = mysqli_query($con,$query);
-        if($result){
-            echo "<div class='form'>
-<h3>You are registered successfully.</h3>
-<br/>Click here to <a href='login.php'>Login</a></div>";
+        $query = "SELECT username FROM users WHERE username = '".$_POST['username']."'";
+        //$result = mysqli_query($con,$query);
+        if(mysqli_num_rows($query) != 0){
+            echo "<h3> This username is takedn</h3";
         }
     }else{
+       $query1= "INSERT into `users` (username, password, email, trn_date)
+VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
+$res = mysqli_query($con,$query1);
+ echo "<div class='form'>
+<h3>You are registered successfully.</h3>
+<br/>Click here to <a href='login.php'>Login</a></div>";
 ?>
 <div class="form">
 <h1 style="color:white;">Registration</h1>
