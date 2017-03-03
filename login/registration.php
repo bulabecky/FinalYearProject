@@ -41,25 +41,32 @@ if (isset($_REQUEST['username'])){
     $password = mysqli_real_escape_string($con,$password);
     $trn_date = date("Y-m-d H:i:s");
 
+$query = mysql_query("SELECT username FROM users WHERE username='$username'");
 
-    $query = mysql_query("SELECT username FROM users WHERE username='$username'");
+if (mysql_num_rows($query) == 0)
+{
+    $email = stripslashes($_REQUEST['email']);
+    $email = mysqli_real_escape_string($con,$email);
+    $password = stripslashes($_REQUEST['password']);
+    $password = mysqli_real_escape_string($con,$password);
+    $trn_date = date("Y-m-d H:i:s");
+    $query = "INSERT into `users` (username, password, email, trn_date)
+    VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
+    $result = mysqli_query($con,$query);
+    if($result){
+        echo "<div class='form'>
+        <h3>You are registered successfully.</h3>
+        <br/>Click here to <a href='login.php'>Login</a></div>";
+    }
+}
 
-  if (mysql_num_rows($query) != 0)
-  {
-      echo "Username already exists";
-  }
-
-  else
-  {
-     $query = "INSERT into `users` (username, password, email, trn_date)
-VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
-        $result = mysqli_query($con,$query);
-        if($result){
-            echo "<div class='form'>
-<h3>You are registered successfully.</h3>
-<br/>Click here to <a href='login.php'>Login</a></div>";
-        }
-  }
+else
+{
+    echo "<div class='form'>
+    <h3>Already exit</h3>
+</div>";
+}
+}
 
 
     }
