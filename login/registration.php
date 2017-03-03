@@ -40,9 +40,9 @@ $email = stripslashes($_REQUEST['email']);
     $password = mysqli_real_escape_string($con,$password);
     $trn_date = date("Y-m-d H:i:s");
 
-$query = mysql_query("SELECT username FROM users WHERE username='$username'");
+$query = mysqli_query("SELECT username FROM users WHERE username='$username'");
 
-if (mysql_num_rows($query) == 0)
+if (mysqli_num_rows($query) == 0)
 {
 
     $query = "INSERT into `users` (username, password, email, trn_date)
