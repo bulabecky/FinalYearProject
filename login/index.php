@@ -291,7 +291,7 @@ downloadUrl("http://cosanceol.tk/mapDBXML.php", function(data) {
   <form method="post" action="" onsubmit="return post();">
   <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
   <br>
-  <input type="text" id="username" placeholder=<?php echo $_SESSION['username']; ?> disabled="disabled">
+  <input type="text" id="username" placeholder=<?php echo $_SESSION['username']; ?>>
   <br>
   <input type="submit" value="Post Comment">
   </form>
