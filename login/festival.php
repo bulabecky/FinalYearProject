@@ -281,14 +281,14 @@ downloadUrl("http://cosanceol.tk/festivalDBXML.php", function(data) {
 
   </script>
     </script>
-    <div class="col-lg-12 text-center">    
+        <div class="col-lg-12 text-center">    
       <div id="comment-section">
           <h4>Leave a comment</h4>
 
   <form method="post" action="" onsubmit="return post();">
-  <textarea  disabled id="comment" placeholder="To leave a comment, you need to login or Sign up."></textarea>
+  <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
   <br>
-  <input type="text" id="username" value="Sign in please" readonly>
+  <input type="text" id="username" value=<?php echo $_SESSION['username']; ?> readonly>
   <br>
   <input type="submit" value="Post Comment">
   </form>
