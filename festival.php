@@ -281,19 +281,19 @@ downloadUrl("http://cosanceol.tk/festivalDBXML.php", function(data) {
 
   </script>
     </script>
-    <div class="col-lg-12 text-center">      
+    <div class="col-lg-12 text-center">    
       <div id="comment-section">
           <h4>Leave a comment</h4>
 
   <form method="post" action="" onsubmit="return post();">
-  <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
+  <textarea  disabled id="comment" placeholder="To leave a comment, you need to login or Sign up."></textarea>
   <br>
-  <input type="text" id="username" placeholder="Your Name">
+  <input type="text" id="username" value="Sign in please" readonly>
   <br>
   <input type="submit" value="Post Comment">
   </form>
 
-  <div id="all_comments" style="position: center;">
+  <div id="all_comments">
   <?php
     $con = mysqli_connect("localhost","root","Beckyboo4","register");
     // Check connection
@@ -325,7 +325,6 @@ downloadUrl("http://cosanceol.tk/festivalDBXML.php", function(data) {
 
     mysqli_close($con) or die(mysqli_error());
     ?>
-  </div>
   </div>
 
      <footer id="bottom">

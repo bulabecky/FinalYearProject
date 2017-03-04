@@ -1,27 +1,21 @@
-<?php
-//include auth.php file on all secure pages
-include("auth.php");
-?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+<!DOCTYPE html >
+  <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <title>Cosán Ceol</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../css1/bootstrap1.min.css" rel="stylesheet">
+    <link href="css1/bootstrap1.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../css1/stylish-portfolio.css" rel="stylesheet">
+    <link href="css1/stylish-portfolio.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
       
       <link rel="stylesheet" type="text/css" href="comment_style.css">
-<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
 <script src="testAjax.js"></script>
     <style>
       /* Always set the map height explicitly to define the size of the div
@@ -36,9 +30,9 @@ include("auth.php");
     </style>
   </head>
 
-<body onload="load()">
-  <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-       <nav id="sidebar-wrapper">
+  <body onload="load()">
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+        <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
@@ -51,7 +45,10 @@ include("auth.php");
                 <a href="#about" onclick=$("#menu-close").click();>About</a>
             </li>
             <li>
-                <a href="logout.php" onclick=$("#menu-close").click();>Log out</a>
+                <a href="login/login.php" onclick=$("#menu-close").click();>Log In</a>
+            </li>
+            <li>
+                <a href="login/registration.php" onclick=$("#menu-close").click();>Sign Up</a>
             </li>
             <li>
                 <a href="#map" onclick=$("#menu-close").click();>Search the Map</a>
@@ -65,13 +62,12 @@ include("auth.php");
         </ul>
     </nav>
 
- <!-- Header -->
+    <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
             <h1 id="heading">Cosán Ceol</h1>
             <h3>Journey through Irish Music</h3>
             <br>
-            <h3 style="color: floralwhite;">Welcome <?php echo $_SESSION['username']; ?>!</h3>
             <a href="#map" class="btn btn-dark btn-lg">Start Searching</a>
         </div>
     </header>
@@ -100,34 +96,50 @@ include("auth.php");
                     <a href="login/registration.php" class="btn btn-lg btn-dark">Register Me!</a>
                 </div>
             </div>
-    </section>
-
+        </section>
     <div id="map"style="float: right;">
-    </div>
+      </div>
       <form action="#">
-        <input type="checkbox" id="Tradbox" onclick="boxclick(this,'Trad')" checked/>
-        <label>Traditonal Music</label>
-        <input type="checkbox" id="Folkbox" onclick="boxclick(this,'Folk')" checked/>
-        <label>Folk Music</label>
-        <input type="checkbox" id="Harpbox" onclick="boxclick(this,'Harp')" checked/>
-        <label>Harp</label>
-        <input type="checkbox" id="Celticbox" onclick="boxclick(this,'Celtic')" checked/>
-        <label>Celtic</label>
+      <input type="checkbox" id="Tradbox" onclick="boxclick(this,'Trad')" checked/>
+      <label>Traditonal Music</label>
+      <input type="checkbox" id="Folkbox" onclick="boxclick(this,'Folk')" checked/>
+      <label>Folk Music</label>
+      <input type="checkbox" id="Harpbox" onclick="boxclick(this,'Harp')" checked/>
+      <label>Harp</label>
+      <input type="checkbox" id="Celticbox" onclick="boxclick(this,'Celtic')" checked/>
+      <label>Celtic</label>
       </form>
-
-    <div class="col-lg-12 text-center"> 
-      <a href="index.php" class="btn btn-lg btn-dark">Artist Map</a>
+<div class="col-lg-12 text-center"> 
+<a href="index.php" class="btn btn-lg btn-dark">Artist Map</a>
+</div>
     </div>
 
     <script type="text/javascript">
-      
+      /*var iconBase ='http://maps.google.com/mapfiles/ms/micons/';
+      var icons = {
+        Trad: {
+          icon: iconBase + 'orange-dot.png'
+        },
+        Folk: {
+         icon: iconBase +'red-dot.png'
+        },
+        Harp: {
+        icon: iconBase + 'blue-dot.png'
+       },
+        Celtic: {
+          icon: iconBase +'green-dot.png'
+        }
+      };*/
 
-      //set up globals
-      var gmarkers = [];
-      var infoWindow = [];
+
+    //<![CDATA[
+
+//set up globals
+var gmarkers = [];
+var infoWindow = [];
 
 //set up icons
-      var customIcons = {
+var customIcons = {
               Trad: {
                 icon: 'http://maps.google.com/mapfiles/ms/micons/ltblue-dot.png'
                },
@@ -143,67 +155,75 @@ include("auth.php");
                 Celtic: {
                   icon: 'http://maps.google.com/mapfiles/ms/micons/purple-dot.png'
                 }
-      };
-//load function
-      function load() {
-//initialise map
-      var map = new google.maps.Map(document.getElementById("map"), {
-            center: new google.maps.LatLng(53.350140, -6.266155),
-            zoom: 7
-      });
-      var infoWindow = new google.maps.InfoWindow;
-      //gets naekers frin festivalDBXML.php
-      downloadUrl("http://cosanceol.tk/festivalDBXML.php", function(data) {
-         var xml = data.responseXML;
-         var markers = xml.documentElement.getElementsByTagName("marker");
-         for (var i = 0; i < markers.length; i++) {
-            var name = markers[i].getAttribute("name");
-            var address = markers[i].getAttribute("address");
-            var url = markers[i].getAttribute("url");
-            var type = markers[i].getAttribute("type");
-            var point = new google.maps.LatLng(
-                parseFloat(markers[i].getAttribute("lat")),
-                parseFloat(markers[i].getAttribute("lng")));
-            //styling the info box
-            var infowincontent = document.createElement('div');
-            var strong = document.createElement('strong');
-            strong.textContent = name
-            infowincontent.appendChild(strong);
-            infowincontent.appendChild(document.createElement('br'));
+             };
 
-            var text = document.createElement('text');
-            text.textContent = address
-            infowincontent.appendChild(text);
-            infowincontent.appendChild(document.createElement('br'));
-            //website link to festivals in info box
-            var x = document.createElement("A");
-            var t = document.createTextNode("Festival Website");
+
+
+//load function
+function load() {
+
+//initialise map
+var map = new google.maps.Map(document.getElementById("map"), {
+center: new google.maps.LatLng(53.350140, -6.266155),
+          zoom: 7
+});
+var infoWindow = new google.maps.InfoWindow;
+//ok
+
+
+
+//set up pins from xmlgen.php file
+  // Change this depending on the name of your PHP file
+downloadUrl("http://cosanceol.tk/festivalDBXML.php", function(data) {
+  var xml = data.responseXML;
+  var markers = xml.documentElement.getElementsByTagName("marker");
+  for (var i = 0; i < markers.length; i++) {
+    var name = markers[i].getAttribute("name");
+    var address = markers[i].getAttribute("address");
+    var url = markers[i].getAttribute("url");
+    var type = markers[i].getAttribute("type");
+    var point = new google.maps.LatLng(
+        parseFloat(markers[i].getAttribute("lat")),
+        parseFloat(markers[i].getAttribute("lng")));
+    var infowincontent = document.createElement('div');
+                      var strong = document.createElement('strong');
+                      strong.textContent = name
+                      infowincontent.appendChild(strong);
+                      infowincontent.appendChild(document.createElement('br'));
+
+                      var text = document.createElement('text');
+                      text.textContent = address
+                      infowincontent.appendChild(text);
+                      infowincontent.appendChild(document.createElement('br'));
+                      var x = document.createElement("A");
+           var t = document.createTextNode("Festival Website");
             x.setAttribute("href", url);
             x.appendChild(t);
             infowincontent.appendChild(x);
+                     /* var a = document.createElement("IFRAME");
+                      a.setAttribute("src", video);
+                      infowincontent.appendChild(a);*/
+    var icon = customIcons[type] || {};
 
-            var icon = customIcons[type] || {};
+    var marker = new google.maps.Marker({
+      map: map,
+      position: point,
+      icon: icon.icon
+    });
+    marker.mycategory = type;
+    gmarkers.push(marker);
 
-            var marker = new google.maps.Marker({
-              map: map,
-              position: point,
-              icon: icon.icon
-            });
+    bindInfoWindow(marker, map, infoWindow, infowincontent);
+}
+  });
+}
 
-            marker.mycategory = type;
-            gmarkers.push(marker);
-
-             bindInfoWindow(marker, map, infoWindow, infowincontent);
-          }
-        });
-      }
-
-     function bindInfoWindow(marker, map, infoWindow, infowincontent) {
-        google.maps.event.addListener(marker, 'click', function() {
-          infoWindow.setContent(infowincontent);
-          infoWindow.open(map, marker);
-        });
-       }
+    function bindInfoWindow(marker, map, infoWindow, infowincontent) {
+      google.maps.event.addListener(marker, 'click', function() {
+        infoWindow.setContent(infowincontent);
+        infoWindow.open(map, marker);
+      });
+    }
 
     function downloadUrl(url, callback) {
       var request = window.ActiveXObject ?
@@ -222,24 +242,26 @@ include("auth.php");
     }
 
     function doNothing() {}
+
+
 // == shows all markers of a particular category, and ensures the checkbox is checked ==
-     function show(category) {
-       for (var i=0; i<gmarkers.length; i++) {
-         if (gmarkers[i].mycategory == category) {
-           gmarkers[i].setVisible(true);
-         }
-       }
+ function show(category) {
+   for (var i=0; i<gmarkers.length; i++) {
+     if (gmarkers[i].mycategory == category) {
+       gmarkers[i].setVisible(true);
+     }
+   }
    // == check the checkbox ==
    document.getElementById(category+"box").checked = true;
-     }
+ }
 
  // == hides all markers of a particular category, and ensures the checkbox is cleared ==
-     function hide(category) {
-       for (var i=0; i<gmarkers.length; i++) {
-         if (gmarkers[i].mycategory == category) {
-           gmarkers[i].setVisible(false);
-         }
-       }
+ function hide(category) {
+   for (var i=0; i<gmarkers.length; i++) {
+     if (gmarkers[i].mycategory == category) {
+       gmarkers[i].setVisible(false);
+     }
+   }
    // == clear the checkbox ==
    document.getElementById(category+"box").checked = false;
    // == close the info window, in case its open on a marker that we just hid
@@ -257,22 +279,21 @@ include("auth.php");
 
     //]]>
 
-     </script>
+  </script>
     </script>
-    
-    <div class="col-lg-12 text-center">    
+    <div class="col-lg-12 text-center">      
       <div id="comment-section">
           <h4>Leave a comment</h4>
 
-          <form method="post" action="" onsubmit="return post();">
-          <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
-          <br>
-          <input type="text" id="username" value=<?php echo $_SESSION['username']; ?> readonly>
-          <br>
-          <input type="submit" value="Post Comment">
-          </form>
+  <form method="post" action="" onsubmit="return post();">
+  <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
+  <br>
+  <input type="text" id="username" placeholder="Your Name">
+  <br>
+  <input type="submit" value="Post Comment">
+  </form>
 
-  <div id="all_comments">
+  <div id="all_comments" style="position: center;">
   <?php
     $con = mysqli_connect("localhost","root","Beckyboo4","register");
     // Check connection
@@ -304,6 +325,7 @@ include("auth.php");
 
     mysqli_close($con) or die(mysqli_error());
     ?>
+  </div>
   </div>
 
      <footer id="bottom">
@@ -394,50 +416,50 @@ include("auth.php");
         });
     });
     //#to-top button appears after scrolling
-              var fixed = false;
-              $(document).scroll(function() {
-                  if ($(this).scrollTop() > 250) {
-                      if (!fixed) {
-                          fixed = true;
-                          // $('#to-top').css({position:'fixed', display:'block'});
-                          $('#to-top').show("slow", function() {
-                              $('#to-top').css({
-                                  position: 'fixed',
-                                  display: 'block'
-                              });
-                          });
-                      }
-                  } else {
-                      if (fixed) {
-                          fixed = false;
-                          $('#to-top').hide("slow", function() {
-                              $('#to-top').css({
-                                  display: 'none'
-                              });
-                          });
-                      }
+    var fixed = false;
+    $(document).scroll(function() {
+        if ($(this).scrollTop() > 250) {
+            if (!fixed) {
+                fixed = true;
+                // $('#to-top').css({position:'fixed', display:'block'});
+                $('#to-top').show("slow", function() {
+                    $('#to-top').css({
+                        position: 'fixed',
+                        display: 'block'
+                    });
+                });
+            }
+        } else {
+            if (fixed) {
+                fixed = false;
+                $('#to-top').hide("slow", function() {
+                    $('#to-top').css({
+                        display: 'none'
+                    });
+                });
+            }
         }
     });
     // Disable Google Maps scrolling
     // See http://stackoverflow.com/a/25904582/1607849
     // Disable scroll zooming and bind back the click event
-          var onMapMouseleaveHandler = function(event) {
-              var that = $(this);
-              that.on('click', onMapClickHandler);
-              that.off('mouseleave', onMapMouseleaveHandler);
-              that.find('iframe').css("pointer-events", "none");
-          }
-          var onMapClickHandler = function(event) {
-                  var that = $(this);
-                  // Disable the click handler until the user leaves the map area
-                  that.off('click', onMapClickHandler);
-                  // Enable scrolling zoom
-                  that.find('iframe').css("pointer-events", "auto");
-                  // Handle the mouse leave event
-                  that.on('mouseleave', onMapMouseleaveHandler);
-              }
-              // Enable map zooming with mouse scroll when the user clicks the map
-          $('.map').on('click', onMapClickHandler);
+    var onMapMouseleaveHandler = function(event) {
+        var that = $(this);
+        that.on('click', onMapClickHandler);
+        that.off('mouseleave', onMapMouseleaveHandler);
+        that.find('iframe').css("pointer-events", "none");
+    }
+    var onMapClickHandler = function(event) {
+            var that = $(this);
+            // Disable the click handler until the user leaves the map area
+            that.off('click', onMapClickHandler);
+            // Enable scrolling zoom
+            that.find('iframe').css("pointer-events", "auto");
+            // Handle the mouse leave event
+            that.on('mouseleave', onMapMouseleaveHandler);
+        }
+        // Enable map zooming with mouse scroll when the user clicks the map
+    $('.map').on('click', onMapClickHandler);
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJXSQg6uRk9OD-fGID7NQ52sXpufXz268&callback=initMap">
