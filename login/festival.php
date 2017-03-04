@@ -1,22 +1,28 @@
-<!DOCTYPE html >
-  <head>
+<?php
+//include auth.php file on all secure pages
+include("auth.php");
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <title>Cosán Ceol</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css1/bootstrap1.min.css" rel="stylesheet">
+    <link href="../css1/bootstrap1.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css1/stylish-portfolio.css" rel="stylesheet">
+    <link href="../css1/stylish-portfolio.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
       
-    <link rel="stylesheet" type="text/css" href="comment_style.css">
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script src="testAjax.js"></script>
+      <link rel="stylesheet" type="text/css" href="comment_style.css">
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script src="testAjax.js"></script>
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -30,44 +36,42 @@
     </style>
   </head>
 
-  <body onload="load()">
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-      <nav id="sidebar-wrapper">
+<body onload="load()">
+  <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+       <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-              <a href="#top" onclick=$("#menu-close").click();>Menu </a>
+                <a href="#top" onclick=$("#menu-close").click();>Menu </a>
             </li>
             <li>
-              <a href="#top" onclick=$("#menu-close").click();>Home</a>
+                <a href="#top" onclick=$("#menu-close").click();>Home</a>
             </li>
             <li>
-              <a href="#about" onclick=$("#menu-close").click();>About</a>
+                <a href="#about" onclick=$("#menu-close").click();>About</a>
             </li>
             <li>
-              <a href="login/login.php" onclick=$("#menu-close").click();>Log In</a>
+                <a href="logout.php" onclick=$("#menu-close").click();>Log out</a>
             </li>
             <li>
-              <a href="login/registration.php" onclick=$("#menu-close").click();>Sign Up</a>
+                <a href="#map" onclick=$("#menu-close").click();>Search the Map</a>
             </li>
             <li>
-              <a href="#map" onclick=$("#menu-close").click();>Search the Map</a>
+                <a href="#comment-section" onclick=$("#menu-close").click();>Leave a Comment</a>
             </li>
             <li>
-              <a href="#comment-section" onclick=$("#menu-close").click();>Leave a Comment</a>
-            </li>
-            <li>
-              <a href="#bottom" onclick=$("#menu-close").click();>Contact</a>
+                <a href="#bottom" onclick=$("#menu-close").click();>Contact</a>
             </li>
         </ul>
-      </nav>
+    </nav>
 
-    <!-- Header -->
+ <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
             <h1 id="heading">Cosán Ceol</h1>
             <h3>Journey through Irish Music</h3>
             <br>
+            <h3 style="color: floralwhite;">Welcome <?php echo $_SESSION['username']; ?>!</h3>
             <a href="#map" class="btn btn-dark btn-lg">Start Searching</a>
         </div>
     </header>
@@ -260,48 +264,47 @@
       <div id="comment-section">
           <h4>Leave a comment</h4>
 
-            <form method="post" action="" onsubmit="return post();">
-            <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
-            <br>
-            <input type="text" id="username" value=<?php echo $_SESSION['username']; ?> readonly>
-            <br>
-            <input type="submit" value="Post Comment">
-            </form>
+          <form method="post" action="" onsubmit="return post();">
+          <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
+          <br>
+          <input type="text" id="username" value=<?php echo $_SESSION['username']; ?> readonly>
+          <br>
+          <input type="submit" value="Post Comment">
+          </form>
 
-            <div id="all_comments">
-            <?php
-              $con = mysqli_connect("localhost","root","Beckyboo4","register");
-              // Check connection
-              if (mysqli_connect_errno())
-                {
-                echo "Failed to connect to MySQL: " . mysqli_connect_error();
-                }
+  <div id="all_comments">
+  <?php
+    $con = mysqli_connect("localhost","root","Beckyboo4","register");
+    // Check connection
+    if (mysqli_connect_errno())
+      {
+      echo "Failed to connect to MySQL: " . mysqli_connect_error();
+      }
 
 
-              $result = mysqli_query($con,'SELECT name, comment, post_time FROM comments order by post_time desc');
-              if (!$result) {
-                  die('Could not query:' . mysqli_error());
-              }
+    $result = mysqli_query($con,'SELECT name, comment, post_time FROM comments order by post_time desc');
+    if (!$result) {
+        die('Could not query:' . mysqli_error());
+    }
 
-             while ($row = mysqli_fetch_row($result)) {
-                $name = $row[0];
-                $comment = $row[1];
-                $datetime = $row[2];
-                
-                ?>
+   while ($row = mysqli_fetch_row($result)) {
+      $name = $row[0];
+      $comment = $row[1];
+      $datetime = $row[2];
+      
+      ?>
 
-                <div class="comment_div"> 
-                  <p class="name">Posted By: <?php echo $name;?></p>
-                    <p class="comment"><?php echo $comment;?></p> 
-                  <p class="time"><?php echo $datetime;?></p>
-                </div>
-              <?php
-              }
-
-              mysqli_close($con) or die(mysqli_error());
-              ?>
-            </div>
+      <div class="comment_div"> 
+        <p class="name">Posted By: <?php echo $name;?></p>
+          <p class="comment"><?php echo $comment;?></p> 
+        <p class="time"><?php echo $datetime;?></p>
       </div>
+    <?php
+    }
+
+    mysqli_close($con) or die(mysqli_error());
+    ?>
+  </div>
 
      <footer id="bottom">
         <div class="container">
@@ -357,7 +360,7 @@
             </div>
        
         <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-      </footer>
+    </footer>
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
