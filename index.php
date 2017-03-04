@@ -287,9 +287,9 @@ downloadUrl("http://cosanceol.tk/mapDBXML.php", function(data) {
           <h4>Leave a comment</h4>
 
   <form method="post" action="" onsubmit="return post();">
-  <textarea id="comment" value="you need to login or sign up to leave a comment" readonly></textarea>
+  <textarea id="comment" placeholder="To leave a comment, you need to login or Sign up."></textarea>
   <br>
-  <input type="text" id="username" value="you need to login or sign up to leave a comment." readonly>
+  <input type="text" id="username" value="Sign in please" readonly>
   <br>
   <input type="submit" value="Post Comment">
   </form>
