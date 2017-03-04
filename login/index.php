@@ -291,7 +291,7 @@ downloadUrl("http://cosanceol.tk/mapDBXML.php", function(data) {
   <form method="post" action="" onsubmit="return post();">
   <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
   <br>
-  <input type="text" id="username" placeholder=<?php echo $_SESSION['username']; ?> READONLY>
+  <input type="text" id="username" placeholder=<?php echo $_SESSION['username']; ?>>
   <br>
   <input type="submit" value="Post Comment">
   </form>
@@ -319,7 +319,7 @@ downloadUrl("http://cosanceol.tk/mapDBXML.php", function(data) {
       ?>
 
       <div class="comment_div"> 
-        <p class="name">Posted By: <?php echo $_SESSION['username']; ?></p>
+        <p class="name">Posted By: <?php echo $name;?></p>
           <p class="comment"><?php echo $comment;?></p> 
         <p class="time"><?php echo $datetime;?></p>
       </div>
