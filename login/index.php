@@ -319,7 +319,7 @@ downloadUrl("http://cosanceol.tk/mapDBXML.php", function(data) {
       ?>
 
       <div class="comment_div"> 
-        <p class="name">Posted By: <?php echo $name;?></p>
+        <p class="name">Posted By: <?php echo $_SESSION['username']; ?></p>
           <p class="comment"><?php echo $comment;?></p> 
         <p class="time"><?php echo $datetime;?></p>
       </div>
