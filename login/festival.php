@@ -1,21 +1,27 @@
-<!DOCTYPE html >
-  <head>
+ <?php
+//include auth.php file on all secure pages
+include("auth.php");
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <title>Cosán Ceol</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css1/bootstrap1.min.css" rel="stylesheet">
+    <link href="../css1/bootstrap1.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css1/stylish-portfolio.css" rel="stylesheet">
+    <link href="../css1/stylish-portfolio.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
       
       <link rel="stylesheet" type="text/css" href="comment_style.css">
-<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
 <script src="testAjax.js"></script>
     <style>
       /* Always set the map height explicitly to define the size of the div
@@ -24,15 +30,11 @@
         height: 90%;
         width: 100%;
       }
-      .link {
-        color:black;
-      }
     </style>
   </head>
-
-  <body onload="load()">
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-        <nav id="sidebar-wrapper">
+<body onload="load()">
+  <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
@@ -45,10 +47,7 @@
                 <a href="#about" onclick=$("#menu-close").click();>About</a>
             </li>
             <li>
-                <a href="login/login.php" onclick=$("#menu-close").click();>Log In</a>
-            </li>
-            <li>
-                <a href="login/registration.php" onclick=$("#menu-close").click();>Sign Up</a>
+                <a href="logout.php" onclick=$("#menu-close").click();>Log out</a>
             </li>
             <li>
                 <a href="#map" onclick=$("#menu-close").click();>Search the Map</a>
@@ -68,6 +67,7 @@
             <h1 id="heading">Cosán Ceol</h1>
             <h3>Journey through Irish Music</h3>
             <br>
+            <h3 style="color: floralwhite;">Welcome <?php echo $_SESSION['username']; ?>!</h3>
             <a href="#map" class="btn btn-dark btn-lg">Start Searching</a>
         </div>
     </header>
@@ -281,19 +281,19 @@ downloadUrl("http://cosanceol.tk/festivalDBXML.php", function(data) {
 
   </script>
     </script>
-    <div class="col-lg-12 text-center">      
+    <div class="col-lg-12 text-center">    
       <div id="comment-section">
           <h4>Leave a comment</h4>
 
   <form method="post" action="" onsubmit="return post();">
-  <textarea id="comment" placeholder="Write Your Comment Here....."></textarea>
+  <textarea  disabled id="comment" placeholder="To leave a comment, you need to login or Sign up."></textarea>
   <br>
-  <input type="text" id="username" placeholder="Your Name">
+  <input type="text" id="username" value="Sign in please" readonly>
   <br>
   <input type="submit" value="Post Comment">
   </form>
 
-  <div id="all_comments" style="position: center;">
+  <div id="all_comments">
   <?php
     $con = mysqli_connect("localhost","root","Beckyboo4","register");
     // Check connection
@@ -325,7 +325,6 @@ downloadUrl("http://cosanceol.tk/festivalDBXML.php", function(data) {
 
     mysqli_close($con) or die(mysqli_error());
     ?>
-  </div>
   </div>
 
      <footer id="bottom">
