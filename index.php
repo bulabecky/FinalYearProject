@@ -97,8 +97,6 @@
     <div id="map"style="float: right;">
       </div>
       <form action="#">
-      <input type="checkbox" id="Festivalbox" onclick="boxclick(this,'Festival')" checked/>
-      <label>Festival</label>
       <input type="checkbox" id="Bandbox" onclick="boxclick(this,'Band')" checked/>
       <label>Band</label>
       <input type="checkbox" id="Fiddlebox" onclick="boxclick(this,'Fiddle')" checked/>
@@ -124,15 +122,14 @@
 
 
         <script type="text/javascript">
-    //<![CDATA[
 
-//set up globals
-var gmarkers = [];
-var infoWindow = [];
+            //set up globals
+            var gmarkers = [];
+            var infoWindow = [];
 
-//set up icons
-var customIcons = {
- FolkBand: {
+            //set up icons
+            var customIcons = {
+             FolkBand: {
                 icon: 'http://maps.google.com/mapfiles/ms/micons/orange-dot.png'
                },
                 Festival: {

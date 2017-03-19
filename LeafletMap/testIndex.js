@@ -5,8 +5,6 @@ var mymap = L.map('mapid').setView([53.350140, -6.266155], 13);
       attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
     }).addTo(mymap);
 
-    
-
     var popup = L.popup(); 
 
     function onMapClick(e) {
@@ -16,11 +14,6 @@ var mymap = L.map('mapid').setView([53.350140, -6.266155], 13);
         .openOn(mymap);
         var LatLong = e.latlng.toString()
     }
-  mymap.on('click', onMapClick);   
+  mymap.on('click', onMapClick);    
 
-  var kmlLayer = new L.KML ("test.kml", {async:true});
-  kmlLayer.on("loaded", function(e) {
-    mymap.fitBounds(e.target.getBounds());
-  });
-
-  mymap.addLayer(kmlLayer); 
+var marker = L.marker([53.35096,-6.25464]).addTo(mymap);
